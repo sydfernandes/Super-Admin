@@ -1,0 +1,121 @@
+{
+  "categories": [
+    {
+      "id": "43867dfb-3dc5-45fd-b4a5-0d9356603576",
+      "name": "Carne",
+      "children": [
+        {
+          "id": "a6eecb84-52db-4db5-a67e-89a132457419",
+          "name": "Aves y Pollos",
+          "children": [],
+          "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576"
+        },
+        {
+          "id": "17c9245e-c12f-443d-9122-b4231fce6083",
+          "name": "Cerdo",
+          "children": [],
+          "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576"
+        },
+        {
+          "id": "3a951a70-5b3d-4641-8019-716bfe635f2c",
+          "name": "Carne congelada",
+          "children": [],
+          "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576"
+        },
+        {
+          "id": "a639a562-6ad8-4aa5-b9b7-41c5fb5ac0aa",
+          "name": "Conejo y Cordero",
+          "children": [],
+          "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576"
+        },
+        {
+          "id": "ba11f2c0-13d9-4b31-8687-5e0d0692dab4",
+          "name": "Empanados y Elaborados",
+          "children": [],
+          "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576"
+        },
+        {
+          "id": "76316f1e-27b2-43f1-8a1f-767ac408066b",
+          "name": "Embutido",
+          "children": [],
+          "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576"
+        },
+        {
+          "id": "c912817e-a412-445d-8019-02648e4dcc28",
+          "name": "Hamburguesas y Picadas",
+          "children": [],
+          "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576"
+        },
+        {
+          "id": "62009c04-0904-45e8-8e64-f99081602a25",
+          "name": "Arreglos",
+          "children": [],
+          "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576"
+        },
+        {
+          "id": "3091dba0-8ada-49ff-a1b6-1f5ef608404d",
+          "name": "Vacuno",
+          "children": [],
+          "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576"
+        }
+      ],
+      "parentId": null
+    },
+    {
+      "id": "3906ab53-2e13-483c-9327-00011b78528f",
+      "name": "Pescado",
+      "children": [
+        {
+          "id": "91822d51-dee3-484d-ab9c-85e22ad70db3",
+          "name": "Pescado Fresco",
+          "children": [],
+          "parentId": "3906ab53-2e13-483c-9327-00011b78528f"
+        },
+        {
+          "id": "root-1737711759259",
+          "name": "Sushi",
+          "parentId": "3906ab53-2e13-483c-9327-00011b78528f",
+          "children": []
+        },
+        {
+          "id": "fd23d2c9-71bc-482a-af46-04308eaf83f2",
+          "name": "Pescado congelado",
+          "children": [],
+          "parentId": "3906ab53-2e13-483c-9327-00011b78528f"
+        },
+        {
+          "id": "ea153f75-6de2-4e74-acc1-b498e6fca4c5",
+          "name": "Salazones y Ahumados",
+          "children": [],
+          "parentId": "3906ab53-2e13-483c-9327-00011b78528f"
+        },
+        {
+          "id": "b211bd88-25fe-4a1e-9426-2046678b2941",
+          "name": "Marisco",
+          "children": [],
+          "parentId": "3906ab53-2e13-483c-9327-00011b78528f"
+        }
+      ],
+      "parentId": null
+    },
+    {
+      "id": "63a52fae-0085-4552-8ecd-d240356de280",
+      "name": "Frutas E Verduras",
+      "children": [
+        {
+          "id": "1a322a4f-e9a7-4dc3-80e2-f4505f3d61ea",
+          "name": "Fruta",
+          "children": [],
+          "parentId": "63a52fae-0085-4552-8ecd-d240356de280"
+        },
+        {
+          "id": "bdc7d0c2-a0ad-4946-9622-b1f93d0bace3",
+          "name": "Lechuga y Ensalada Preparada",
+          "children": [],
+          "parentId": "63a52fae-0085-4552-8ecd-d240356de280"
+        }
+      ],
+      "parentId": null
+    }
+  ]
+}

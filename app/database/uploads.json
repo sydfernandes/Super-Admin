@@ -1,0 +1,52 @@
+{
+  "uploads": [
+    {
+      "id": "upload_1737451442135",
+      "fileName": "ver_todo_la_despensa_20250119_094205.json",
+      "queuePath": "app/database/processed/queue/2025/01/21/ver_todo_la_despensa_20250119_094205_1737451442135.json",
+      "uploadedAt": "2025-01-21T09:24:02.135Z",
+      "status": "queued",
+      "fileSize": 15354
+    },
+    {
+      "id": "upload_1737451438282",
+      "fileName": "ver_todo_bebidas_20250119_094205.json",
+      "queuePath": "app/database/processed/queue/2025/01/21/ver_todo_bebidas_20250119_094205_1737451438282.json",
+      "uploadedAt": "2025-01-21T09:23:58.282Z",
+      "status": "queued",
+      "fileSize": 152379
+    },
+    {
+      "id": "upload_1737451434609",
+      "fileName": "ver_todo_bebe_20250119_094205.json",
+      "queuePath": "app/database/processed/queue/2025/01/21/ver_todo_bebe_20250119_094205_1737451434609.json",
+      "uploadedAt": "2025-01-21T09:23:54.609Z",
+      "status": "queued",
+      "fileSize": 99944
+    },
+    {
+      "id": "upload_1737451428176",
+      "fileName": "bebidas.json",
+      "queuePath": "app/database/processed/queue/2025/01/21/bebidas_1737451428176.json",
+      "uploadedAt": "2025-01-21T09:23:48.176Z",
+      "status": "queued",
+      "fileSize": 127692
+    },
+    {
+      "id": "upload_1737451423692",
+      "fileName": "alimentacion.json",
+      "queuePath": "app/database/processed/queue/2025/01/21/alimentacion_1737451423692.json",
+      "uploadedAt": "2025-01-21T09:23:43.692Z",
+      "status": "queued",
+      "fileSize": 130617
+    },
+    {
+      "id": "upload_1737451235433",
+      "fileName": "bebe.json",
+      "queuePath": "app/database/processed/queue/2025/01/21/bebe_1737451235433.json",
+      "uploadedAt": "2025-01-21T09:20:35.433Z",
+      "status": "queued",
+      "fileSize": 147923
+    }
+  ]
+} 

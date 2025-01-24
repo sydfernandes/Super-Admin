@@ -1,0 +1,854 @@
+{
+  "products": [
+    {
+      "nombre": "PULEVA batido de cacao pack 6 briks 200 ml",
+      "marca": "PULEVA",
+      "precio": 2.49,
+      "descripcion": "N/A",
+      "unidad": "(2,08 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200190-puleva-batido-de-cacao-pack-6-briks-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202009/16/00120911800561____6__325x325.jpg"
+    },
+    {
+      "nombre": "PULEVA batido de cacao pack 9 brik 200 ml",
+      "marca": "PULEVA",
+      "precio": 3.95,
+      "descripcion": "N/A",
+      "unidad": "(2,19 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616201156-puleva-batido-de-cacao-pack-9-brik-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202206/24/00120911802658____3__325x325.jpg"
+    },
+    {
+      "nombre": "PULEVA batido de chocolate sin sactosa sin gluten pack 6 briks 200 ml",
+      "marca": "PULEVA",
+      "precio": 2.49,
+      "descripcion": "N/A",
+      "unidad": "(2,08 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200455-puleva-batido-de-chocolate-sin-sactosa-sin-gluten-pack-6-briks-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202205/13/00120911801551____10__325x325.jpg"
+    },
+    {
+      "nombre": "PULEVA batido de cacao 90% de leche Sin Gluten botella 1 l",
+      "marca": "PULEVA",
+      "precio": 2.19,
+      "descripcion": "N/A",
+      "unidad": "(2,19 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200372-puleva-batido-de-cacao-90-de-leche-sin-gluten-botella-1-l/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202205/03/00120911801452____15__325x325.jpg"
+    },
+    {
+      "nombre": "PULEVA Zero batido de cacao 90% de leche Sin Gluten pack 6 briks 200 ml",
+      "marca": "PULEVA",
+      "precio": 2.49,
+      "descripcion": "N/A",
+      "unidad": "(2,08 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200596-puleva-zero-batido-de-cacao-90-de-leche-sin-gluten-pack-6-briks-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202205/12/00120911801999____6__325x325.jpg"
+    },
+    {
+      "nombre": "PULEVA batido de chocolate 90% leche sin lactosa sin gluten botella 1 l",
+      "marca": "PULEVA",
+      "precio": 2.19,
+      "descripcion": "N/A",
+      "unidad": "(2,19 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200489-puleva-batido-de-chocolate-90-leche-sin-lactosa-sin-gluten-botella-1-l/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202205/03/00120911801668____9__325x325.jpg"
+    },
+    {
+      "nombre": "PULEVA batido de chocolate 90% de leche Sin Gluten botella 200 ml",
+      "marca": "PULEVA",
+      "precio": 1.05,
+      "descripcion": "N/A",
+      "unidad": "(5,25 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200430-puleva-batido-de-chocolate-90-de-leche-sin-gluten-botella-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202205/03/00120911801510____5__325x325.jpg"
+    },
+    {
+      "nombre": "CACAOLAT batido de cacao sin gluten pack 8 botellas 200 ml",
+      "marca": "CACAOLAT",
+      "precio": 6.45,
+      "descripcion": "N/A",
+      "unidad": "(4,03 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200828-cacaolat-batido-de-cacao-sin-gluten-pack-8-botellas-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202304/14/00120911802294____11__325x325.jpg"
+    },
+    {
+      "nombre": "CACAOLAT batido de cacao Sin Gluten botella 1,5 l",
+      "marca": "CACAOLAT",
+      "precio": 3.45,
+      "descripcion": "N/A",
+      "unidad": "(2,30 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616201263-cacaolat-batido-de-cacao-sin-gluten-botella-15-l/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202412/18/00120616201263____1__325x325.jpg"
+    },
+    {
+      "nombre": "CACAOLAT batido de cacao sin gluten pack 6 briks 200 ml",
+      "marca": "CACAOLAT",
+      "precio": 3.6,
+      "descripcion": "N/A",
+      "unidad": "(3 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200257-cacaolat-batido-de-cacao-sin-gluten-pack-6-briks-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202304/14/00120911800652____15__325x325.jpg"
+    },
+    {
+      "nombre": "CACAOLAT batido de cacao 0% sin azúcares añadidos Sin Gluten botella 1 l",
+      "marca": "CACAOLAT",
+      "precio": 2.6,
+      "descripcion": "N/A",
+      "unidad": "(2,60 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200281-cacaolat-batido-de-cacao-0-sin-azucares-anadidos-sin-gluten-botella-1-l/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202412/18/00120616200281____1__40x40.jpg"
+    },
+    {
+      "nombre": "CACAOLAT batido de cacao sin gluten botella 1 l",
+      "marca": "CACAOLAT",
+      "precio": 2.5,
+      "descripcion": "N/A",
+      "unidad": "(2,50 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200059-cacaolat-batido-de-cacao-sin-gluten-botella-1-l/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202412/18/00120616200059____1__40x40.jpg"
+    },
+    {
+      "nombre": "CACAOLAT batido de cacao sin lactosa y sin gluten pack 6 briks 200 ml",
+      "marca": "CACAOLAT",
+      "precio": 3.6,
+      "descripcion": "N/A",
+      "unidad": "(3 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200885-cacaolat-batido-de-cacao-sin-lactosa-y-sin-gluten-pack-6-briks-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202304/14/00120911802385____8__40x40.jpg"
+    },
+    {
+      "nombre": "CACAOLAT batido de cacao 0% sin azúcares añadidos sin gluten pack 6 briks 200 ml",
+      "marca": "CACAOLAT",
+      "precio": 3.6,
+      "descripcion": "N/A",
+      "unidad": "(3 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616201073-cacaolat-batido-de-cacao-0-sin-azucares-anadidos-sin-gluten-pack-6-briks-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202304/14/00120911802575____5__40x40.jpg"
+    },
+    {
+      "nombre": "CACAOLAT batido de cacao Sin Gluten botella 200 ml (envase de vidrio)",
+      "marca": "CACAOLAT",
+      "precio": 1.58,
+      "descripcion": "N/A",
+      "unidad": "(7,90 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200844-cacaolat-batido-de-cacao-sin-gluten-botella-200-ml-envase-de-vidrio/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202412/18/00120616200844____1__40x40.jpg"
+    },
+    {
+      "nombre": "CACAOLAT batido de cacao 0% sin azúcares añadidos Sin Gluten pack 4 botella 200 ml",
+      "marca": "CACAOLAT",
+      "precio": 3.65,
+      "descripcion": "N/A",
+      "unidad": "(4,56 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200638-cacaolat-batido-de-cacao-0-sin-azucares-anadidos-sin-gluten-pack-4-botella-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202202/09/00120911802054____6__40x40.jpg"
+    },
+    {
+      "nombre": "CACAOLAT batido de cacao Sin Gluten pack 4 botellas 200 ml",
+      "marca": "CACAOLAT",
+      "precio": 3.65,
+      "descripcion": "N/A",
+      "unidad": "(4,56 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200836-cacaolat-batido-de-cacao-sin-gluten-pack-4-botellas-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202304/14/00120911802302____7__40x40.jpg"
+    },
+    {
+      "nombre": "CACAOLAT batido de cacao con café Mocca Sin Gluten pack 4 botellas 200 ml",
+      "marca": "CACAOLAT",
+      "precio": 3.65,
+      "descripcion": "N/A",
+      "unidad": "(4,56 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200331-cacaolat-batido-de-cacao-con-cafe-mocca-sin-gluten-pack-4-botellas-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202303/30/00120911801395____6__40x40.jpg"
+    },
+    {
+      "nombre": "CACAOLAT batido de cacao botella 190 ml",
+      "marca": "CACAOLAT",
+      "precio": 1.25,
+      "descripcion": "N/A",
+      "unidad": "(6,58 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616201446-cacaolat-batido-de-cacao-botella-190-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202407/12/00120616201446____1__40x40.jpg"
+    },
+    {
+      "nombre": "CACAOLAT batido de cacao 0% sin azúcares añadidos Sin Gluten vaso 200 ml",
+      "marca": "CACAOLAT",
+      "precio": 1.62,
+      "descripcion": "N/A",
+      "unidad": "(8,10 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616201305-cacaolat-batido-de-cacao-0-sin-azucares-anadidos-sin-gluten-vaso-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202307/06/00120911802815____1__40x40.jpg"
+    },
+    {
+      "nombre": "CACAOLAT batido de cacao con infusión de virutas de cacao Sin Gluten pack 4 botellas 200 ml",
+      "marca": "CACAOLAT",
+      "precio": 3.95,
+      "descripcion": "N/A",
+      "unidad": "(4,94 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200448-cacaolat-batido-de-cacao-con-infusion-de-virutas-de-cacao-sin-gluten-pack-4-botellas-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202303/30/00120911801528____8__40x40.jpg"
+    },
+    {
+      "nombre": "EL CORTE INGLES batido al cacao Sin Gluten pack 6 briks 200 ml",
+      "marca": "EL CORTE INGLES",
+      "precio": 1.47,
+      "descripcion": "N/A",
+      "unidad": "(1,22 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200422-el-corte-ingles-batido-al-cacao-sin-gluten-pack-6-briks-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202104/13/00120911801502____8__40x40.jpg"
+    },
+    {
+      "nombre": "COLACAO ENERGY batido de cacao pack 9 botellas 188 ml",
+      "marca": "COLACAO",
+      "precio": 6.25,
+      "descripcion": "N/A",
+      "unidad": "(3,69 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200232-colacao-energy-batido-de-cacao-pack-9-botellas-188-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202009/24/00120911800637____2__40x40.jpg"
+    },
+    {
+      "nombre": "COLACAO ENERGY batido de cacao pack 3 briks 200 ml",
+      "marca": "COLACAO",
+      "precio": 1.9,
+      "descripcion": "N/A",
+      "unidad": "(3,17 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200612-colacao-energy-batido-de-cacao-pack-3-briks-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202009/24/00120911802021____3__40x40.jpg"
+    },
+    {
+      "nombre": "COLACAO ENERGY batido de cacao pack 4 botellas 188 ml",
+      "marca": "COLACAO",
+      "precio": 2.85,
+      "descripcion": "N/A",
+      "unidad": "(3,58 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616201289-colacao-energy-batido-de-cacao-pack-4-botellas-188-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202406/12/00120616201289____2__325x325.jpg"
+    },
+    {
+      "nombre": "COLACAO ENERGY batido de cacao botella 750 ml",
+      "marca": "COLACAO",
+      "precio": 2.1,
+      "descripcion": "N/A",
+      "unidad": "(2,80 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200620-colacao-energy-batido-de-cacao-botella-750-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202009/24/00120911802039____3__325x325.jpg"
+    },
+    {
+      "nombre": "PASCUAL batido de chocolate 50% menos de azúcares añadidos sin edulcorantes pack 6 briks 200 ml",
+      "marca": "PASCUAL",
+      "precio": 2.53,
+      "descripcion": "N/A",
+      "unidad": "(2,11 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200364-pascual-batido-de-chocolate-50-menos-de-azucares-anadidos-sin-edulcorantes-pack-6-briks-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202206/15/00120911801429____15__325x325.jpg"
+    },
+    {
+      "nombre": "PASCUAL batido de leche con galletas Oreo Toppings vaso 200 ml",
+      "marca": "PASCUAL",
+      "precio": 1.85,
+      "descripcion": "N/A",
+      "unidad": "(0,92 € / 100 ml.)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200737-pascual-batido-de-leche-con-galletas-oreo-toppings-vaso-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202102/12/00120911802203____2__325x325.jpg"
+    },
+    {
+      "nombre": "PASCUAL Dinamic Protein Sport batido proteico de chocolate y avellanas brik 330 ml",
+      "marca": "PASCUAL",
+      "precio": 2.35,
+      "descripcion": "N/A",
+      "unidad": "(6,87 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616201404-pascual-dinamic-protein-sport-batido-proteico-de-chocolate-y-avellanas-brik-330-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202404/18/00120616201404____4__325x325.jpg"
+    },
+    {
+      "nombre": "COLACAO SHAKE batido de leche y cacao natural 1,5% M.G. Sin Gluten vaso 200 ml",
+      "marca": "COLACAO",
+      "precio": 1.61,
+      "descripcion": "N/A",
+      "unidad": "(8,05 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200349-colacao-shake-batido-de-leche-y-cacao-natural-15-mg-sin-gluten-vaso-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202009/24/00120911801403____2__325x325.jpg"
+    },
+    {
+      "nombre": "COLACAO SHAKE batido de leche y cacao natural 0% azucarés añadidos y Materia Grasa Sin Gluten vaso 200 ml",
+      "marca": "COLACAO",
+      "precio": 1.61,
+      "descripcion": "N/A",
+      "unidad": "(8,05 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200356-colacao-shake-batido-de-leche-y-cacao-natural-0-azucares-anadidos-y-materia-grasa-sin-gluten-vaso-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202009/24/00120911801411____2__325x325.jpg"
+    },
+    {
+      "nombre": "NESTLE NESQUIK Shake batido de chocolate 86% de leche vitamina D y calcio sin gluten vaso 180 ml",
+      "marca": "NESTLÉ",
+      "precio": 1.49,
+      "descripcion": "N/A",
+      "unidad": "(8,28 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110118823900636-nestle-nesquik-shake-batido-de-chocolate-86-de-leche-vitamina-d-y-calcio-sin-gluten-vaso-180-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202309/13/00118823900636____10__325x325.jpg"
+    },
+    {
+      "nombre": "ASTURIANA batido de chocolate Sin Gluten brik 1 l",
+      "marca": "ASTURIANA",
+      "precio": 1.79,
+      "descripcion": "N/A",
+      "unidad": "(1,79 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200018-asturiana-batido-de-chocolate-sin-gluten-brik-1-l/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202306/20/00120911800017____15__325x325.jpg"
+    },
+    {
+      "nombre": "ASTURIANA batido de chocolate y Conguitos pack 3 briks 200 ml",
+      "marca": "ASTURIANA",
+      "precio": 2.34,
+      "descripcion": "N/A",
+      "unidad": "(3,90 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200547-asturiana-batido-de-chocolate-y-conguitos-pack-3-briks-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202306/20/00120911801908____10__325x325.jpg"
+    },
+    {
+      "nombre": "LACCAO batido de cacao botella 1 l",
+      "marca": "LACCAO",
+      "precio": 2.5,
+      "descripcion": "N/A",
+      "unidad": "(2,50 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200034-laccao-batido-de-cacao-botella-1-l/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201909/24/00120911800140____1__40x40.jpg"
+    },
+    {
+      "nombre": "LACCAO batido de cacao brik 1 l",
+      "marca": "LACCAO",
+      "precio": 2.35,
+      "descripcion": "N/A",
+      "unidad": "(2,35 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616201016-laccao-batido-de-cacao-brik-1-l/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202205/17/00120911802518____1__40x40.jpg"
+    },
+    {
+      "nombre": "LACCAO batido de cacao botella 200 ml",
+      "marca": "LACCAO",
+      "precio": 1.39,
+      "descripcion": "N/A",
+      "unidad": "(6,95 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200026-laccao-batido-de-cacao-botella-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202205/13/00120911800132____3__40x40.jpg"
+    },
+    {
+      "nombre": "LACCAO batido de cacao pack 6 briks 200 ml",
+      "marca": "LACCAO",
+      "precio": 3.35,
+      "descripcion": "N/A",
+      "unidad": "(2,79 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616201180-laccao-batido-de-cacao-pack-6-briks-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202208/24/00120911802682____5__40x40.jpg"
+    },
+    {
+      "nombre": "LACCAO batido de cacao 0% azúcar sin lactosa brik 1 l",
+      "marca": "LACCAO",
+      "precio": 2.35,
+      "descripcion": "N/A",
+      "unidad": "(2,35 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200661-laccao-batido-de-cacao-0-azucar-sin-lactosa-brik-1-l/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202205/27/00120911802112____2__40x40.jpg"
+    },
+    {
+      "nombre": "OKEY batido de cacao botella 750 ml",
+      "marca": "OKEY",
+      "precio": 1.79,
+      "descripcion": "N/A",
+      "unidad": "(2,39 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200125-okey-batido-de-cacao-botella-750-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202009/24/00120911800249____2__40x40.jpg"
+    },
+    {
+      "nombre": "ARLA Protein batido con proteinas de chocolate sin azúcares añadidos sin lactosa botella 250 g",
+      "marca": "ARLA",
+      "precio": 2.39,
+      "descripcion": "N/A",
+      "unidad": "(9,56 € / Kg)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110118822700151-arla-protein-batido-con-proteinas-de-chocolate-sin-azucares-anadidos-sin-lactosa-botella-250-g/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202408/06/00118822700151____5__40x40.jpg"
+    },
+    {
+      "nombre": "ARLA Protein batido con proteínas de chocolate sin azúcares añadidos sin lactosa botella 479 ml",
+      "marca": "ARLA",
+      "precio": 2.95,
+      "descripcion": "N/A",
+      "unidad": "(6,16 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110118822700946-arla-protein-batido-con-proteinas-de-chocolate-sin-azucares-anadidos-sin-lactosa-botella-479-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202408/06/00118822700946____4__40x40.jpg"
+    },
+    {
+      "nombre": "KAIKU SIN LACTOSA batido de cacao sin lactosa pack 3 briks 200 ml",
+      "marca": "KAIKU",
+      "precio": 2.09,
+      "descripcion": "N/A",
+      "unidad": "(3,48 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200265-kaiku-sin-lactosa-batido-de-cacao-sin-lactosa-pack-3-briks-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201910/10/00120911800744____2__40x40.jpg"
+    },
+    {
+      "nombre": "COVAP batido Smilke Protein Chocolate con 22 gramos de proteínas sin azúcares añadidos botella 250 ml",
+      "marca": "COVAP",
+      "precio": 1.25,
+      "descripcion": "N/A",
+      "unidad": "(5 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616201164-covap-batido-smilke-protein-chocolate-con-22-gramos-de-proteinas-sin-azucares-anadidos-botella-250-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202212/21/00120911802666____6__40x40.jpg"
+    },
+    {
+      "nombre": "COVAP batido de chocolate con leche botella 1 l",
+      "marca": "COVAP",
+      "precio": 1.55,
+      "descripcion": "N/A",
+      "unidad": "(1,55 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200794-covap-batido-de-chocolate-con-leche-botella-1-l/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202212/21/00120911802260____8__40x40.jpg"
+    },
+    {
+      "nombre": "COVAP batido de cacao pack 6 briks 200 ml",
+      "marca": "COVAP",
+      "precio": 2.45,
+      "descripcion": "N/A",
+      "unidad": "(2,04 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200166-covap-batido-de-cacao-pack-6-briks-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202212/21/00120911800504____13__40x40.jpg"
+    },
+    {
+      "nombre": "VALIO Profeel batido con proteínas de chocolate sin azúcares añadidos sin lactosa botella 250 ml",
+      "marca": "VALIO",
+      "precio": 2.12,
+      "descripcion": "N/A",
+      "unidad": "(8,48 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110118822700094-valio-profeel-batido-con-proteinas-de-chocolate-sin-azucares-anadidos-sin-lactosa-botella-250-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202206/06/00118822700094____3__40x40.jpg"
+    },
+    {
+      "nombre": "MILKA Shake batido de chocolate 92% leche pack 3 briks 200 ml",
+      "marca": "MILKA",
+      "precio": 1.91,
+      "descripcion": "N/A",
+      "unidad": "(3,18 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200687-milka-shake-batido-de-chocolate-92-leche-pack-3-briks-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202009/23/00120911802138____1__40x40.jpg"
+    },
+    {
+      "nombre": "MILKA batido de chocolate con 92% de leche botella 750 ml",
+      "marca": "MILKA",
+      "precio": 2.01,
+      "descripcion": "N/A",
+      "unidad": "(2,53 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200877-milka-batido-de-chocolate-con-92-de-leche-botella-750-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202111/10/00120911802369____3__325x325.jpg"
+    },
+    {
+      "nombre": "MILKA Shake batido de chocolate 92% leche vaso 200 ml",
+      "marca": "MILKA",
+      "precio": 1.7,
+      "descripcion": "N/A",
+      "unidad": "(8,50 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200679-milka-shake-batido-de-chocolate-92-leche-vaso-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202010/05/00120911802120____1__325x325.jpg"
+    },
+    {
+      "nombre": "CHOLECK batido de cacao botella 1 l",
+      "marca": "CHOLECK",
+      "precio": 1.89,
+      "descripcion": "N/A",
+      "unidad": "(1,89 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200075-choleck-batido-de-cacao-botella-1-l/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202302/06/00120911800199____8__325x325.jpg"
+    },
+    {
+      "nombre": "CHOLECK batido de cacao pack 3 briks 200 ml",
+      "marca": "CHOLECK",
+      "precio": 1.5,
+      "descripcion": "N/A",
+      "unidad": "(2,50 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200273-choleck-batido-de-cacao-pack-3-briks-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202302/06/00120911801122____9__325x325.jpg"
+    },
+    {
+      "nombre": "FEIRACO batido de chocolate pack 3 briks 200 ml",
+      "marca": "FEIRACO",
+      "precio": 1.2,
+      "descripcion": "N/A",
+      "unidad": "(6 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200463-feiraco-batido-de-chocolate-pack-3-briks-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202204/27/00120911801635____3__325x325.jpg"
+    },
+    {
+      "nombre": "KAIKU batido de cacao pack 6 briks 200 ml",
+      "marca": "KAIKU",
+      "precio": 2.49,
+      "descripcion": "N/A",
+      "unidad": "(2,08 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200240-kaiku-batido-de-cacao-pack-6-briks-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201909/24/00120911800645____1__325x325.jpg"
+    },
+    {
+      "nombre": "RIO Opti Pro batido de chocolate con leche desnatada ultrafiltrada sin lactosa botella 330 ml",
+      "marca": "RIO",
+      "precio": 1.89,
+      "descripcion": "N/A",
+      "unidad": "(5,54 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616201008-rio-opti-pro-batido-de-chocolate-con-leche-desnatada-ultrafiltrada-sin-lactosa-botella-330-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202111/24/00120911802500____2__325x325.jpg"
+    },
+    {
+      "nombre": "GAZA CAO leche con cacao pack 3 briks 200 ml",
+      "marca": "GAZA",
+      "precio": 1.36,
+      "descripcion": "N/A",
+      "unidad": "(2,27 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616201149-gaza-cao-leche-con-cacao-pack-3-briks-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202206/07/00120911802641____2__325x325.jpg"
+    },
+    {
+      "nombre": "PASCUAL Dinamic Protein batido sabor cookies con proteínas y sin azúcares añadidos brik 330 ml",
+      "marca": "PASCUAL",
+      "precio": 2.15,
+      "descripcion": "N/A",
+      "unidad": "(6,52 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616201396-pascual-dinamic-protein-batido-sabor-cookies-con-proteinas-y-sin-azucares-anadidos-brik-330-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202403/27/00120616201396____2__325x325.jpg"
+    },
+    {
+      "nombre": "PASCUAL Dinamic Protein batido proteico de plátano sabor cacahuete sin azúcares añadidos brik 330 ml",
+      "marca": "PASCUAL",
+      "precio": 2.15,
+      "descripcion": "N/A",
+      "unidad": "(6,23 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616201420-pascual-dinamic-protein-batido-proteico-de-platano-sabor-cacahuete-sin-azucares-anadidos-brik-330-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202403/27/00120616201420____2__325x325.jpg"
+    },
+    {
+      "nombre": "PULEVA batido de fresa 90% de leche Sin Gluten pack 6 briks 200 ml",
+      "marca": "PULEVA",
+      "precio": 2.49,
+      "descripcion": "N/A",
+      "unidad": "(2,08 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200216-puleva-batido-de-fresa-90-de-leche-sin-gluten-pack-6-briks-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202205/13/00120911800587____11__325x325.jpg"
+    },
+    {
+      "nombre": "PULEVA batido de fresa 90% de leche Sin Gluten botella 1 l",
+      "marca": "PULEVA",
+      "precio": 2.19,
+      "descripcion": "N/A",
+      "unidad": "(2,19 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200398-puleva-batido-de-fresa-90-de-leche-sin-gluten-botella-1-l/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202205/03/00120911801478____16__325x325.jpg"
+    },
+    {
+      "nombre": "PASCUAL batido de fresa 50% menos de azúcares añadidos sin edulcorantes pack 6 briks 200 ml",
+      "marca": "PASCUAL",
+      "precio": 2.53,
+      "descripcion": "N/A",
+      "unidad": "(2,11 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200752-pascual-batido-de-fresa-50-menos-de-azucares-anadidos-sin-edulcorantes-pack-6-briks-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202111/10/00120911802229____3__325x325.jpg"
+    },
+    {
+      "nombre": "OKEY batido de fresa botella 750 ml",
+      "marca": "OKEY",
+      "precio": 1.79,
+      "descripcion": "N/A",
+      "unidad": "(2,39 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200133-okey-batido-de-fresa-botella-750-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202009/24/00120911800256____2__325x325.jpg"
+    },
+    {
+      "nombre": "COVAP batido de fresa pack 6 briks 200 ml",
+      "marca": "COVAP",
+      "precio": 2.45,
+      "descripcion": "N/A",
+      "unidad": "(2,04 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200174-covap-batido-de-fresa-pack-6-briks-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202212/21/00120911800512____13__325x325.jpg"
+    },
+    {
+      "nombre": "COVAP batido de fresa con leche botella 1 l",
+      "marca": "COVAP",
+      "precio": 1.55,
+      "descripcion": "N/A",
+      "unidad": "(1,55 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200802-covap-batido-de-fresa-con-leche-botella-1-l/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202212/21/00120911802278____8__325x325.jpg"
+    },
+    {
+      "nombre": "VALIO Profeel batido con proteínas de fresa sin azúcares añadidos sin lactosa botella 250 ml",
+      "marca": "VALIO",
+      "precio": 2.65,
+      "descripcion": "N/A",
+      "unidad": "(10,60 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110118822700920-valio-profeel-batido-con-proteinas-de-fresa-sin-azucares-anadidos-sin-lactosa-botella-250-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202404/15/00118822700920____1__325x325.jpg"
+    },
+    {
+      "nombre": "PULEVA batido de vainilla 90% de leche Sin Gluten pack 6 briks 200 ml",
+      "marca": "PULEVA",
+      "precio": 2.49,
+      "descripcion": "N/A",
+      "unidad": "(2,08 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200208-puleva-batido-de-vainilla-90-de-leche-sin-gluten-pack-6-briks-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202205/13/00120911800579____11__325x325.jpg"
+    },
+    {
+      "nombre": "PULEVA batido de vainilla 90% de leche Sin Gluten botella 1 l",
+      "marca": "PULEVA",
+      "precio": 2.19,
+      "descripcion": "N/A",
+      "unidad": "(2,19 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200380-puleva-batido-de-vainilla-90-de-leche-sin-gluten-botella-1-l/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202205/03/00120911801460____14__325x325.jpg"
+    },
+    {
+      "nombre": "PASCUAL batido de vainilla 50% menos de azúcares añadidos sin edulcorantes pack 6 briks 200 ml",
+      "marca": "PASCUAL",
+      "precio": 2.53,
+      "descripcion": "N/A",
+      "unidad": "(2,11 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200745-pascual-batido-de-vainilla-50-menos-de-azucares-anadidos-sin-edulcorantes-pack-6-briks-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202206/27/00120911802211____5__325x325.jpg"
+    },
+    {
+      "nombre": "OKEY batido de vainilla botella 750 ml",
+      "marca": "OKEY",
+      "precio": 1.79,
+      "descripcion": "N/A",
+      "unidad": "(2,39 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200158-okey-batido-de-vainilla-botella-750-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202009/24/00120911800272____2__325x325.jpg"
+    },
+    {
+      "nombre": "COVAP batido de vainilla pack 6 briks 200 ml",
+      "marca": "COVAP",
+      "precio": 2.45,
+      "descripcion": "N/A",
+      "unidad": "(2,04 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200182-covap-batido-de-vainilla-pack-6-briks-200-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202212/21/00120911800520____13__325x325.jpg"
+    },
+    {
+      "nombre": "COVAP batido de vainilla con leche botella 1 l",
+      "marca": "COVAP",
+      "precio": 1.55,
+      "descripcion": "N/A",
+      "unidad": "(1,55 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200810-covap-batido-de-vainilla-con-leche-botella-1-l/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202212/21/00120911802286____8__325x325.jpg"
+    },
+    {
+      "nombre": "CHOLECK batido de vainilla botella 1 l",
+      "marca": "CHOLECK",
+      "precio": 1.89,
+      "descripcion": "N/A",
+      "unidad": "(1,89 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200083-choleck-batido-de-vainilla-botella-1-l/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202302/06/00120911800207____6__325x325.jpg"
+    },
+    {
+      "nombre": "RIO Opti Pro batido de vainilla con leche desnatada ultrafiltrada sin lactosa botella 330 ml",
+      "marca": "RIO",
+      "precio": 1.89,
+      "descripcion": "N/A",
+      "unidad": "(5,54 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110120616200984-rio-opti-pro-batido-de-vainilla-con-leche-desnatada-ultrafiltrada-sin-lactosa-botella-330-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202111/24/00120911802484____2__325x325.jpg"
+    },
+    {
+      "nombre": "ARLA Protein batido con proteínas de vainilla sin azúcares añadidos sin lactosa botella 479 ml",
+      "marca": "ARLA",
+      "precio": 2.95,
+      "descripcion": "N/A",
+      "unidad": "(6,16 € / Litro)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110118822700953-arla-protein-batido-con-proteinas-de-vainilla-sin-azucares-anadidos-sin-lactosa-botella-479-ml/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202408/06/00118822700953____4__325x325.jpg"
+    },
+    {
+      "nombre": "FLORA margarina rica en omega 3 sin aceite de palma tarrina 400 g sin gluten sin lactosa",
+      "marca": "FLORA",
+      "precio": 3.09,
+      "descripcion": "N/A",
+      "unidad": "(7,72 € / Kg)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110118815200896-flora-margarina-rica-en-omega-3-sin-aceite-de-palma-tarrina-400-g-sin-gluten-sin-lactosa/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202305/25/00118815200896____6__325x325.jpg"
+    },
+    {
+      "nombre": "FLORA margarina rica en omega 3 al toque de aceite de oliva sin aceite de palma tarrina 225 g sin gluten sin lactosa",
+      "marca": "FLORA",
+      "precio": 2.09,
+      "descripcion": "N/A",
+      "unidad": "(9,29 € / Kg)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110118815200888-flora-margarina-rica-en-omega-3-al-toque-de-aceite-de-oliva-sin-aceite-de-palma-tarrina-225-g-sin-gluten-sin-lactosa/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202305/25/00118815200888____6__325x325.jpg"
+    },
+    {
+      "nombre": "FLORA margarina original rica en omega 3 sin aceite de palma tarrina 225 g sin gluten sin lactosa",
+      "marca": "FLORA",
+      "precio": 2.09,
+      "descripcion": "N/A",
+      "unidad": "(9,29 € / Kg)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110118815200912-flora-margarina-original-rica-en-omega-3-sin-aceite-de-palma-tarrina-225-g-sin-gluten-sin-lactosa/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202305/25/00118815200912____4__325x325.jpg"
+    },
+    {
+      "nombre": "TULIPAN margarina original sin aceite de palma sin gluten tarrina 400 g",
+      "marca": "TULIPAN",
+      "precio": 2.65,
+      "descripcion": "N/A",
+      "unidad": "(6,62 € / Kg)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110118815200839-tulipan-margarina-original-sin-aceite-de-palma-sin-gluten-tarrina-400-g/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202409/09/00118815200839____9__325x325.jpg"
+    },
+    {
+      "nombre": "TULIPAN margarina con sal sin aceite de palma sin gluten sin lactosa tarrina 400 g",
+      "marca": "TULIPAN",
+      "precio": 2.65,
+      "descripcion": "N/A",
+      "unidad": "(6,62 € / Kg)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110118815200847-tulipan-margarina-con-sal-sin-aceite-de-palma-sin-gluten-sin-lactosa-tarrina-400-g/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202409/09/00118815200847____9__325x325.jpg"
+    },
+    {
+      "nombre": "TULIPAN margarina original sin aceite de palma sin gluten tarrina 225 g",
+      "marca": "TULIPAN",
+      "precio": 1.79,
+      "descripcion": "N/A",
+      "unidad": "(7,96 € / Kg)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110118815200862-tulipan-margarina-original-sin-aceite-de-palma-sin-gluten-tarrina-225-g/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202409/09/00118815200862____9__325x325.jpg"
+    },
+    {
+      "nombre": "TULIPAN plantequilla sin sal tarrina 200 g",
+      "marca": "TULIPAN",
+      "precio": 2.09,
+      "descripcion": "N/A",
+      "unidad": "(10,45 € / Kg)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110118815200938-tulipan-plantequilla-sin-sal-tarrina-200-g/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202312/21/00118815200938____3__325x325.jpg"
+    },
+    {
+      "nombre": "TULIPAN plantequilla con sal tarrina 200 g",
+      "marca": "TULIPAN",
+      "precio": 2.09,
+      "descripcion": "N/A",
+      "unidad": "(10,45 € / Kg)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110118815200920-tulipan-plantequilla-con-sal-tarrina-200-g/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202312/21/00118815200920____3__325x325.jpg"
+    },
+    {
+      "nombre": "TULIPAN margarina con sal sin aceite de palma sin gluten tarrina 225 g",
+      "marca": "TULIPAN",
+      "precio": 1.79,
+      "descripcion": "N/A",
+      "unidad": "(7,96 € / Kg)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110118815200870-tulipan-margarina-con-sal-sin-aceite-de-palma-sin-gluten-tarrina-225-g/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202409/09/00118815200870____7__325x325.jpg"
+    },
+    {
+      "nombre": "LIGERESA margarina vegetal tarrina 500 g",
+      "marca": "LIGERESA",
+      "precio": 2.89,
+      "descripcion": "N/A",
+      "unidad": "(5,78 € / Kg)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110118815200250-ligeresa-margarina-vegetal-tarrina-500-g/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202310/05/00118815200250____19__325x325.jpg"
+    },
+    {
+      "nombre": "ARTUA margarina de maíz sin gluten sin lactosa tarrina 500 g",
+      "marca": "ARTUA",
+      "precio": 3.05,
+      "descripcion": "N/A",
+      "unidad": "(6,10 € / Kg)",
+      "tienda": "elcorteingles",
+      "url": "https://www.elcorteingles.es/supermercado/0110118815200052-artua-margarina-de-maiz-sin-gluten-sin-lactosa-tarrina-500-g/",
+      "imagen": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202006/08/00118815200052____5__40x40.jpg"
+    }
+  ]
+}

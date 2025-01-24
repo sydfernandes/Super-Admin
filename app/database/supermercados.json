@@ -1,0 +1,28 @@
+{
+  "supermercados": [
+    {
+      "id": "1",
+      "nombre": "Carrefour",
+      "url": "https://www.carrefour.es/",
+      "activo": true
+    },
+    {
+      "id": "super_1737448483912",
+      "nombre": "Mercadona",
+      "url": "https://tienda.mercadona.es",
+      "activo": true
+    },
+    {
+      "id": "super_1737448538021",
+      "nombre": "Dia",
+      "url": "https://www.dia.es/",
+      "activo": true
+    },
+    {
+      "id": "super_1737448561997",
+      "nombre": "El Corte Inglés Supermercado",
+      "url": "https://www.elcorteingles.es/supermercado",
+      "activo": true
+    }
+  ]
+} 

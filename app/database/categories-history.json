@@ -1,0 +1,34 @@
+{
+  "history": [
+    {
+      "action": "moved",
+      "details": "Moved \"Lechuga y Ensalada Preparada\" after \"Fruta\"",
+      "id": "aa84401a-0053-472f-b643-ac2cfac0725c",
+      "timestamp": "2025-01-24T09:50:08.095Z"
+    },
+    {
+      "action": "created",
+      "details": "Created category \"Lechuga y Ensalada Preparada\"",
+      "id": "630ae783-11cb-42cf-98ce-4cef1b73b25a",
+      "timestamp": "2025-01-24T09:50:03.636Z"
+    },
+    {
+      "action": "moved",
+      "details": "Made \"Fruta\" a child of \"Frutas E Verduras\"",
+      "id": "9ec1e58a-d16a-4e77-a884-e8b7e4c64353",
+      "timestamp": "2025-01-24T09:49:44.467Z"
+    },
+    {
+      "action": "created",
+      "details": "Created category \"Fruta\"",
+      "id": "2dd80b6c-a57c-42d6-a800-e27ae85987e1",
+      "timestamp": "2025-01-24T09:49:42.550Z"
+    },
+    {
+      "action": "created",
+      "details": "Created category \"Frutas E Verduras\"",
+      "id": "3f50a927-1058-4747-a32b-a15617d0c314",
+      "timestamp": "2025-01-24T09:49:17.680Z"
+    }
+  ]
+}
