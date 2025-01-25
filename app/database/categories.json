@@ -58,8 +58,7 @@
           "children": [],
           "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576"
         }
-      ],
-      "parentId": null
+      ]
     },
     {
       "id": "3906ab53-2e13-483c-9327-00011b78528f",
@@ -95,8 +94,7 @@
           "children": [],
           "parentId": "3906ab53-2e13-483c-9327-00011b78528f"
         }
-      ],
-      "parentId": null
+      ]
     },
     {
       "id": "63a52fae-0085-4552-8ecd-d240356de280",
@@ -114,48 +112,7 @@
           "children": [],
           "parentId": "63a52fae-0085-4552-8ecd-d240356de280"
         }
-      ],
-      "parentId": null
-    },
-    {
-      "id": "8d67b20f-05f0-4bb8-a3b3-b7127c5c2074",
-      "name": "2",
-      "children": [
-        {
-          "id": "190e7dbe-d78c-414f-8acd-109a57e841d9",
-          "name": "d",
-          "children": [
-            {
-              "id": "424fc94d-c3d7-47c8-9c92-45a6ba62d22d",
-              "name": "1",
-              "children": [
-                {
-                  "id": "a7de462d-e6f6-44ec-bee7-733c5116abdb",
-                  "name": "7",
-                  "children": [
-                    {
-                      "id": "b28ca34c-27e0-489f-bc73-32d8dbc368fa",
-                      "name": "666",
-                      "children": [],
-                      "parentId": "a7de462d-e6f6-44ec-bee7-733c5116abdb"
-                    }
-                  ],
-                  "parentId": "424fc94d-c3d7-47c8-9c92-45a6ba62d22d"
-                }
-              ],
-              "parentId": "190e7dbe-d78c-414f-8acd-109a57e841d9"
-            }
-          ],
-          "parentId": "8d67b20f-05f0-4bb8-a3b3-b7127c5c2074"
-        }
-      ],
-      "parentId": null
-    },
-    {
-      "id": "b46cfa0f-de1c-4de3-8c1f-c97e7bad082b",
-      "name": "w",
-      "children": [],
-      "parentId": null
+      ]
     }
   ]
 }

@@ -12,7 +12,7 @@ export default function ContentLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="min-h-screen flex">
       <div className="flex-1">{children}</div>
       <Toaster />
     </div>

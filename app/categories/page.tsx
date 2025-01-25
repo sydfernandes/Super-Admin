@@ -31,10 +31,19 @@ import {
   GripVertical,
   CirclePlus,
   ChevronRight,
+  ChevronDown,
+  ChevronUp,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { format } from "date-fns";
+import { CalendarIcon, Filter, X } from "lucide-react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { CategoryHistory } from "@/components/ui/category-history";
+import { CategorySidebar } from "@/components/ui/category-sidebar";
 
 /** ---------------------------------------------------------------------------------
  * 1. Data Types
@@ -42,8 +51,14 @@ import { useToast } from "@/hooks/use-toast";
 interface TreeItem {
   id: string;
   name: string;
-  parentId: string | null;
+  parentId: string | undefined;
   children: TreeItem[];
+  metadata?: {
+    createdAt?: string;
+    updatedAt?: string;
+    deletedAt?: string;
+    status?: "active" | "inactive";
+  };
 }
 
 interface DragIntention {
@@ -70,9 +85,66 @@ interface CategoryTreeItemProps {
 /** Interface for history log */
 interface CategoryAction {
   id: string;
-  timestamp: Date;
-  action: "created" | "edited" | "deleted" | "moved";
-  details: string;
+  timestamp: string;
+  action: "CATEGORY_CREATED" | "SUBCATEGORY_ADDED" | "SUBCATEGORY_MOVED" | "CATEGORY_RENAMED" | "CATEGORY_REMOVED" | "SUBCATEGORY_REMOVED" | "ORDER_CHANGED" | "PROPERTY_ASSIGNED" | "CATEGORY_ACTIVATED" | "CATEGORY_DEACTIVATED";
+  details: {
+    message: string;
+    affectedCategories: {
+      target?: {
+        id: string;
+        name: string;
+        path?: string | undefined;
+      };
+      previousParent?: {
+        id: string;
+        name: string;
+      };
+      newParent?: {
+        id: string;
+        name: string;
+      };
+    };
+  };
+  user: {
+    id: string;
+    name: string;
+  };
+  category: {
+    id: string;
+    name: string;
+    path?: string | undefined;
+    metadata?: {
+      createdAt?: string;
+      updatedAt?: string;
+      deletedAt?: string;
+      status?: "active" | "inactive";
+    };
+  };
+  changes?: {
+    previousState?: {
+      parentId?: string;
+      position?: number;
+      depth?: number;
+      path?: string | undefined;
+      status?: "active" | "inactive";
+    };
+    newState?: {
+      parentId?: string;
+      position?: number;
+      depth?: number;
+      path?: string | undefined;
+      status?: "active" | "inactive";
+    };
+  };
+}
+
+/** Update the CategoryHistoryProps interface */
+interface CategoryHistoryProps {
+  history: CategoryAction[];
+  categories: TreeItem[];
+  className?: string;
+  isExpanded?: boolean;
+  onExpandToggle?: () => void;
 }
 
 /** ---------------------------------------------------------------------------------
@@ -364,6 +436,10 @@ export function CategoryTree({ className }: CategoryTreeProps) {
   const [newCategoryName, setNewCategoryName] = useState("");
   const [actionHistory, setActionHistory] = useState<CategoryAction[]>([]);
   const { toast } = useToast();
+  const [isHistoryExpanded, setIsHistoryExpanded] = useState(false);
+  const [dateFilter, setDateFilter] = useState<Date>();
+  const [categoryFilter, setCategoryFilter] = useState<string>("");
+  const [showFilters, setShowFilters] = useState(false);
 
   /** DnD sensors */
   const sensors = useSensors(
@@ -374,7 +450,7 @@ export function CategoryTree({ className }: CategoryTreeProps) {
 
   /** Flatten & rebuild approach (with memoization) */
   const flattenTree = useCallback(
-    (list: TreeItem[], parentId: string | null = null): TreeItem[] => {
+    (list: TreeItem[], parentId: string | undefined = undefined): TreeItem[] => {
       return list.reduce<TreeItem[]>((acc, item) => {
         const copy = { ...item, parentId };
         return [...acc, copy, ...flattenTree(item.children, item.id)];
@@ -451,6 +527,30 @@ export function CategoryTree({ className }: CategoryTreeProps) {
     []
   );
 
+  /** Filter history items */
+  const filteredHistory = useMemo(() => {
+    return actionHistory.filter(action => {
+      // Date filter
+      if (dateFilter) {
+        const actionDate = new Date(action.timestamp);
+        if (
+          actionDate.getDate() !== dateFilter.getDate() ||
+          actionDate.getMonth() !== dateFilter.getMonth() ||
+          actionDate.getFullYear() !== dateFilter.getFullYear()
+        ) {
+          return false;
+        }
+      }
+
+      // Category filter
+      if (categoryFilter && action.category.id !== categoryFilter) {
+        return false;
+      }
+
+      return true;
+    });
+  }, [actionHistory, dateFilter, categoryFilter]);
+
   /** API calls */
   const saveCategories = useCallback(
     async (newItems: TreeItem[]) => {
@@ -478,11 +578,15 @@ export function CategoryTree({ className }: CategoryTreeProps) {
   );
 
   const addToHistory = useCallback(
-    async (action: Omit<CategoryAction, "id" | "timestamp">) => {
+    async (action: Omit<CategoryAction, "id" | "timestamp" | "user">) => {
       const newAction = {
         ...action,
         id: crypto.randomUUID(),
-        timestamp: new Date(),
+        timestamp: new Date().toISOString(),
+        user: {
+          id: "u_01HNK2E8YRJX9QWM5390VEXZK4", // This should be replaced with actual user ID
+          name: "Sydney Fernandes"
+        }
       };
 
       // Update local state first for immediate feedback
@@ -678,6 +782,7 @@ export function CategoryTree({ className }: CategoryTreeProps) {
     let moveDescription = "";
     let insertIndex = overIndex;
     let newParentId = tgt.parentId;
+    let action: CategoryAction["action"] = "ORDER_CHANGED";
 
     switch (type) {
       case "before":
@@ -701,10 +806,11 @@ export function CategoryTree({ className }: CategoryTreeProps) {
         insertIndex = lastChildIndex === -1 ? overIndex + 1 : lastChildIndex + 1;
         newParentId = tgt.id;
         moveDescription = `Made "${src.name}" a child of "${tgt.name}"`;
+        action = "SUBCATEGORY_MOVED";
         break;
 
       case "root":
-        newParentId = null;
+        newParentId = undefined;
         const rootItems = newFlat.filter((x) => !x.parentId);
         const lastRootIndex =
           rootItems.length > 0
@@ -718,15 +824,62 @@ export function CategoryTree({ className }: CategoryTreeProps) {
     }
 
     // Insert updated item
-    newFlat.splice(insertIndex, 0, { ...src, parentId: newParentId });
+    const updatedSrc = { ...src, parentId: newParentId };
+    newFlat.splice(insertIndex, 0, updatedSrc);
 
     // Rebuild and update
     const newTree = buildTree(newFlat);
     setItems(newTree);
     saveCategories(newTree);
+
+    const previousParent = src.parentId ? flatItemsMap.get(src.parentId) : undefined;
+    const newParent = newParentId ? flatItemsMap.get(newParentId) : undefined;
+
     addToHistory({
-      action: "moved",
-      details: moveDescription,
+      action,
+      details: {
+        message: moveDescription,
+        affectedCategories: {
+          target: {
+            id: src.id,
+            name: src.name,
+            path: src.parentId ? `/${src.name.toLowerCase()}` : undefined
+          },
+          ...(previousParent && {
+            previousParent: {
+              id: previousParent.id,
+              name: previousParent.name
+            }
+          }),
+          ...(newParent && {
+            newParent: {
+              id: newParent.id,
+              name: newParent.name
+            }
+          })
+        }
+      },
+      category: {
+        id: src.id,
+        name: src.name,
+        path: src.parentId ? `/${src.name.toLowerCase()}` : undefined,
+        metadata: {
+          updatedAt: new Date().toISOString(),
+          status: "active"
+        }
+      },
+      changes: {
+        previousState: {
+          parentId: src.parentId,
+          position: overIndex,
+          path: previousParent ? `/${previousParent.name.toLowerCase()}/${src.name.toLowerCase()}` : undefined
+        },
+        newState: {
+          parentId: newParentId,
+          position: insertIndex,
+          path: newParent ? `/${newParent.name.toLowerCase()}/${src.name.toLowerCase()}` : undefined
+        }
+      }
     });
     resetDrag();
   }
@@ -753,7 +906,7 @@ export function CategoryTree({ className }: CategoryTreeProps) {
       id: crypto.randomUUID(),
       name: newCategoryName.trim(),
       children: [],
-      parentId: null,
+      parentId: undefined,
     };
 
     const updated = [...items, newCat];
@@ -761,8 +914,27 @@ export function CategoryTree({ className }: CategoryTreeProps) {
     saveCategories(updated);
     setNewCategoryName("");
     addToHistory({
-      action: "created",
-      details: `Created category "${newCat.name}"`,
+      action: "CATEGORY_CREATED",
+      details: {
+        message: `Created category "${newCat.name}"`,
+        affectedCategories: {
+          target: {
+            id: newCat.id,
+            name: newCat.name,
+            path: `/${newCat.name.toLowerCase()}`
+          }
+        }
+      },
+      category: {
+        id: newCat.id,
+        name: newCat.name,
+        path: `/${newCat.name.toLowerCase()}`,
+        metadata: {
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+          status: "active"
+        }
+      }
     });
   };
 
@@ -791,9 +963,38 @@ export function CategoryTree({ className }: CategoryTreeProps) {
 
         // Persist changes
         await saveCategories(newTree);
-        await addToHistory({
-          action: "deleted",
-          details: `Deleted category "${itemToDelete.name}" and its subcategories`,
+        addToHistory({
+          action: childrenIds.size > 1 ? "SUBCATEGORY_REMOVED" : "CATEGORY_REMOVED",
+          details: {
+            message: `${childrenIds.size > 1 ? 'Category and subcategories' : 'Category'} removed: "${itemToDelete.name}"`,
+            affectedCategories: {
+              target: {
+                id: itemToDelete.id,
+                name: itemToDelete.name,
+                path: itemToDelete.parentId ? `/${itemToDelete.name.toLowerCase()}` : undefined
+              }
+            }
+          },
+          category: {
+            id: itemToDelete.id,
+            name: itemToDelete.name,
+            path: itemToDelete.parentId ? `/${itemToDelete.name.toLowerCase()}` : undefined,
+            metadata: {
+              createdAt: itemToDelete.metadata?.createdAt || new Date().toISOString(), // Preserve original createdAt if it exists
+              updatedAt: new Date().toISOString(),
+              deletedAt: new Date().toISOString(),
+              status: "inactive"
+            }
+          },
+          changes: {
+            previousState: {
+              parentId: itemToDelete.parentId || undefined,
+              status: "active"
+            },
+            newState: {
+              status: "inactive"
+            }
+          }
         });
       } catch (err) {
         console.error("Failed to delete category:", err);
@@ -814,129 +1015,109 @@ export function CategoryTree({ className }: CategoryTreeProps) {
   );
 
   return (
-    <div className={cn("p-4", className)}>
-      {/* Header & Add New Category */}
-      <div className="flex items-center justify-between mb-4">
-        <h2 className="text-2xl font-bold">Categories</h2>
-        <div className="flex items-center gap-2">
-          <Input
-            value={newCategoryName}
-            onChange={(e) => setNewCategoryName(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && handleAddCategory()}
-            placeholder="Add new category"
-            className="h-9"
-          />
-          <Button variant="default" size="default" onClick={handleAddCategory}>
-            <CirclePlus className="h-5 w-5" />
-          </Button>
+    <div className={cn("flex gap-6", className)}>
+      {/* Main Content */}
+      <div className="flex-1 p-4">
+        {/* Header & Add New Category */}
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-2xl font-bold">Categories</h2>
+          <div className="flex items-center gap-2">
+            <Input
+              value={newCategoryName}
+              onChange={(e) => setNewCategoryName(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && handleAddCategory()}
+              placeholder="Add new category"
+              className="h-9"
+            />
+            <Button variant="default" size="default" onClick={handleAddCategory}>
+              <CirclePlus className="h-5 w-5" />
+            </Button>
+          </div>
         </div>
-      </div>
 
-      {/* Main Layout */}
-      <div className="flex gap-6">
         {/* Category Tree */}
-        <div className="flex-1">
-          <DndContext
-            sensors={sensors}
-            onDragStart={handleDragStart}
-            onDragMove={handleDragMove}
-            onDragOver={handleDragOver}
-            onDragEnd={handleDragEnd}
-            measuring={{ droppable: { strategy: MeasuringStrategy.Always } }}
-          >
-            <div className="flex flex-col gap-2">
-              {items.map((item) => (
-                <CategoryTreeItem
-                  key={item.id}
-                  item={item}
-                  depth={0}
-                  activeId={activeId}
-                  overId={overId}
-                  currentPosition={currentPosition}
-                  onDelete={handleDelete}
-                  onRename={async (id: string, newName: string) => {
-                    const oldItem = items.find((x) => x.id === id);
-                    if (!oldItem) return;
+        <DndContext
+          sensors={sensors}
+          onDragStart={handleDragStart}
+          onDragMove={handleDragMove}
+          onDragOver={handleDragOver}
+          onDragEnd={handleDragEnd}
+          measuring={{ droppable: { strategy: MeasuringStrategy.Always } }}
+        >
+          <div className="flex flex-col gap-2">
+            {items.map((item) => (
+              <CategoryTreeItem
+                key={item.id}
+                item={item}
+                depth={0}
+                activeId={activeId}
+                overId={overId}
+                currentPosition={currentPosition}
+                onDelete={handleDelete}
+                onRename={async (id: string, newName: string) => {
+                  const oldItem = items.find((x) => x.id === id);
+                  if (!oldItem) return;
 
-                    const newArr = items.map((x) =>
-                      x.id === id ? { ...x, name: newName } : x
-                    );
-                    setItems(newArr);
+                  const newArr = items.map((x) =>
+                    x.id === id ? { ...x, name: newName } : x
+                  );
+                  setItems(newArr);
 
-                    await saveCategories(newArr);
-                    addToHistory({
-                      action: "edited",
-                      details: `Renamed "${oldItem.name}" to "${newName}"`,
-                    });
-                  }}
-                />
-              ))}
-            </div>
+                  await saveCategories(newArr);
+                  addToHistory({
+                    action: "CATEGORY_RENAMED",
+                    details: {
+                      message: `Renamed "${oldItem.name}" to "${newName}"`,
+                      affectedCategories: {
+                        target: {
+                          id: oldItem.id,
+                          name: newName,
+                          path: oldItem.parentId ? `/${newName.toLowerCase()}` : undefined
+                        }
+                      }
+                    },
+                    category: {
+                      id: oldItem.id,
+                      name: newName,
+                      path: oldItem.parentId ? `/${newName.toLowerCase()}` : undefined,
+                      metadata: {
+                        updatedAt: new Date().toISOString(),
+                        status: "active"
+                      }
+                    },
+                    changes: {
+                      previousState: {
+                        path: oldItem.parentId ? `/${oldItem.name.toLowerCase()}` : undefined
+                      },
+                      newState: {
+                        path: oldItem.parentId ? `/${newName.toLowerCase()}` : undefined
+                      }
+                    }
+                  });
+                }}
+              />
+            ))}
+          </div>
 
-            {/* Drag Overlay */}
-            <DragOverlay dropAnimation={defaultDropAnimation}>
-              {activeId && (
-                <div className="bg-background border rounded-md p-2 opacity-80">
-                  {items.find((it) => it.id === activeId)?.name}
-                </div>
-              )}
-            </DragOverlay>
-          </DndContext>
-        </div>
-
-        {/* Sidebar Stats & History */}
-        <div className="w-80 flex flex-col gap-4">
-          <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-sm font-medium">
-                Number of Categories
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">{items.length}</div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-sm font-medium">
-                Number of Subcategories
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">
-                {countSubcategories(items)}
+          {/* Drag Overlay */}
+          <DragOverlay dropAnimation={defaultDropAnimation}>
+            {activeId && (
+              <div className="bg-background border rounded-md p-2 opacity-80">
+                {items.find((it) => it.id === activeId)?.name}
               </div>
-            </CardContent>
-          </Card>
-
-          <Card className="flex-1">
-            <CardHeader className="pb-2">
-              <CardTitle className="text-sm font-medium">
-                History of Changes
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="max-h-[300px] overflow-y-auto">
-              <div className="space-y-2">
-                {actionHistory.map((action) => (
-                  <div key={action.id} className="text-sm">
-                    <div className="flex items-center justify-between text-muted-foreground">
-                      <span>{action.action}</span>
-                      <span>
-                        {new Date(action.timestamp).toLocaleTimeString()}
-                      </span>
-                    </div>
-                    <p>{action.details}</p>
-                  </div>
-                ))}
-                {actionHistory.length === 0 && (
-                  <p className="text-sm text-muted-foreground">No changes yet</p>
-                )}
-              </div>
-            </CardContent>
-          </Card>
-        </div>
+            )}
+          </DragOverlay>
+        </DndContext>
       </div>
+
+      {/* Sidebar */}
+      <CategorySidebar
+        items={items}
+        actionHistory={actionHistory}
+        isHistoryExpanded={isHistoryExpanded}
+        onHistoryExpandToggle={() => setIsHistoryExpanded(!isHistoryExpanded)}
+        countSubcategories={countSubcategories}
+      />
     </div>
   );
 }
@@ -946,7 +1127,7 @@ export function CategoryTree({ className }: CategoryTreeProps) {
  */
 export default function CategoriesPage() {
   return (
-    <div className="container mx-auto py-8">
+    <div className="min-h-screen">
       <CategoryTree />
     </div>
   );

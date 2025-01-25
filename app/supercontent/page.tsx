@@ -4,8 +4,7 @@ import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CategoryTree } from '@/components/category-tree';
-import { SidebarInset, SidebarTrigger } from "@/components/ui/sidebar";
+import { CategoryTree } from '@/app/categories/page';
 import {
   Table,
   TableBody,
@@ -14,6 +13,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
+import { ContentHeader } from '@/components/ui/content-header';
 
 // Product Structure Component
 function ProductStructure() {
@@ -98,34 +98,34 @@ function Overview() {
 // Main Content Manager Component
 export default function ContentManager() {
   return (
-    <SidebarInset>
-      <header className="flex h-16 items-center border-b px-6">
-        <div className="flex items-center gap-4">
-          <SidebarTrigger />
-          <h1 className="text-xl font-semibold">Content Manager</h1>
-        </div>
-      </header>
-      <main className="flex-1 space-y-4 p-8 pt-6">
-        <Tabs defaultValue="overview" className="w-full space-y-6">
-          <TabsList>
-            <TabsTrigger value="overview">Overview</TabsTrigger>
-            <TabsTrigger value="categories">Categories</TabsTrigger>
-            <TabsTrigger value="product-structure">Product Structure</TabsTrigger>
-          </TabsList>
-          
-          <TabsContent value="overview">
-            <Overview />
-          </TabsContent>
-          
-          <TabsContent value="categories">
-            <CategoryTree />
-          </TabsContent>
-          
-          <TabsContent value="product-structure">
-            <ProductStructure />
-          </TabsContent>
-        </Tabs>
-      </main>
-    </SidebarInset>
+    <div className="flex min-h-screen">
+      {/* Main Content */}
+      <div className="flex-1">
+        <ContentHeader title="Content Manager" />
+        <main className="flex-1 space-y-4 p-8 pt-6">
+          <Tabs defaultValue="overview" className="w-full space-y-6">
+            <TabsList>
+              <TabsTrigger value="overview">Overview</TabsTrigger>
+              <TabsTrigger value="categories">Categories</TabsTrigger>
+              <TabsTrigger value="product-structure">Product Structure</TabsTrigger>
+            </TabsList>
+            
+            <TabsContent value="overview">
+              <Overview />
+            </TabsContent>
+            
+            <TabsContent value="categories">
+              <CategoryTree />
+            </TabsContent>
+            
+            <TabsContent value="product-structure">
+              <ProductStructure />
+            </TabsContent>
+          </Tabs>
+        </main>
+      </div>
+
+      
+    </div>
   );
 } 

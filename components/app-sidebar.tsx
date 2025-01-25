@@ -34,14 +34,17 @@ const data = {
     {
       name: "Super Admin",
       logo: GalleryVerticalEnd,
+      plan: "pro"
     },
     {
       name: "Super Products",
       logo: AudioWaveform,
+      plan: "basic"
     },
     {
       name: "Super Collect",
       logo: Command,
+      plan: "basic"
     },
   ],
   navMain: [
@@ -157,7 +160,7 @@ const data = {
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar collapsible="icon" {...props}>
+    <Sidebar collapsible="icon" {...props}  side="left">
       <SidebarHeader>
         <TeamSwitcher teams={data.teams} />
       </SidebarHeader>

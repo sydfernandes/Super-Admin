@@ -1,1150 +1,771 @@
 {
   "history": [
     {
-      "action": "moved",
-      "details": "Moved \"w\" before \"d\" (depth: 4)",
-      "id": "a46212a1-e89d-41f9-b75a-73b7c6928a70",
-      "timestamp": "2025-01-25T17:17:58.702Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"w\" before \"7\" (depth: 4)",
-      "id": "13836cdd-660e-4066-af2b-88ea2b6b1491",
-      "timestamp": "2025-01-25T17:17:55.970Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"w\" before \"666\" (depth: 4)",
-      "id": "e1bf0dd7-a11f-438e-bbb6-60e9c0f40290",
-      "timestamp": "2025-01-25T17:17:53.974Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"666\" before \"w\" (depth: 4)",
-      "id": "2d77373b-44b9-40a3-9c1c-c1324617aec2",
-      "timestamp": "2025-01-25T17:17:51.124Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"666\" after \"w\" (depth: 3)",
-      "id": "870836a0-3d08-468d-adcb-ed3b02e43a63",
-      "timestamp": "2025-01-25T17:17:48.053Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"666\" after \"w\" (depth: 2)",
-      "id": "e24ed7d3-ebc2-42c3-9366-e95dc461b2c9",
-      "timestamp": "2025-01-25T17:17:46.383Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"666\" after \"w\" (depth: 1)",
-      "id": "37817458-6989-414a-92d6-405f959e16bb",
-      "timestamp": "2025-01-25T17:17:44.609Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"666\" after \"d\" (depth: 4)",
-      "id": "987defc5-4847-4018-92a7-66417da5bc3a",
-      "timestamp": "2025-01-25T17:17:42.837Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"666\" after \"1\" (depth: 4)",
-      "id": "50f8be0a-1934-4896-9360-c24c8fdcc571",
-      "timestamp": "2025-01-25T17:17:41.439Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"666\" before \"1\" (depth: 4)",
-      "id": "4407ccae-b653-477f-abac-350800129d42",
-      "timestamp": "2025-01-25T17:17:39.271Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"666\" after \"7\" (depth: 4)",
-      "id": "06119507-e4b0-4aec-b423-41f00982480c",
-      "timestamp": "2025-01-25T17:17:33.886Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"w\" before \"666\" (depth: 4)",
-      "id": "af037d33-792b-47f3-a373-40e66547826e",
-      "timestamp": "2025-01-25T17:17:30.598Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"w\" to root level",
-      "id": "e8711b03-31b0-4a2a-b50f-68c800a7b331",
-      "timestamp": "2025-01-25T17:17:08.773Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"w\" after \"d\"",
-      "id": "3a592cb4-8797-40a1-a651-ceed8fa67774",
-      "timestamp": "2025-01-25T17:17:06.969Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"w\" after \"1\"",
-      "id": "3b30f766-d09c-4fce-b8a9-6356b898ed6f",
-      "timestamp": "2025-01-25T17:17:04.570Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"666\" before \"w\"",
-      "id": "ef60d5c0-358a-4f9a-b467-f32ba5f45aa4",
-      "timestamp": "2025-01-25T17:17:02.371Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"666\" a child of \"7\"",
-      "id": "6258213c-ed96-42bb-b5fc-08d99071536a",
-      "timestamp": "2025-01-25T17:16:52.624Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"666\" a child of \"1\"",
-      "id": "88b38452-ae35-47ba-a119-13621a0bceac",
-      "timestamp": "2025-01-25T17:16:49.241Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"666\" a child of \"7\"",
-      "id": "d071b66a-8b12-41bb-8882-c60bbce6c813",
-      "timestamp": "2025-01-25T17:16:46.509Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"666\"",
-      "id": "88c42e8a-63ae-417e-b6c4-bb88f8c47879",
-      "timestamp": "2025-01-25T17:16:41.597Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"w\" a child of \"7\"",
-      "id": "be5c4043-614b-4554-8622-dcec65c6b826",
-      "timestamp": "2025-01-25T17:16:07.896Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"w\" after \"7\"",
-      "id": "ddeec16f-afdd-422e-9ce5-3769cb158a3c",
-      "timestamp": "2025-01-25T17:16:05.434Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"w\" after \"1\" (depth: 4)",
-      "id": "b84c641e-809c-4752-b318-d2dd49d9f3f6",
-      "timestamp": "2025-01-25T17:15:57.093Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"w\" after \"7\" (depth: 0)",
-      "id": "bd7b8edb-96e5-472b-ae02-7d624dd2b153",
-      "timestamp": "2025-01-25T17:15:54.852Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"w\" after \"1\" (depth: 4)",
-      "id": "32fa311c-f50c-439d-ac1c-d4252780aed1",
-      "timestamp": "2025-01-25T17:15:53.158Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"w\" before \"d\" (depth: 4)",
-      "id": "6baf9977-3c58-418a-9f2e-729c66f2446a",
-      "timestamp": "2025-01-25T17:15:51.029Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"w\" a child of \"1\"",
-      "id": "1052577e-808b-4bc9-a5cc-d992f6814779",
-      "timestamp": "2025-01-25T17:11:22.231Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"w\" before \"1\"",
-      "id": "a39121ad-3a0c-4fc2-a4fe-48a6ecf6bd42",
-      "timestamp": "2025-01-25T17:11:18.819Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"w\" a child of \"1\"",
-      "id": "8af1acfe-05fa-4030-a462-9f730b075127",
-      "timestamp": "2025-01-25T17:11:14.716Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"w\" to root level",
-      "id": "de06e33a-8d89-4d0f-bbda-066122714926",
-      "timestamp": "2025-01-25T17:11:10.751Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"w\" a child of \"7\"",
-      "id": "d0ae81f6-6c29-4149-ba02-e7dc848978d7",
-      "timestamp": "2025-01-25T17:11:05.869Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"w\" after \"2\"",
-      "id": "a06f055b-6d14-4972-a821-32e23813f14f",
-      "timestamp": "2025-01-25T17:11:02.847Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"w\" after \"d\"",
-      "id": "aa2efef1-c0ce-4bf6-8ba3-25e6403fcc2a",
-      "timestamp": "2025-01-25T17:11:00.435Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"w\" after \"1\"",
-      "id": "de534e2e-df95-49ec-b2e5-5f00bc9be71f",
-      "timestamp": "2025-01-25T17:10:57.842Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"w\" after \"7\"",
-      "id": "e7d155b3-7630-43cb-926b-af51f96e1202",
-      "timestamp": "2025-01-25T17:10:56.064Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"w\" a child of \"7\"",
-      "id": "61fc0e2d-0367-4b24-8134-b925bd71f0f8",
-      "timestamp": "2025-01-25T17:10:53.684Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"7\" a child of \"1\"",
-      "id": "724be886-9b41-4594-83aa-632874d61ced",
-      "timestamp": "2025-01-25T17:10:34.420Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"7\" to root level",
-      "id": "cd68cd4e-c76e-430b-985c-5c1d62e3bbb0",
-      "timestamp": "2025-01-25T17:10:29.345Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"w\" after \"1\"",
-      "id": "708cd21c-e3e6-4e07-b2ab-5f0e6b380dda",
-      "timestamp": "2025-01-25T17:10:22.446Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"7\" after \"1\"",
-      "id": "de5b5ab8-65ca-46ab-9b69-2a518d672aff",
-      "timestamp": "2025-01-25T17:09:34.673Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"1\" a child of \"d\"",
-      "id": "3745cd98-77f8-4dca-ab74-71b3ace211e2",
-      "timestamp": "2025-01-25T17:09:29.907Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"d\" after \"7\"",
-      "id": "ada9cee0-b0ab-4ac7-9f65-5d0c5af93b24",
-      "timestamp": "2025-01-25T17:08:08.630Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"w\" after \"7\"",
-      "id": "f6d535c4-4a72-440f-9818-40742d90a973",
-      "timestamp": "2025-01-25T17:08:04.180Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"1\" after \"2\"",
-      "id": "2d03ffb9-63ee-47b3-900c-cc4a53da4621",
-      "timestamp": "2025-01-25T17:07:46.758Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"w\" after \"d\"",
-      "id": "fe1396f1-ff6a-408c-9997-8b055d09056c",
-      "timestamp": "2025-01-25T17:07:18.917Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"d\" before \"w\"",
-      "id": "bdece31d-ff42-4277-8c25-1f8cc2512673",
-      "timestamp": "2025-01-25T17:07:13.044Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"1\" after \"7\"",
-      "id": "fcf1895d-5e75-4df7-a023-5d3f7bfc0c36",
-      "timestamp": "2025-01-25T17:07:07.795Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"2\" before \"1\"",
-      "id": "4c329d79-aa13-4ce0-b22d-89971d5bc05c",
-      "timestamp": "2025-01-25T17:07:04.941Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"d\" before \"7\"",
-      "id": "557e6099-3f6d-4cc2-993e-029da7863aac",
-      "timestamp": "2025-01-25T17:07:02.812Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"7\" after \"d\"",
-      "id": "c16e941e-e5da-403c-ac1c-c9e8c9e89a1c",
-      "timestamp": "2025-01-25T17:07:00.414Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"7\" a child of \"2\"",
-      "id": "10e8c5dd-a720-4f20-b4b7-4887dc96f13e",
-      "timestamp": "2025-01-25T17:06:55.039Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"7\" after \"1\"",
-      "id": "82999098-4508-49df-8f52-02875e5398d1",
-      "timestamp": "2025-01-25T17:06:40.570Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"2\" a child of \"w\"",
-      "id": "f8bd5a27-319b-47e6-8e71-ef3e02548b76",
-      "timestamp": "2025-01-25T17:06:35.422Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"1\" to root level",
-      "id": "839e9cfc-537b-4a8c-a52e-c28cea02a2fa",
-      "timestamp": "2025-01-25T17:06:30.108Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"w\" before \"7\"",
-      "id": "e56c3333-eaea-4b0e-b805-09ca9d1019b4",
-      "timestamp": "2025-01-25T17:06:24.592Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"w\" after \"7\"",
-      "id": "15da53eb-a5f1-49ae-8166-42a26771acde",
-      "timestamp": "2025-01-25T17:05:39.499Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"7\" before \"w\"",
-      "id": "74c8bb1c-815a-40c9-9b21-2dbc6c80f30d",
-      "timestamp": "2025-01-25T17:05:31.646Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"w\" a child of \"1\"",
-      "id": "20f2ba21-918b-4787-86dc-243a25e57afd",
-      "timestamp": "2025-01-25T17:05:28.366Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"7\" before \"w\"",
-      "id": "9e1f49cd-9e5b-4282-ba34-719545d37c9e",
-      "timestamp": "2025-01-25T17:05:24.674Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"7\" after \"1\"",
-      "id": "437c472f-3bad-4e68-8e42-feea85ba3ef8",
-      "timestamp": "2025-01-25T17:05:19.901Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"7\" after \"d\"",
-      "id": "8afe7c48-d063-4647-801d-ade0ed5b53d5",
-      "timestamp": "2025-01-25T17:05:18.151Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"1\" a child of \"d\"",
-      "id": "3b5865b5-6dc7-42f8-bfc6-4fca4b32aa1f",
-      "timestamp": "2025-01-25T17:01:48.142Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"d\" before \"7\"",
-      "id": "e5d0b83d-763b-468b-99be-4bab6f03ff6c",
-      "timestamp": "2025-01-25T17:01:44.371Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"d\" before \"w\"",
-      "id": "285e67e5-cba8-45f7-8fd1-f202c18f36ef",
-      "timestamp": "2025-01-25T17:01:38.168Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"d\" after \"7\"",
-      "id": "f69f8822-288e-4cd9-928a-b58daccee316",
-      "timestamp": "2025-01-25T17:01:32.920Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"w\" after \"2\"",
-      "id": "0819c1fe-62c3-4809-8b9a-d1042b9464ee",
-      "timestamp": "2025-01-25T17:01:27.542Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"d\" a child of \"7\"",
-      "id": "3f0279ec-7f0a-443f-a115-25e888273f1b",
-      "timestamp": "2025-01-25T16:59:44.964Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"w\" a child of \"7\"",
-      "id": "1a812b25-7e5b-4c47-8f04-b60cb76b6b0d",
-      "timestamp": "2025-01-25T16:59:31.874Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"d\" after \"2\"",
-      "id": "014027a4-bc92-4230-b91b-ed362d3e7179",
-      "timestamp": "2025-01-25T16:59:27.203Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"d\" after \"7\"",
-      "id": "cc88e735-9288-44b3-9351-5ff5d66305a7",
-      "timestamp": "2025-01-25T16:59:23.235Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"d\" before \"7\"",
-      "id": "b09f1ceb-138c-49bf-b490-d6c2b4de9ecd",
-      "timestamp": "2025-01-25T16:59:20.085Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"7\" a child of \"2\"",
-      "id": "b60cb95e-864f-4ea7-a5c0-2e0d4689e92a",
-      "timestamp": "2025-01-25T16:54:03.153Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"7\" before \"d\"",
-      "id": "d7bbbf4b-12fa-4824-b05b-c1a8843e878d",
-      "timestamp": "2025-01-25T16:53:55.030Z"
-    },
-    {
-      "action": "deleted",
-      "details": "Deleted category \"3\" and its subcategories",
-      "id": "32b853de-55a5-49f2-84b5-ff8ddc4c733c",
-      "timestamp": "2025-01-25T16:53:51.181Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"r\" a child of \"f\"",
-      "id": "b1ae6f2a-03e0-432e-8b7f-d088d2351bd5",
-      "timestamp": "2025-01-25T16:53:48.284Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"r\" after \"3\"",
-      "id": "59037f0d-095b-42cb-b7f8-fb5fbd8093c6",
-      "timestamp": "2025-01-25T16:53:44.235Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"f\" after \"4\"",
-      "id": "5c71863a-cd5a-44b4-96aa-157d7e1b331c",
-      "timestamp": "2025-01-25T16:53:41.596Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"c\" a child of \"4\"",
-      "id": "fa6b2ad4-43a3-455d-85d2-d589d046add5",
-      "timestamp": "2025-01-25T16:53:39.489Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"4\" a child of \"3\"",
-      "id": "27130b28-be69-4a2d-b86f-3b11366e8e0f",
-      "timestamp": "2025-01-25T16:53:36.093Z"
-    },
-    {
-      "action": "deleted",
-      "details": "Deleted category \"5\" and its subcategories",
-      "id": "a433bdad-ad0c-4b10-9050-97a176104be5",
-      "timestamp": "2025-01-25T16:52:40.666Z"
-    },
-    {
-      "action": "deleted",
-      "details": "Deleted category \"s\" and its subcategories",
-      "id": "e2b85635-fb0b-4934-8854-42224a3d1715",
-      "timestamp": "2025-01-25T16:52:40.489Z"
-    },
-    {
-      "action": "deleted",
-      "details": "Deleted category \"g\" and its subcategories",
-      "id": "439fa9af-f750-4450-8981-36a725d0a455",
-      "timestamp": "2025-01-25T16:52:40.236Z"
-    },
-    {
-      "action": "deleted",
-      "details": "Deleted category \"v\" and its subcategories",
-      "id": "02c1a6c5-fc30-4b63-ad0c-a4f881ca788f",
-      "timestamp": "2025-01-25T16:52:40.110Z"
-    },
-    {
-      "action": "deleted",
-      "details": "Deleted category \"6\" and its subcategories",
-      "id": "22886455-d013-48d2-83e6-57a4f556b005",
-      "timestamp": "2025-01-25T16:52:38.827Z"
-    },
-    {
-      "action": "deleted",
-      "details": "Deleted category \"q\" and its subcategories",
-      "id": "b20aac58-61de-403c-9f42-078da65e3b06",
-      "timestamp": "2025-01-25T16:52:37.929Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"v\" before \"c\"",
-      "id": "866ad35d-393b-4cb8-83f1-402067bda009",
-      "timestamp": "2025-01-25T16:52:36.320Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"w\" to root level",
-      "id": "a5b3c39a-025f-4040-b7b4-32779d82946a",
-      "timestamp": "2025-01-25T16:52:35.024Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"d\" to root level",
-      "id": "da769cd8-7f04-465e-8e91-53b4f0bdd429",
-      "timestamp": "2025-01-25T16:52:33.389Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"q\" before \"v\"",
-      "id": "181ef77b-4ddd-4fbf-a6d0-75da19e97211",
-      "timestamp": "2025-01-25T16:52:31.466Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"7\" to root level",
-      "id": "39091b37-b59e-4a80-9fc7-5f6b00841b5f",
-      "timestamp": "2025-01-25T16:52:29.297Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"r\" to root level",
-      "id": "e7a2f9b1-1c7b-4b4b-a6bd-362f88051e8a",
-      "timestamp": "2025-01-25T16:52:26.541Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"f\" to root level",
-      "id": "27f423f8-1302-4853-9c57-7f0db9ffe81a",
-      "timestamp": "2025-01-25T16:52:23.675Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"f\" after \"7\"",
-      "id": "bf72888d-e1aa-4c31-bcd7-a407ad76ee6b",
-      "timestamp": "2025-01-25T16:52:21.594Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"d\" a child of \"6\"",
-      "id": "928f74fd-7165-4f74-a118-dbe39a2d6497",
-      "timestamp": "2025-01-25T16:45:03.129Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"r\" before \"d\"",
-      "id": "e19ca9df-5344-4278-9a8f-f6d0c4d0b215",
-      "timestamp": "2025-01-25T16:45:00.511Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"r\" a child of \"d\"",
-      "id": "3ab6ca6e-19f4-49ed-9320-7340cec1af3c",
-      "timestamp": "2025-01-25T16:44:48.829Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"d\" to same level as \"7\"",
-      "id": "0956bc01-94cc-4fce-af47-e2b3ba504498",
-      "timestamp": "2025-01-25T16:40:28.032Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"d\" to same level as \"v\"",
-      "id": "2c63bf37-4603-415a-b44a-266297521664",
-      "timestamp": "2025-01-25T16:40:25.738Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"d\" to same level as \"q\"",
-      "id": "888c98d0-4587-48fe-8c14-f0ee59dd0a89",
-      "timestamp": "2025-01-25T16:40:22.785Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"d\" after \"v\"",
-      "id": "ced23cf0-61b6-4dc5-ab59-d601681fa18b",
-      "timestamp": "2025-01-25T16:40:14.528Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"v\" after \"r\"",
-      "id": "2cfe7095-14aa-4f8f-b02b-079fb9c209a5",
-      "timestamp": "2025-01-25T16:40:11.513Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"f\" after \"d\"",
-      "id": "30a0c2d1-11fb-4f01-9242-08631a2cc274",
-      "timestamp": "2025-01-25T16:40:09.925Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"q\" after \"d\"",
-      "id": "7ab0242b-ccaa-408c-ada6-8419d69d3823",
-      "timestamp": "2025-01-25T16:40:08.093Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"q\" a child of \"v\"",
-      "id": "47ac8cb4-5fb4-4f79-b640-20f7ea805971",
-      "timestamp": "2025-01-25T16:40:00.852Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"q\" after \"6\"",
-      "id": "969831d9-7694-40e2-990d-3bd35f8d9a9f",
-      "timestamp": "2025-01-25T16:39:56.997Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"c\" after \"6\"",
-      "id": "3298dd80-124e-42e4-9ad1-5946fb00cf84",
-      "timestamp": "2025-01-25T16:39:54.693Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"q\" after \"7\"",
-      "id": "eea0259c-969a-4b64-9555-27faa0be1c59",
-      "timestamp": "2025-01-25T16:39:52.670Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"c\" before \"q\"",
-      "id": "f6dc61df-bc91-4a20-b1e3-8e7dbf362fb2",
-      "timestamp": "2025-01-25T16:39:51.174Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"c\" to same level as \"q\"",
-      "id": "c2f59241-879a-4c31-8dcb-5d9e90a2b82a",
-      "timestamp": "2025-01-25T16:39:48.004Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"r\" after \"7\"",
-      "id": "8a914517-7ee9-4204-9a9e-0f6ddd4bf520",
-      "timestamp": "2025-01-25T16:39:43.289Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"r\" after \"7\"",
-      "id": "5b5afcb9-3bc5-4f71-ac0c-51fdf7413a37",
-      "timestamp": "2025-01-25T16:39:39.033Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"q\" before \"c\"",
-      "id": "f42689b6-bd50-4d1f-a738-36cee72887fb",
-      "timestamp": "2025-01-25T16:39:34.625Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"q\" after \"c\"",
-      "id": "481cfd46-ad21-4ce2-9be5-32e0ae1c4ef7",
-      "timestamp": "2025-01-25T16:39:32.054Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"q\" after \"c\"",
-      "id": "1ccb6e3e-5951-4902-bd3e-5b515b4cc6fe",
-      "timestamp": "2025-01-25T16:39:28.414Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"7\" before \"r\"",
-      "id": "fe430edd-2c62-4343-888c-bf76827bf644",
-      "timestamp": "2025-01-25T16:39:24.376Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"7\" before \"r\"",
-      "id": "14687fcc-bb53-4dc1-8937-ff5fdd9eb57e",
-      "timestamp": "2025-01-25T16:39:21.359Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"7\" after \"6\"",
-      "id": "5dd8f451-1ee3-4844-99b8-d54db3dde35b",
-      "timestamp": "2025-01-25T16:39:18.545Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"g\" after \"s\"",
-      "id": "6499282c-6d37-42f9-886f-42093e1cfa28",
-      "timestamp": "2025-01-25T16:37:49.751Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"g\" a child of \"s\"",
-      "id": "1c91c506-d954-4ccb-bd4a-34695298e071",
-      "timestamp": "2025-01-25T16:37:42.317Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"s\" a child of \"5\"",
-      "id": "df95a58a-6456-4afa-9c6a-eba79081bc23",
-      "timestamp": "2025-01-25T16:37:37.094Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"s\" after \"5\"",
-      "id": "33d7a2cd-c658-43f8-ba97-bd14fc5734ac",
-      "timestamp": "2025-01-25T16:37:33.187Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"c\" before \"s\"",
-      "id": "d79e336e-0235-40ff-8e14-37f9812f2dab",
-      "timestamp": "2025-01-25T16:37:30.446Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"f\" after \"v\"",
-      "id": "60beb427-3c4a-4455-be3a-b128e5fdb707",
-      "timestamp": "2025-01-25T16:37:25.616Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"v\" before \"c\"",
-      "id": "d97344b0-479f-4c93-ad79-41dfa8135ad3",
-      "timestamp": "2025-01-25T16:37:21.980Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"v\" after \"d\"",
-      "id": "8a54df87-40ec-468c-9407-d5d6d185fa7f",
-      "timestamp": "2025-01-25T16:37:20.012Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"v\" after \"d\"",
-      "id": "906da4a9-a526-4b73-bf5e-6de4ff8ac2e9",
-      "timestamp": "2025-01-25T16:37:16.018Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"g\" to root level",
-      "id": "cab43c9b-c485-481a-8313-3508a0464fb9",
-      "timestamp": "2025-01-25T16:36:58.708Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"g\" a child of \"4\"",
-      "id": "68c507ff-d0ec-4589-8d56-91a061a51c98",
-      "timestamp": "2025-01-25T16:36:56.744Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"g\" after \"5\"",
-      "id": "c1c0c913-4815-4c97-b056-454e0fe81245",
-      "timestamp": "2025-01-25T16:36:53.393Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"g\" a child of \"r\"",
-      "id": "e450ee92-b209-4c20-8e35-0b42399e22dd",
-      "timestamp": "2025-01-25T16:36:49.084Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"v\" a child of \"d\"",
-      "id": "ddfc6312-f72b-481e-8c57-77f3044a097d",
-      "timestamp": "2025-01-25T16:35:59.055Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"c\" a child of \"d\"",
-      "id": "27a7aabb-ea3a-4a5a-ac8d-de5f3fd1ae07",
-      "timestamp": "2025-01-25T16:35:44.370Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"f\" before \"w\"",
-      "id": "848ff042-49f4-4c27-84f8-9fb279d1fa3c",
-      "timestamp": "2025-01-25T16:35:40.743Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"d\" before \"w\"",
-      "id": "557e6092-0283-4c6f-b71c-686caeef6c1e",
-      "timestamp": "2025-01-25T16:35:37.846Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"s\" a child of \"7\"",
-      "id": "91481714-5b5d-41b2-94dd-a8e1af7dc366",
-      "timestamp": "2025-01-25T16:35:35.650Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"q\" before \"7\"",
-      "id": "6ef992fb-1667-4cac-979a-54da22825edd",
-      "timestamp": "2025-01-25T16:35:33.253Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"q\" a child of \"r\"",
-      "id": "8a73423e-e47b-4a27-b238-fa3e0de43754",
-      "timestamp": "2025-01-25T16:35:30.340Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"w\" after \"r\"",
-      "id": "dc777d1e-6176-487e-9ed6-315348afedbd",
-      "timestamp": "2025-01-25T16:35:00.785Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"w\" a child of \"r\"",
-      "id": "402521e6-2697-4974-9962-6e846eca52b5",
-      "timestamp": "2025-01-25T16:34:55.528Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"7\" a child of \"r\"",
-      "id": "f4bd809e-cda4-482e-ac6b-f6618e67d4d3",
-      "timestamp": "2025-01-25T16:34:53.518Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"r\" a child of \"6\"",
-      "id": "81edfdfd-a654-4656-bff7-aabb9037d455",
-      "timestamp": "2025-01-25T16:34:51.116Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"r\" before \"w\"",
-      "id": "73a7695d-9a29-4a7a-953e-2eed33a8789f",
-      "timestamp": "2025-01-25T16:34:49.215Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"g\"",
-      "id": "f9310f79-e5f0-4bde-a815-9b9fd2e0caf7",
-      "timestamp": "2025-01-25T16:34:46.463Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"v\"",
-      "id": "5e278f53-faa6-4df3-bf8d-175b30ff128e",
-      "timestamp": "2025-01-25T16:34:46.205Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"c\"",
-      "id": "16696517-7981-4ea9-b5fe-de54e87c6347",
-      "timestamp": "2025-01-25T16:34:45.973Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"f\"",
-      "id": "83fc9aa7-0835-40f2-b43a-dd4c1907df4f",
-      "timestamp": "2025-01-25T16:34:45.707Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"d\"",
-      "id": "472ea48c-1e16-45d9-ab4a-0d7c45cf2f01",
-      "timestamp": "2025-01-25T16:34:45.429Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"s\"",
-      "id": "681e853f-e2cf-4bf7-8188-2ac1b6aaa9fa",
-      "timestamp": "2025-01-25T16:34:45.147Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"q\"",
-      "id": "67eb1591-651f-4a64-a8b1-2ba4c47de997",
-      "timestamp": "2025-01-25T16:34:44.808Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"w\"",
-      "id": "798001b6-e992-40fa-8a42-27ffc4c84c23",
-      "timestamp": "2025-01-25T16:34:44.518Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"r\"",
-      "id": "fe762c61-b2cc-477c-a173-b44eae2d71c8",
-      "timestamp": "2025-01-25T16:34:44.152Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"7\"",
-      "id": "dc71cff6-e660-4951-a92d-a19212528a88",
-      "timestamp": "2025-01-25T16:34:43.755Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"6\"",
-      "id": "a9050e35-5a69-4680-9f30-f9f14426322c",
-      "timestamp": "2025-01-25T16:34:43.466Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"5\"",
-      "id": "1466058c-d4f5-4c7d-a8a7-ef9daf994a2f",
-      "timestamp": "2025-01-25T16:34:43.145Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"4\"",
-      "id": "e242f1b4-e008-4a57-9dda-872c21a9f4b7",
-      "timestamp": "2025-01-25T16:34:42.821Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"3\"",
-      "id": "2fb8b731-fb35-43b7-9684-9c25bb5fcc7a",
-      "timestamp": "2025-01-25T16:34:42.467Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"2\"",
-      "id": "31949d6b-3453-47d6-807d-890dd0b253cb",
-      "timestamp": "2025-01-25T16:34:42.154Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"1\"",
-      "id": "08119704-4113-4a66-ae37-fdea18f44c6e",
-      "timestamp": "2025-01-25T16:34:41.865Z"
-    },
-    {
-      "action": "deleted",
-      "details": "Deleted category \"cwe\" and its subcategories",
-      "id": "b83d9ff7-7277-47bf-9624-c6759d4c9aa1",
-      "timestamp": "2025-01-25T16:33:20.743Z"
-    },
-    {
-      "action": "deleted",
-      "details": "Deleted category \"12\" and its subcategories",
-      "id": "5baca2f2-1df1-4357-9f3a-397cde052b57",
-      "timestamp": "2025-01-25T16:33:19.686Z"
-    },
-    {
-      "action": "deleted",
-      "details": "Deleted category \"123\" and its subcategories",
-      "id": "7920b247-80c3-4641-82b5-1752e6b723dc",
-      "timestamp": "2025-01-25T16:33:18.801Z"
-    },
-    {
-      "action": "deleted",
-      "details": "Deleted category \"12323456543\" and its subcategories",
-      "id": "71093a4d-20b8-4a0b-88ba-2645ce492b71",
-      "timestamp": "2025-01-25T16:33:17.196Z"
-    },
-    {
-      "action": "deleted",
-      "details": "Deleted category \"234fr\" and its subcategories",
-      "id": "f4d761ff-6602-4fde-b68f-67a6e76065a4",
-      "timestamp": "2025-01-25T16:33:15.370Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"234fr\" a child of \"2wq345\"",
-      "id": "d3817439-f967-4108-9111-c4db7e8e8901",
-      "timestamp": "2025-01-25T16:33:10.768Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"13245r\" a child of \"123\"",
-      "id": "2c890356-4265-402b-a544-8a9840977782",
-      "timestamp": "2025-01-25T16:33:08.780Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"2wq345\" a child of \"12323456543\"",
-      "id": "f3f90e72-48ba-4161-9543-35b54debbca4",
-      "timestamp": "2025-01-25T16:33:06.867Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"1234\" a child of \"12323456543\"",
-      "id": "c4563287-e8a0-4d13-a6c0-dcc62d33c976",
-      "timestamp": "2025-01-25T16:33:05.167Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"12323456543\" a child of \"123\"",
-      "id": "698a9663-f6fa-4a7c-8c32-25491ffceb62",
-      "timestamp": "2025-01-25T16:33:02.900Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"12323456543\" before \"2wq345\"",
-      "id": "36c4a188-3b5d-4dc2-9d2c-c591d07809ff",
-      "timestamp": "2025-01-25T16:32:59.815Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"2wq345\" before \"12323456543\"",
-      "id": "e81405de-26da-4a24-9a5b-0516b04ea639",
-      "timestamp": "2025-01-25T16:32:58.678Z"
-    },
-    {
-      "action": "deleted",
-      "details": "Deleted category \"q34rt\" and its subcategories",
-      "id": "9c02b275-4401-499b-bee7-fecf8c8d30e7",
-      "timestamp": "2025-01-25T16:32:56.898Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"cwe\"",
-      "id": "ec522f16-ae9b-4b08-b6f9-340cfe2f9b1f",
-      "timestamp": "2025-01-25T16:32:54.171Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"234fr\"",
-      "id": "f110caa8-2fbc-4b99-9124-6ef3a7b8b1ee",
-      "timestamp": "2025-01-25T16:32:53.975Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"q34rt\"",
-      "id": "a806dbf8-3274-440f-866e-0bedc9e656a6",
-      "timestamp": "2025-01-25T16:32:53.497Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"13245r\"",
-      "id": "bf60353c-6b4c-44e7-b17c-0e9a9e712591",
-      "timestamp": "2025-01-25T16:32:53.015Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"2wq345\"",
-      "id": "3e0944fb-5fa6-4768-a03c-1784a985a496",
-      "timestamp": "2025-01-25T16:32:52.084Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"12323456543\"",
-      "id": "a567f208-6443-4753-b7a9-6a03ef89b265",
-      "timestamp": "2025-01-25T16:32:51.009Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"1234\"",
-      "id": "9c06f3e7-46e8-422b-a340-795190f69e03",
-      "timestamp": "2025-01-25T16:32:48.699Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"123\"",
-      "id": "41db152a-f258-4fe9-a145-35eb27068e09",
-      "timestamp": "2025-01-25T16:32:46.836Z"
-    },
-    {
-      "action": "deleted",
-      "details": "Deleted category \"2\" and its subcategories",
-      "id": "d2172ce9-97a7-4834-abfb-184e99d0c9eb",
-      "timestamp": "2025-01-25T16:32:37.543Z"
-    },
-    {
-      "action": "deleted",
-      "details": "Deleted category \"undefined\"",
-      "id": "5061bcee-cf26-435e-aff7-aca1c1d79fc0",
-      "timestamp": "2025-01-25T16:27:43.207Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"2\" a child of \"12\"",
-      "id": "6e9e0ed8-158e-4754-afca-9d730ceb8a4c",
-      "timestamp": "2025-01-25T16:27:40.318Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"2\"",
-      "id": "893cb311-062e-49c0-ad89-dec41f3493bf",
-      "timestamp": "2025-01-25T16:27:37.684Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"12\"",
-      "id": "19e36895-0c72-4ed6-aafd-915d6672e291",
-      "timestamp": "2025-01-25T16:27:35.996Z"
-    },
-    {
-      "action": "deleted",
-      "details": "Deleted category \"qw\"",
-      "id": "b66fb651-fb50-4d7b-be0f-e08da64200c8",
-      "timestamp": "2025-01-25T16:23:19.989Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"qw\"",
-      "id": "ac8ad1a1-1d60-4a38-8565-0b861336ad3f",
-      "timestamp": "2025-01-25T16:23:15.121Z"
-    },
-    {
-      "action": "moved",
-      "details": "Moved \"Lechuga y Ensalada Preparada\" after \"Fruta\"",
-      "id": "aa84401a-0053-472f-b643-ac2cfac0725c",
-      "timestamp": "2025-01-24T09:50:08.095Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"Lechuga y Ensalada Preparada\"",
-      "id": "630ae783-11cb-42cf-98ce-4cef1b73b25a",
-      "timestamp": "2025-01-24T09:50:03.636Z"
-    },
-    {
-      "action": "moved",
-      "details": "Made \"Fruta\" a child of \"Frutas E Verduras\"",
-      "id": "9ec1e58a-d16a-4e77-a884-e8b7e4c64353",
-      "timestamp": "2025-01-24T09:49:44.467Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"Fruta\"",
-      "id": "2dd80b6c-a57c-42d6-a800-e27ae85987e1",
-      "timestamp": "2025-01-24T09:49:42.550Z"
-    },
-    {
-      "action": "created",
-      "details": "Created category \"Frutas E Verduras\"",
-      "id": "3f50a927-1058-4747-a32b-a15617d0c314",
-      "timestamp": "2025-01-24T09:49:17.680Z"
+      "action": "CATEGORY_REMOVED",
+      "details": {
+        "message": "Category removed: \"a\"",
+        "affectedCategories": {
+          "target": {
+            "id": "91ac5997-3e21-4941-8fad-59858a64aa63",
+            "name": "a"
+          }
+        }
+      },
+      "category": {
+        "id": "91ac5997-3e21-4941-8fad-59858a64aa63",
+        "name": "a",
+        "metadata": {
+          "createdAt": "2025-01-25T23:43:28.877Z",
+          "updatedAt": "2025-01-25T23:43:28.877Z",
+          "deletedAt": "2025-01-25T23:43:28.877Z",
+          "status": "inactive"
+        }
+      },
+      "changes": {
+        "previousState": {
+          "status": "active"
+        },
+        "newState": {
+          "status": "inactive"
+        }
+      },
+      "id": "199d031d-42b1-426e-8075-5f21cb91cc8c",
+      "timestamp": "2025-01-25T23:43:28.877Z",
+      "user": {
+        "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        "name": "Sydney Fernandes"
+      }
+    },
+    {
+      "action": "CATEGORY_CREATED",
+      "details": {
+        "message": "Created category \"a\"",
+        "affectedCategories": {
+          "target": {
+            "id": "91ac5997-3e21-4941-8fad-59858a64aa63",
+            "name": "a",
+            "path": "/a"
+          }
+        }
+      },
+      "category": {
+        "id": "91ac5997-3e21-4941-8fad-59858a64aa63",
+        "name": "a",
+        "path": "/a",
+        "metadata": {
+          "createdAt": "2025-01-25T23:43:26.708Z",
+          "updatedAt": "2025-01-25T23:43:26.708Z",
+          "status": "active"
+        }
+      },
+      "id": "78b0f7ee-fe65-4e67-a4bd-3a0fb20a26b4",
+      "timestamp": "2025-01-25T23:43:26.708Z",
+      "user": {
+        "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        "name": "Sydney Fernandes"
+      }
+    },
+    {
+      "action": "CATEGORY_REMOVED",
+      "details": {
+        "message": "Category removed: \"a\"",
+        "affectedCategories": {
+          "target": {
+            "id": "d52c2b0a-2641-4085-935e-1a6489320151",
+            "name": "a"
+          }
+        }
+      },
+      "category": {
+        "id": "d52c2b0a-2641-4085-935e-1a6489320151",
+        "name": "a",
+        "metadata": {
+          "createdAt": "2025-01-25T23:42:02.193Z",
+          "updatedAt": "2025-01-25T23:42:02.193Z",
+          "deletedAt": "2025-01-25T23:42:02.193Z",
+          "status": "inactive"
+        }
+      },
+      "changes": {
+        "previousState": {
+          "status": "active"
+        },
+        "newState": {
+          "status": "inactive"
+        }
+      },
+      "id": "7f1ec3f3-e198-4cab-a9a5-3dc0059ba4e8",
+      "timestamp": "2025-01-25T23:42:02.193Z",
+      "user": {
+        "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        "name": "Sydney Fernandes"
+      }
+    },
+    {
+      "action": "CATEGORY_CREATED",
+      "details": {
+        "message": "Created category \"a\"",
+        "affectedCategories": {
+          "target": {
+            "id": "d52c2b0a-2641-4085-935e-1a6489320151",
+            "name": "a",
+            "path": "/a"
+          }
+        }
+      },
+      "category": {
+        "id": "d52c2b0a-2641-4085-935e-1a6489320151",
+        "name": "a",
+        "path": "/a",
+        "metadata": {
+          "createdAt": "2025-01-25T23:41:58.904Z",
+          "updatedAt": "2025-01-25T23:41:58.904Z",
+          "status": "active"
+        }
+      },
+      "id": "71f8cceb-285d-4e07-8b68-76e2eacd6acd",
+      "timestamp": "2025-01-25T23:41:58.904Z",
+      "user": {
+        "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        "name": "Sydney Fernandes"
+      }
+    },
+    {
+      "action": "CATEGORY_REMOVED",
+      "details": {
+        "message": "Category removed: \"Ivan\"",
+        "affectedCategories": {
+          "target": {
+            "id": "1d678157-02fe-4b7d-823d-97397b81f4d8",
+            "name": "Ivan"
+          }
+        }
+      },
+      "category": {
+        "id": "1d678157-02fe-4b7d-823d-97397b81f4d8",
+        "name": "Ivan",
+        "metadata": {
+          "createdAt": "2025-01-25T23:23:35.529Z",
+          "updatedAt": "2025-01-25T23:23:35.529Z",
+          "deletedAt": "2025-01-25T23:23:35.529Z",
+          "status": "inactive"
+        }
+      },
+      "changes": {
+        "previousState": {
+          "status": "active"
+        },
+        "newState": {
+          "status": "inactive"
+        }
+      },
+      "id": "f634a6f2-1acf-42a7-9c08-4d1c9de37a02",
+      "timestamp": "2025-01-25T23:23:35.529Z",
+      "user": {
+        "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        "name": "Sydney Fernandes"
+      }
+    },
+    {
+      "action": "CATEGORY_REMOVED",
+      "details": {
+        "message": "Category removed: \"Pozo\"",
+        "affectedCategories": {
+          "target": {
+            "id": "0031d50f-d029-41c5-ba17-43d0bb005f8d",
+            "name": "Pozo",
+            "path": "/pozo"
+          }
+        }
+      },
+      "category": {
+        "id": "0031d50f-d029-41c5-ba17-43d0bb005f8d",
+        "name": "Pozo",
+        "path": "/pozo",
+        "metadata": {
+          "createdAt": "2025-01-25T23:23:34.815Z",
+          "updatedAt": "2025-01-25T23:23:34.815Z",
+          "deletedAt": "2025-01-25T23:23:34.815Z",
+          "status": "inactive"
+        }
+      },
+      "changes": {
+        "previousState": {
+          "parentId": "1d678157-02fe-4b7d-823d-97397b81f4d8",
+          "status": "active"
+        },
+        "newState": {
+          "status": "inactive"
+        }
+      },
+      "id": "30197f05-de72-42b8-af15-61bd076ae33d",
+      "timestamp": "2025-01-25T23:23:34.815Z",
+      "user": {
+        "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        "name": "Sydney Fernandes"
+      }
+    },
+    {
+      "action": "SUBCATEGORY_MOVED",
+      "details": {
+        "message": "Made \"Pozo\" a child of \"Ivan\"",
+        "affectedCategories": {
+          "target": {
+            "id": "0031d50f-d029-41c5-ba17-43d0bb005f8d",
+            "name": "Pozo"
+          },
+          "newParent": {
+            "id": "1d678157-02fe-4b7d-823d-97397b81f4d8",
+            "name": "Ivan"
+          }
+        }
+      },
+      "category": {
+        "id": "0031d50f-d029-41c5-ba17-43d0bb005f8d",
+        "name": "Pozo",
+        "metadata": {
+          "updatedAt": "2025-01-25T23:23:30.003Z",
+          "status": "active"
+        }
+      },
+      "changes": {
+        "previousState": {
+          "position": 19
+        },
+        "newState": {
+          "parentId": "1d678157-02fe-4b7d-823d-97397b81f4d8",
+          "position": 20,
+          "path": "/ivan/pozo"
+        }
+      },
+      "id": "d8e26fbc-e311-49ed-bbc2-22730b3c0ca4",
+      "timestamp": "2025-01-25T23:23:30.003Z",
+      "user": {
+        "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        "name": "Sydney Fernandes"
+      }
+    },
+    {
+      "action": "CATEGORY_CREATED",
+      "details": {
+        "message": "Created category \"Pozo\"",
+        "affectedCategories": {
+          "target": {
+            "id": "0031d50f-d029-41c5-ba17-43d0bb005f8d",
+            "name": "Pozo",
+            "path": "/pozo"
+          }
+        }
+      },
+      "category": {
+        "id": "0031d50f-d029-41c5-ba17-43d0bb005f8d",
+        "name": "Pozo",
+        "path": "/pozo",
+        "metadata": {
+          "createdAt": "2025-01-25T23:23:28.046Z",
+          "updatedAt": "2025-01-25T23:23:28.046Z",
+          "status": "active"
+        }
+      },
+      "id": "e7312a18-22c1-4869-9543-d9cb8a2515b5",
+      "timestamp": "2025-01-25T23:23:28.046Z",
+      "user": {
+        "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        "name": "Sydney Fernandes"
+      }
+    },
+    {
+      "action": "CATEGORY_CREATED",
+      "details": {
+        "message": "Created category \"Ivan\"",
+        "affectedCategories": {
+          "target": {
+            "id": "1d678157-02fe-4b7d-823d-97397b81f4d8",
+            "name": "Ivan",
+            "path": "/ivan"
+          }
+        }
+      },
+      "category": {
+        "id": "1d678157-02fe-4b7d-823d-97397b81f4d8",
+        "name": "Ivan",
+        "path": "/ivan",
+        "metadata": {
+          "createdAt": "2025-01-25T23:23:23.329Z",
+          "updatedAt": "2025-01-25T23:23:23.329Z",
+          "status": "active"
+        }
+      },
+      "id": "2840db92-ad69-4b45-8c5f-cde3e879caed",
+      "timestamp": "2025-01-25T23:23:23.330Z",
+      "user": {
+        "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        "name": "Sydney Fernandes"
+      }
+    },
+    {
+      "action": "SUBCATEGORY_REMOVED",
+      "details": {
+        "message": "Category and subcategories removed: \"a\"",
+        "affectedCategories": {
+          "target": {
+            "id": "87c8f9cd-d5fb-4763-9fb5-2a73c623d49b",
+            "name": "a"
+          }
+        }
+      },
+      "category": {
+        "id": "87c8f9cd-d5fb-4763-9fb5-2a73c623d49b",
+        "name": "a",
+        "metadata": {
+          "createdAt": "2025-01-25T23:03:33.407Z",
+          "updatedAt": "2025-01-25T23:03:33.407Z",
+          "deletedAt": "2025-01-25T23:03:33.407Z",
+          "status": "inactive"
+        }
+      },
+      "changes": {
+        "previousState": {
+          "status": "active"
+        },
+        "newState": {
+          "status": "inactive"
+        }
+      },
+      "id": "167ef9f7-93d8-4063-ba81-0c8c5d83a51e",
+      "timestamp": "2025-01-25T23:03:33.407Z",
+      "user": {
+        "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        "name": "Sydney Fernandes"
+      }
+    },
+    {
+      "action": "SUBCATEGORY_MOVED",
+      "details": {
+        "message": "Made \"1\" a child of \"a\"",
+        "affectedCategories": {
+          "target": {
+            "id": "f05e2e57-eaf6-4d06-94ba-11f6545b824f",
+            "name": "1"
+          },
+          "newParent": {
+            "id": "87c8f9cd-d5fb-4763-9fb5-2a73c623d49b",
+            "name": "a"
+          }
+        }
+      },
+      "category": {
+        "id": "f05e2e57-eaf6-4d06-94ba-11f6545b824f",
+        "name": "1",
+        "metadata": {
+          "updatedAt": "2025-01-25T23:03:30.831Z",
+          "status": "active"
+        }
+      },
+      "changes": {
+        "previousState": {
+          "position": 19
+        },
+        "newState": {
+          "parentId": "87c8f9cd-d5fb-4763-9fb5-2a73c623d49b",
+          "position": 20,
+          "path": "/a/1"
+        }
+      },
+      "id": "6b4aae8e-5ee5-4d15-98c6-a470fbba8027",
+      "timestamp": "2025-01-25T23:03:30.831Z",
+      "user": {
+        "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        "name": "Sydney Fernandes"
+      }
+    },
+    {
+      "action": "CATEGORY_CREATED",
+      "details": {
+        "message": "Created category \"1\"",
+        "affectedCategories": {
+          "target": {
+            "id": "f05e2e57-eaf6-4d06-94ba-11f6545b824f",
+            "name": "1",
+            "path": "/1"
+          }
+        }
+      },
+      "category": {
+        "id": "f05e2e57-eaf6-4d06-94ba-11f6545b824f",
+        "name": "1",
+        "path": "/1",
+        "metadata": {
+          "createdAt": "2025-01-25T23:03:29.250Z",
+          "updatedAt": "2025-01-25T23:03:29.250Z",
+          "status": "active"
+        }
+      },
+      "id": "e0feb5ed-cd38-4fce-aeae-8f7b5771e1e1",
+      "timestamp": "2025-01-25T23:03:29.251Z",
+      "user": {
+        "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        "name": "Sydney Fernandes"
+      }
+    },
+    {
+      "action": "CATEGORY_CREATED",
+      "details": {
+        "message": "Created category \"a\"",
+        "affectedCategories": {
+          "target": {
+            "id": "87c8f9cd-d5fb-4763-9fb5-2a73c623d49b",
+            "name": "a",
+            "path": "/a"
+          }
+        }
+      },
+      "category": {
+        "id": "87c8f9cd-d5fb-4763-9fb5-2a73c623d49b",
+        "name": "a",
+        "path": "/a",
+        "metadata": {
+          "createdAt": "2025-01-25T23:03:26.547Z",
+          "updatedAt": "2025-01-25T23:03:26.547Z",
+          "status": "active"
+        }
+      },
+      "id": "928552b2-1f99-4f65-879d-7828dd892d68",
+      "timestamp": "2025-01-25T23:03:26.547Z",
+      "user": {
+        "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        "name": "Sydney Fernandes"
+      }
+    },
+    {
+      "action": "CATEGORY_REMOVED",
+      "details": {
+        "message": "Categoria removida: \"Frutas\"",
+        "affectedCategories": {
+          "target": {
+            "id": "e35f7ea4-144e-4a70-8983-eb721dd9c62b",
+            "name": "Frutas"
+          }
+        }
+      },
+      "category": {
+        "id": "e35f7ea4-144e-4a70-8983-eb721dd9c62b",
+        "name": "Frutas",
+        "metadata": {
+          "createdAt": "2025-01-25T20:21:42.584Z",
+          "updatedAt": "2025-01-25T20:21:42.584Z",
+          "deletedAt": "2025-01-25T20:21:42.584Z",
+          "status": "inactive"
+        }
+      },
+      "changes": {
+        "previousState": {
+          "status": "active"
+        },
+        "newState": {
+          "status": "inactive"
+        }
+      },
+      "id": "b2aa60a0-ad29-41cf-9024-e2b9e31603e8",
+      "timestamp": "2025-01-25T20:21:42.585Z",
+      "user": {
+        "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        "name": "Sydney Fernandes"
+      }
+    },
+    {
+      "action": "CATEGORY_CREATED",
+      "details": {
+        "message": "Categoria criada: \"Alimentos\"",
+        "affectedCategories": {
+          "target": {
+            "id": "e35f7ea4-144e-4a70-8983-eb721dd9c62c",
+            "name": "Alimentos",
+            "path": "/alimentos"
+          }
+        }
+      },
+      "category": {
+        "id": "e35f7ea4-144e-4a70-8983-eb721dd9c62c",
+        "name": "Alimentos",
+        "path": "/alimentos",
+        "metadata": {
+          "createdAt": "2025-01-25T20:21:37.245Z",
+          "updatedAt": "2025-01-25T20:21:37.245Z",
+          "status": "active"
+        }
+      },
+      "id": "c8993525-932b-4c7f-b3c9-7ebc41cf6721",
+      "timestamp": "2025-01-25T20:21:37.246Z",
+      "user": {
+        "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        "name": "Sydney Fernandes"
+      }
+    },
+    {
+      "id": "693e815f-43cc-48d9-bbb6-9252c98ffbd5",
+      "timestamp": "2024-01-25T19:19:07.312Z",
+      "action": "SUBCATEGORY_ADDED",
+      "details": {
+        "message": "Subcategoria adicionada: \"Sushi\" em Pescado",
+        "affectedCategories": {
+          "target": {
+            "id": "root-1737711759259",
+            "name": "Sushi"
+          },
+          "newParent": {
+            "id": "3906ab53-2e13-483c-9327-00011b78528f",
+            "name": "Pescado"
+          }
+        }
+      },
+      "user": {
+        "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        "name": "Sydney Fernandes"
+      },
+      "category": {
+        "id": "root-1737711759259",
+        "name": "Sushi",
+        "metadata": {
+          "createdAt": "2024-01-25T19:19:07.312Z",
+          "updatedAt": "2024-01-25T19:19:07.312Z",
+          "status": "active"
+        }
+      }
+    },
+    {
+      "id": "1f01c7e7-d81f-4e3c-8c9f-d07fbfdcb897",
+      "timestamp": "2024-01-25T18:45:05.492Z",
+      "action": "CATEGORY_RENAMED",
+      "details": {
+        "message": "Categoria renomeada de \"Frutas y Verduras\" para \"Frutas E Verduras\"",
+        "affectedCategories": {
+          "target": {
+            "id": "63a52fae-0085-4552-8ecd-d240356de280",
+            "name": "Frutas E Verduras"
+          }
+        }
+      },
+      "user": {
+        "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        "name": "Sydney Fernandes"
+      },
+      "category": {
+        "id": "63a52fae-0085-4552-8ecd-d240356de280",
+        "name": "Frutas E Verduras",
+        "metadata": {
+          "updatedAt": "2024-01-25T18:45:05.492Z",
+          "status": "active"
+        }
+      }
+    },
+    {
+      "id": "b2aa60a0-ad29-41cf-9024-e2b9e31603e8",
+      "timestamp": "2024-01-25T16:30:42.585Z",
+      "action": "SUBCATEGORY_ADDED",
+      "details": {
+        "message": "Subcategoria adicionada: \"Marisco\" em Pescado",
+        "affectedCategories": {
+          "target": {
+            "id": "b211bd88-25fe-4a1e-9426-2046678b2941",
+            "name": "Marisco"
+          },
+          "newParent": {
+            "id": "3906ab53-2e13-483c-9327-00011b78528f",
+            "name": "Pescado"
+          }
+        }
+      },
+      "user": {
+        "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        "name": "Sydney Fernandes"
+      },
+      "category": {
+        "id": "b211bd88-25fe-4a1e-9426-2046678b2941",
+        "name": "Marisco",
+        "metadata": {
+          "createdAt": "2024-01-25T16:30:42.585Z",
+          "updatedAt": "2024-01-25T16:30:42.585Z",
+          "status": "active"
+        }
+      }
+    },
+    {
+      "id": "c8993525-932b-4c7f-b3c9-7ebc41cf6721",
+      "timestamp": "2024-01-25T15:21:37.246Z",
+      "action": "CATEGORY_CREATED",
+      "details": {
+        "message": "Categoria criada: \"Pescado\"",
+        "affectedCategories": {
+          "target": {
+            "id": "3906ab53-2e13-483c-9327-00011b78528f",
+            "name": "Pescado"
+          }
+        }
+      },
+      "user": {
+        "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        "name": "Sydney Fernandes"
+      },
+      "category": {
+        "id": "3906ab53-2e13-483c-9327-00011b78528f",
+        "name": "Pescado",
+        "metadata": {
+          "createdAt": "2024-01-25T15:21:37.246Z",
+          "updatedAt": "2024-01-25T15:21:37.246Z",
+          "status": "active"
+        }
+      }
+    },
+    {
+      "id": "d5aa60a0-ad29-41cf-9024-e2b9e31603e8",
+      "timestamp": "2024-01-25T14:15:42.585Z",
+      "action": "SUBCATEGORY_ADDED",
+      "details": {
+        "message": "Subcategoria adicionada: \"Arreglos\" em Carne",
+        "affectedCategories": {
+          "target": {
+            "id": "62009c04-0904-45e8-8e64-f99081602a25",
+            "name": "Arreglos"
+          },
+          "newParent": {
+            "id": "43867dfb-3dc5-45fd-b4a5-0d9356603576",
+            "name": "Carne"
+          }
+        }
+      },
+      "user": {
+        "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        "name": "Sydney Fernandes"
+      },
+      "category": {
+        "id": "62009c04-0904-45e8-8e64-f99081602a25",
+        "name": "Arreglos",
+        "metadata": {
+          "createdAt": "2024-01-25T14:15:42.585Z",
+          "updatedAt": "2024-01-25T14:15:42.585Z",
+          "status": "active"
+        }
+      }
+    },
+    {
+      "id": "e1aa60a0-ad29-41cf-9024-e2b9e31603e8",
+      "timestamp": "2024-01-25T13:45:42.585Z",
+      "action": "SUBCATEGORY_MOVED",
+      "details": {
+        "message": "Subcategoria \"Fruta\" movida para \"Frutas E Verduras\"",
+        "affectedCategories": {
+          "target": {
+            "id": "1a322a4f-e9a7-4dc3-80e2-f4505f3d61ea",
+            "name": "Fruta"
+          },
+          "newParent": {
+            "id": "63a52fae-0085-4552-8ecd-d240356de280",
+            "name": "Frutas E Verduras"
+          }
+        }
+      },
+      "user": {
+        "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        "name": "Sydney Fernandes"
+      },
+      "category": {
+        "id": "1a322a4f-e9a7-4dc3-80e2-f4505f3d61ea",
+        "name": "Fruta",
+        "metadata": {
+          "updatedAt": "2024-01-25T13:45:42.585Z",
+          "status": "active"
+        }
+      }
+    },
+    {
+      "id": "f3aa60a0-ad29-41cf-9024-e2b9e31603e8",
+      "timestamp": "2024-01-25T12:30:42.585Z",
+      "action": "CATEGORY_CREATED",
+      "details": {
+        "message": "Categoria criada: \"Carne\"",
+        "affectedCategories": {
+          "target": {
+            "id": "43867dfb-3dc5-45fd-b4a5-0d9356603576",
+            "name": "Carne"
+          }
+        }
+      },
+      "user": {
+        "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        "name": "Sydney Fernandes"
+      },
+      "category": {
+        "id": "43867dfb-3dc5-45fd-b4a5-0d9356603576",
+        "name": "Carne",
+        "metadata": {
+          "createdAt": "2024-01-25T12:30:42.585Z",
+          "updatedAt": "2024-01-25T12:30:42.585Z",
+          "status": "active"
+        }
+      }
+    },
+    {
+      "id": "g2aa60a0-ad29-41cf-9024-e2b9e31603e8",
+      "timestamp": "2024-01-24T19:15:42.585Z",
+      "action": "SUBCATEGORY_ADDED",
+      "details": {
+        "message": "Subcategoria adicionada: \"Aves y Pollos\" em Carne",
+        "affectedCategories": {
+          "target": {
+            "id": "a6eecb84-52db-4db5-a67e-89a132457419",
+            "name": "Aves y Pollos"
+          },
+          "newParent": {
+            "id": "43867dfb-3dc5-45fd-b4a5-0d9356603576",
+            "name": "Carne"
+          }
+        }
+      },
+      "user": {
+        "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        "name": "Sydney Fernandes"
+      },
+      "category": {
+        "id": "a6eecb84-52db-4db5-a67e-89a132457419",
+        "name": "Aves y Pollos",
+        "metadata": {
+          "createdAt": "2024-01-24T19:15:42.585Z",
+          "updatedAt": "2024-01-24T19:15:42.585Z",
+          "status": "active"
+        }
+      }
+    },
+    {
+      "id": "h1aa60a0-ad29-41cf-9024-e2b9e31603e8",
+      "timestamp": "2024-01-24T18:30:42.585Z",
+      "action": "SUBCATEGORY_ADDED",
+      "details": {
+        "message": "Subcategoria adicionada: \"Pescado Fresco\" em Pescado",
+        "affectedCategories": {
+          "target": {
+            "id": "91822d51-dee3-484d-ab9c-85e22ad70db3",
+            "name": "Pescado Fresco"
+          },
+          "newParent": {
+            "id": "3906ab53-2e13-483c-9327-00011b78528f",
+            "name": "Pescado"
+          }
+        }
+      },
+      "user": {
+        "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        "name": "Sydney Fernandes"
+      },
+      "category": {
+        "id": "91822d51-dee3-484d-ab9c-85e22ad70db3",
+        "name": "Pescado Fresco",
+        "metadata": {
+          "createdAt": "2024-01-24T18:30:42.585Z",
+          "updatedAt": "2024-01-24T18:30:42.585Z",
+          "status": "active"
+        }
+      }
     }
   ]
 }
