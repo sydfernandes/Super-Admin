@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Sydney Fernandes",
+      "username": "sydneyfernandes",
+      "email": "sydney@example.com",
+      "avatar": "/app/public/user/sydneyfernandes/avatar.JPG",
+      "role": "admin",
+      "createdAt": "2024-01-26T00:00:00.000Z",
+      "lastLogin": "2024-01-26T00:00:00.000Z"
+    }
+  ]
+} 

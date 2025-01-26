@@ -12,8 +12,10 @@ export default function ContentLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen flex">
-      <div className="flex-1">{children}</div>
+    <div className="relative min-h-screen flex">
+      <div className="flex-1 overflow-auto">
+        {children}
+      </div>
       <Toaster />
     </div>
   );

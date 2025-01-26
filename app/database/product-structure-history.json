@@ -1,0 +1,112 @@
+{
+  "history": [
+    {
+      "action": "FIELD_REQUIRED_CHANGED",
+      "details": {
+        "message": "Changed \"Estados\" required status to required",
+        "affectedFields": {
+          "target": {
+            "id": "596a5b57-1656-42d4-858e-23315fdff587",
+            "name": "Estados"
+          }
+        }
+      },
+      "field": {
+        "id": "596a5b57-1656-42d4-858e-23315fdff587",
+        "name": "Estados",
+        "type": "text",
+        "required": true,
+        "metadata": {
+          "updatedAt": "2025-01-26T08:00:41.455Z",
+          "status": "active"
+        }
+      },
+      "changes": {
+        "previousState": {
+          "required": false
+        },
+        "newState": {
+          "required": true
+        }
+      },
+      "id": "d4aa8c0b-aee8-45b3-9196-417decf98adb",
+      "timestamp": "2025-01-26T08:00:41.455Z",
+      "user": {
+        "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        "name": "Sydney Fernandes"
+      }
+    },
+    {
+      "action": "FIELD_REQUIRED_CHANGED",
+      "details": {
+        "message": "Changed \"Preço\" required status to required",
+        "affectedFields": {
+          "target": {
+            "id": "f_02",
+            "name": "Preço"
+          }
+        }
+      },
+      "field": {
+        "id": "f_02",
+        "name": "Preço",
+        "type": "number",
+        "required": true,
+        "metadata": {
+          "updatedAt": "2025-01-26T08:00:39.661Z",
+          "status": "active"
+        }
+      },
+      "changes": {
+        "previousState": {
+          "required": false
+        },
+        "newState": {
+          "required": true
+        }
+      },
+      "id": "0d47b1ac-64a9-43fd-bc15-e0b482a5da86",
+      "timestamp": "2025-01-26T08:00:39.661Z",
+      "user": {
+        "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        "name": "Sydney Fernandes"
+      }
+    },
+    {
+      "action": "FIELD_REQUIRED_CHANGED",
+      "details": {
+        "message": "Changed \"Preço\" required status to optional",
+        "affectedFields": {
+          "target": {
+            "id": "f_02",
+            "name": "Preço"
+          }
+        }
+      },
+      "field": {
+        "id": "f_02",
+        "name": "Preço",
+        "type": "number",
+        "required": false,
+        "metadata": {
+          "updatedAt": "2025-01-26T08:00:38.463Z",
+          "status": "active"
+        }
+      },
+      "changes": {
+        "previousState": {
+          "required": true
+        },
+        "newState": {
+          "required": false
+        }
+      },
+      "id": "15bd0752-7c9d-478b-89d8-9392393832da",
+      "timestamp": "2025-01-26T08:00:38.463Z",
+      "user": {
+        "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        "name": "Sydney Fernandes"
+      }
+    }
+  ]
+}

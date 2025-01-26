@@ -14,6 +14,7 @@ import {
   SquareTerminal,
   Database,
   Upload,
+  LayoutGrid,
 } from "lucide-react"
 
 import { NavMain } from "./nav-main"
@@ -22,13 +23,19 @@ import { NavDatabase } from "./nav-database"
 import { NavUser } from "./nav-user"
 import { TeamSwitcher } from "./team-switcher"
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarRail } from "@/components/ui/sidebar"
+import { ScrollArea } from "@/components/ui/scroll-area"
 
-// This is sample data.
+// Import users data
+import usersData from "@/app/database/users.json"
+
+// Get the first user from the users array
+const currentUser = usersData.users[0]
+
 const data = {
   user: {
-    name: "Sydney Fernandes",
-    email: "sydneyfernandes@me.com",
-    avatar: "app/public/user/sydneyfernandes/avatar.JPG",
+    name: currentUser.name,
+    email: currentUser.email,
+    avatar: currentUser.avatar,
   },
   teams: [
     {
@@ -52,7 +59,6 @@ const data = {
       title: "Productos",
       url: "#",
       icon: SquareTerminal,
-      isActive: true,
       items: [
         {
           title: "Ver todos",
@@ -139,35 +145,39 @@ const data = {
       icon: Map,
     },
     {
-        name: "Archivos",
-        url: "#",
-        icon: Map,
-      },
+      name: "Archivos",
+      url: "#",
+      icon: Map,
+    },
   ],
   databases: [
     {
-      name: "View Database",
+      name: "Database",
       url: "/database",
       icon: Database,
     },
     {
-      name: "Adicionar Archivos",
-      url: "/database/upload",
-      icon: Upload,
+      name: "Super Content",
+      url: "/supercontent",
+      icon: LayoutGrid,
     },
   ],
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar collapsible="icon" {...props}  side="left">
+    <Sidebar collapsible="icon" {...props} side="left">
       <SidebarHeader>
         <TeamSwitcher teams={data.teams} />
       </SidebarHeader>
       <SidebarContent>
-        <NavMain items={data.navMain} />
-        <NavProjects projects={data.projects} />
-        <NavDatabase databases={data.databases} />
+        <ScrollArea className="h-[calc(100vh-8rem)]">
+          <div className="space-y-4 py-4">
+            <NavMain items={data.navMain} />
+            <NavProjects projects={data.projects} />
+            <NavDatabase databases={data.databases} />
+          </div>
+        </ScrollArea>
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />

@@ -130,7 +130,7 @@ export function CategoryHistory({
     )}>
       <CardHeader className="pb-2 shrink-0">
         <div className="flex items-center justify-between">
-          <CardTitle className="text-sm font-medium">
+          <CardTitle>
             Histórico de Alterações
           </CardTitle>
           <div className="flex items-center gap-2">

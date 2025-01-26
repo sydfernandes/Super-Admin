@@ -1,50 +1,76 @@
 "use client";
 
+import * as React from "react";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-import { PanelRightClose, PanelRightOpen } from "lucide-react";
 import { SidebarTrigger } from "@/components/ui/sidebar";
+import { Separator } from "@/components/ui/separator";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbList,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
 
 interface ContentHeaderProps {
   title: string;
+  subtitle?: string;
   className?: string;
   children?: React.ReactNode;
-  isSidebarOpen?: boolean;
-  onSidebarToggle?: () => void;
+  actions?: React.ReactNode;
+  tabs?: React.ReactNode;
 }
 
 export function ContentHeader({
   title,
+  subtitle,
   className,
   children,
-  isSidebarOpen = true,
-  onSidebarToggle,
+  actions,
+  tabs,
 }: ContentHeaderProps) {
   return (
-    <header className={cn("flex h-16 items-center border-b px-6", className)}>
-      <div className="flex items-center gap-4">
-        <SidebarTrigger />
-        <h1 className="text-xl font-semibold">{title}</h1>
+    <div className="flex flex-col border-b">
+      {/* Top Navigation Bar */}
+      <header className={cn("flex h-14 shrink-0 items-center gap-2 ", className)}>
+        <div className="flex flex-1 items-center gap-2 px-3">
+          <SidebarTrigger />
+          <Separator orientation="vertical" className="mr-2 h-4" />
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbPage className="line-clamp-1">
+                  {title}
+                </BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+        <div className="ml-auto px-3">
+          {children}
+        </div>
+      </header>
+
+      {/* Page Header with Title and Actions */}
+      <div className="flex flex-col gap-4 px-6 py-4">
+        <div className="flex items-center justify-between">
+          <div className="space-y-1">
+            <h1 className="text-2xl font-semibold tracking-tight">{title}</h1>
+            {subtitle && (
+              <p className="text-sm text-muted-foreground">
+                {subtitle}
+              </p>
+            )}
+          </div>
+          <div className="flex items-center gap-4">
+            {tabs}
+            {actions && (
+              <div className="flex items-center gap-2">
+                {actions}
+              </div>
+            )}
+          </div>
+        </div>
       </div>
-      <div className="ml-auto flex items-center gap-2">
-        {children}
-        <Button variant="default" className="bg-black hover:bg-black/90">
-          Action
-        </Button>
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={onSidebarToggle}
-          className="h-9 w-9"
-          title={isSidebarOpen ? "Hide sidebar" : "Show sidebar"}
-        >
-          {isSidebarOpen ? (
-            <PanelRightClose className="h-5 w-5" />
-          ) : (
-            <PanelRightOpen className="h-5 w-5" />
-          )}
-        </Button>
-      </div>
-    </header>
+    </div>
   );
 } 

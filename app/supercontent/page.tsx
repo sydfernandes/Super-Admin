@@ -1,21 +1,16 @@
 'use client';
 
 import { useState } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CategoryTree } from '@/app/supercontent/categories/page';
+import { Overview } from '@/app/supercontent/overview/page';
+import { ProductStructure } from '@/app/supercontent/product-structure/page';
 import { ContentHeader } from '@/components/page-header';
-import { RightSidebar } from '@/components/app-rightsidebar';
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table';
-import { cn } from '@/lib/utils';
+import { RightSidebarProvider, RightSidebarTrigger } from '@/components/ui/right-sidebar';
+import { CategoriesSidebar } from './categories/sidebar'
+import { ProductStructureSidebar } from './product-structure/sidebar'
+import { OverviewSidebar } from './overview/sidebar'
 
 // Types
 interface TreeItem {
@@ -91,86 +86,6 @@ interface CategoryData {
   history: CategoryAction[];
 }
 
-// Product Structure Component
-function ProductStructure() {
-  const [fields, setFields] = useState([
-    { id: 1, name: 'name', type: 'string', required: true },
-    { id: 2, name: 'price', type: 'number', required: true },
-    { id: 3, name: 'description', type: 'text', required: false },
-  ]);
-
-  return (
-    <div className="flex-1 space-y-4">
-      <div className="flex items-center justify-between">
-        <h2 className="text-3xl font-bold tracking-tight">Product Structure</h2>
-        <Button>Add Field</Button>
-      </div>
-      <Card>
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHead>Field Name</TableHead>
-              <TableHead>Type</TableHead>
-              <TableHead>Required</TableHead>
-              <TableHead>Actions</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {fields.map((field) => (
-              <TableRow key={field.id}>
-                <TableCell>{field.name}</TableCell>
-                <TableCell>{field.type}</TableCell>
-                <TableCell>{field.required ? 'Yes' : 'No'}</TableCell>
-                <TableCell>
-                  <Button variant="ghost" size="sm">Edit</Button>
-                  <Button variant="ghost" size="sm" className="text-red-500">Delete</Button>
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </Card>
-    </div>
-  );
-}
-
-// Overview Component
-function Overview() {
-  return (
-    <div className="flex-1 space-y-4">
-      <div className="flex items-center justify-between">
-        <h2 className="text-3xl font-bold tracking-tight">Overview</h2>
-      </div>
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <Card>
-          <div className="p-6">
-            <h3 className="font-semibold mb-2">Total Products</h3>
-            <p className="text-3xl font-bold">0</p>
-          </div>
-        </Card>
-        <Card>
-          <div className="p-6">
-            <h3 className="font-semibold mb-2">Total Categories</h3>
-            <p className="text-3xl font-bold">0</p>
-          </div>
-        </Card>
-        <Card>
-          <div className="p-6">
-            <h3 className="font-semibold mb-2">Last Update</h3>
-            <p className="text-3xl font-bold">-</p>
-          </div>
-        </Card>
-        <Card>
-          <div className="p-6">
-            <h3 className="font-semibold mb-2">Active Products</h3>
-            <p className="text-3xl font-bold">0</p>
-          </div>
-        </Card>
-      </div>
-    </div>
-  );
-}
-
 /**
  * Main Page Component
  */
@@ -179,7 +94,6 @@ export default function ContentManager() {
   const [isHistoryExpanded, setIsHistoryExpanded] = useState(false);
   const [categories, setCategories] = useState<TreeItem[]>([]);
   const [actionHistory, setActionHistory] = useState<CategoryAction[]>([]);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   // Handler to receive data from CategoryTree
   const handleCategoryDataUpdate = (data: CategoryData) => {
@@ -188,54 +102,67 @@ export default function ContentManager() {
   };
 
   return (
-    <div className="flex min-h-screen">
-      {/* Main Content */}
-      <div className={cn(
-        "flex-1 flex flex-col",
-        isSidebarOpen ? "mr-[450px]" : "mr-0"
-      )}>
-        <ContentHeader 
-          title="Contenaat Manager" 
-          className="sticky top-0 z-30 bg-background"
-          isSidebarOpen={isSidebarOpen}
-          onSidebarToggle={() => setIsSidebarOpen(!isSidebarOpen)}
-        />
-        <div className="flex-1 p-8 pt-6">
+    <RightSidebarProvider>
+      <div className="flex min-h-screen relative">
+        {/* Main Content */}
+        <div className="flex-1 flex flex-col">
           <Tabs 
             defaultValue="overview" 
-            className="w-full space-y-6"
+            className="w-full"
             onValueChange={setActiveTab}
           >
-            <TabsList>
-              <TabsTrigger value="overview">Overview</TabsTrigger>
-              <TabsTrigger value="categories">Categories</TabsTrigger>
-              <TabsTrigger value="product-structure">Product Structure</TabsTrigger>
-            </TabsList>
-            
-            <TabsContent value="overview">
-              <Overview />
-            </TabsContent>
-            
-            <TabsContent value="categories">
-              <CategoryTree onDataUpdate={handleCategoryDataUpdate} />
-            </TabsContent>
-            
-            <TabsContent value="product-structure">
-              <ProductStructure />
-            </TabsContent>
+            <ContentHeader 
+              title="Super Content"
+              subtitle="Manage your products, categories, and content structure."
+              className="sticky top-0 z-30 bg-background"
+              tabs={
+                <TabsList className="h-9">
+                  <TabsTrigger value="overview">Overview</TabsTrigger>
+                  <TabsTrigger value="categories">Categories</TabsTrigger>
+                  <TabsTrigger value="product-structure">Structure</TabsTrigger>
+                </TabsList>
+              }
+            >
+              <RightSidebarTrigger />
+            </ContentHeader>
+
+            <div className="flex-1">
+              <TabsContent value="overview" className="p-8">
+                <Overview />
+              </TabsContent>
+              
+              <TabsContent value="categories" className="p-8">
+                <CategoryTree onDataUpdate={handleCategoryDataUpdate} />
+              </TabsContent>
+              
+              <TabsContent value="product-structure" className="p-8">
+                <ProductStructure />
+              </TabsContent>
+            </div>
           </Tabs>
         </div>
-      </div>
 
-      {/* Right Sidebar */}
-      <RightSidebar 
-        activeTab={activeTab}
-        categories={categories}
-        actionHistory={actionHistory}
-        isHistoryExpanded={isHistoryExpanded}
-        onHistoryExpandToggle={() => setIsHistoryExpanded(!isHistoryExpanded)}
-        isOpen={isSidebarOpen}
-      />
-    </div>
+        {/* Right Sidebar - Conditionally render based on active tab */}
+        {activeTab === "overview" && (
+          <OverviewSidebar />
+        )}
+        {activeTab === "categories" && (
+          <CategoriesSidebar 
+            activeTab={activeTab}
+            categories={categories}
+            actionHistory={actionHistory}
+            isHistoryExpanded={isHistoryExpanded}
+            onHistoryExpandToggle={() => setIsHistoryExpanded(!isHistoryExpanded)}
+          />
+        )}
+        {activeTab === "product-structure" && (
+          <ProductStructureSidebar 
+            fields={[]}
+            isExpanded={isHistoryExpanded}
+            onExpandToggle={() => setIsHistoryExpanded(!isHistoryExpanded)}
+          />
+        )}
+      </div>
+    </RightSidebarProvider>
   );
 } 

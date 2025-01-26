@@ -33,26 +33,26 @@ import {
   ChevronRight,
   ChevronDown,
   ChevronUp,
+  ChevronLeft,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { Calendar } from "@/components/ui/calendar";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { format } from "date-fns";
-import { CalendarIcon, Filter, X } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { CategoryHistory } from "@/components/ui/category-history";
-import { CategorySidebar } from "@/components/ui/category-sidebar";
+import { Switch } from "@/components/ui/switch";
+import { ProductStructureSidebar } from "./sidebar"
 
 /** ---------------------------------------------------------------------------------
  * 1. Data Types
  * --------------------------------------------------------------------------------- */
-interface TreeItem {
+interface FieldItem {
   id: string;
   name: string;
+  type: "text" | "number" | "boolean" | "date" | "select" | "multiselect" | "url" | "timestamp" | "email" | "image" | "currency" | "phone" | "json" | "markdown" | "color";
+  required: boolean;
   parentId: string | undefined;
-  children: TreeItem[];
+  children: FieldItem[];
+  options?: string[];
   metadata?: {
     createdAt?: string;
     updatedAt?: string;
@@ -66,40 +66,14 @@ interface DragIntention {
   id: string;
 }
 
-/** Props for the top-level CategoryTree container */
-interface CategoryTreeProps {
-  className?: string;
-}
-
-/** Props for each item (node) in the tree */
-interface CategoryTreeItemProps {
-  item: TreeItem;
-  depth: number;
-  activeId: string | null;
-  overId: string | null;
-  currentPosition: DragIntention | null;
-  onDelete: (id: string) => Promise<void>;
-  onRename: (id: string, newName: string) => Promise<void>;
-}
-
-/** Interface for history log */
-interface CategoryAction {
+interface FieldAction {
   id: string;
   timestamp: string;
-  action: "CATEGORY_CREATED" | "SUBCATEGORY_ADDED" | "SUBCATEGORY_MOVED" | "CATEGORY_RENAMED" | "CATEGORY_REMOVED" | "SUBCATEGORY_REMOVED" | "ORDER_CHANGED" | "PROPERTY_ASSIGNED" | "CATEGORY_ACTIVATED" | "CATEGORY_DEACTIVATED";
+  action: "FIELD_CREATED" | "FIELD_UPDATED" | "FIELD_DELETED" | "FIELD_MOVED" | "FIELD_REQUIRED_CHANGED" | "FIELD_TYPE_CHANGED";
   details: {
     message: string;
-    affectedCategories: {
-      target?: {
-        id: string;
-        name: string;
-        path?: string | undefined;
-      };
-      previousParent?: {
-        id: string;
-        name: string;
-      };
-      newParent?: {
+    affectedFields: {
+      target: {
         id: string;
         name: string;
       };
@@ -109,10 +83,11 @@ interface CategoryAction {
     id: string;
     name: string;
   };
-  category: {
+  field: {
     id: string;
     name: string;
-    path?: string | undefined;
+    type: string;
+    required: boolean;
     metadata?: {
       createdAt?: string;
       updatedAt?: string;
@@ -122,54 +97,77 @@ interface CategoryAction {
   };
   changes?: {
     previousState?: {
+      type?: string;
+      required?: boolean;
       parentId?: string;
       position?: number;
-      depth?: number;
-      path?: string | undefined;
-      status?: "active" | "inactive";
     };
     newState?: {
+      type?: string;
+      required?: boolean;
       parentId?: string;
       position?: number;
-      depth?: number;
-      path?: string | undefined;
-      status?: "active" | "inactive";
     };
   };
 }
 
-/** Update the CategoryHistoryProps interface */
-interface CategoryHistoryProps {
-  history: CategoryAction[];
-  categories: TreeItem[];
+/** Props for the top-level ProductStructure container */
+interface ProductStructureProps {
   className?: string;
-  isExpanded?: boolean;
-  onExpandToggle?: () => void;
+  onDataUpdate?: (data: { items: FieldItem[] }) => void;
+}
+
+/** Props for each item (node) in the tree */
+interface ProductFieldItemProps {
+  item: FieldItem;
+  depth: number;
+  activeId: string | null;
+  overId: string | null;
+  currentPosition: DragIntention | null;
+  onDelete: (id: string) => Promise<void>;
+  onRename: (id: string, newName: string) => Promise<void>;
+  onTypeChange: (id: string, newType: FieldItem["type"]) => Promise<void>;
+  onRequiredChange: (id: string, required: boolean) => Promise<void>;
 }
 
 /** ---------------------------------------------------------------------------------
  * 2. Constants
  * --------------------------------------------------------------------------------- */
 const INDENT_SIZE = 24;
-const UNPARENT_THRESHOLD = -20; // how far left to drag to force root-level
-const CHILD_THRESHOLD = 20;     // how far right to drag to nest as a child
-const MAX_DEPTH = 5;
-const GAP_SIZE = 8;            // 0.5rem (gap-2) in pixels
+const UNPARENT_THRESHOLD = -20;
+const CHILD_THRESHOLD = 20;
+const MAX_DEPTH = 3;
+const GAP_SIZE = 8;
 
-/** Constants for visual feedback */
-const GHOST_LINE_THICKNESS = 2; // px
-const GHOST_DOT_SIZE = 6;       // px
-const GHOST_LINE_CLASSES =
-  "absolute pointer-events-none transition-all duration-200";
+const GHOST_LINE_THICKNESS = 2;
+const GHOST_DOT_SIZE = 6;
+const GHOST_LINE_CLASSES = "absolute pointer-events-none transition-all duration-200";
 const GHOST_LINE_ACTIVE_CLASSES = "bg-primary shadow-sm";
-const GHOST_DOT_CLASSES =
-  "absolute top-1/2 rounded-full transition-all duration-200";
+const GHOST_DOT_CLASSES = "absolute top-1/2 rounded-full transition-all duration-200";
 const GHOST_DOT_ACTIVE_CLASSES = "bg-primary shadow-sm";
 
+const FIELD_TYPES = [
+  { value: "text", label: "Text" },
+  { value: "number", label: "Number" },
+  { value: "boolean", label: "Boolean" },
+  { value: "date", label: "Date" },
+  { value: "timestamp", label: "Timestamp" },
+  { value: "url", label: "URL" },
+  { value: "email", label: "Email" },
+  { value: "phone", label: "Phone" },
+  { value: "image", label: "Image" },
+  { value: "currency", label: "Currency" },
+  { value: "select", label: "Select" },
+  { value: "multiselect", label: "Multi Select" },
+  { value: "json", label: "JSON" },
+  { value: "markdown", label: "Markdown" },
+  { value: "color", label: "Color" }
+];
+
 /** ---------------------------------------------------------------------------------
- * 3. TreeItem: Single Node
+ * 3. FieldItem: Single Node
  * --------------------------------------------------------------------------------- */
-function CategoryTreeItem({
+function ProductFieldItem({
   item,
   depth,
   activeId,
@@ -177,13 +175,14 @@ function CategoryTreeItem({
   currentPosition,
   onDelete,
   onRename,
-}: CategoryTreeItemProps) {
+  onTypeChange,
+  onRequiredChange,
+}: ProductFieldItemProps) {
   const [isEditing, setIsEditing] = useState(false);
   const [editValue, setEditValue] = useState(item.name);
   const [isExpanded, setIsExpanded] = useState(true);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  /** dnd-kit: useSortable hook */
   const { attributes, listeners, setNodeRef, isDragging, isOver } = useSortable({
     id: item.id,
   });
@@ -222,10 +221,8 @@ function CategoryTreeItem({
   const showGhostChild = isTargetItem && currentPosition?.type === "child";
   const showGhostRoot = isTargetItem && currentPosition?.type === "root";
 
-  // Constants for row geometry
-  const ROW_HEIGHT = 48; // h-12 equals 48px
+  const ROW_HEIGHT = 48;
 
-  // Helper for line positioning
   const getLineStyle = (indentLevel: number) => ({
     left: `${indentLevel * INDENT_SIZE}px`,
     right: 0,
@@ -233,7 +230,6 @@ function CategoryTreeItem({
     zIndex: 10,
   });
 
-  // Helper for dot positioning
   const getDotStyle = (isLeft: boolean) => ({
     width: `${GHOST_DOT_SIZE}px`,
     height: `${GHOST_DOT_SIZE}px`,
@@ -241,14 +237,12 @@ function CategoryTreeItem({
     ...(isLeft ? { left: 0 } : { right: 0 }),
   });
 
-  // Return empty space if the item is currently being dragged
   if (isDragging) {
     return <div style={style} className="h-12" />;
   }
 
   return (
     <div className="relative">
-      {/* Root line (making item root-level) */}
       {showGhostRoot && (
         <div
           className={cn(GHOST_LINE_CLASSES, GHOST_LINE_ACTIVE_CLASSES)}
@@ -271,7 +265,6 @@ function CategoryTreeItem({
         </div>
       )}
 
-      {/* Before line */}
       {showGhostBefore && (
         <div
           className={cn(GHOST_LINE_CLASSES, GHOST_LINE_ACTIVE_CLASSES)}
@@ -291,7 +284,6 @@ function CategoryTreeItem({
         </div>
       )}
 
-      {/* Actual row */}
       <div
         ref={setNodeRef}
         style={style}
@@ -302,7 +294,6 @@ function CategoryTreeItem({
           activeId === item.id && "opacity-50"
         )}
       >
-        {/* Expand/Collapse button */}
         {item.children.length > 0 && (
           <button
             className="p-0.5 hover:bg-muted rounded-sm"
@@ -317,7 +308,6 @@ function CategoryTreeItem({
           </button>
         )}
 
-        {/* Drag handle */}
         <button
           className="touch-none p-1 opacity-60 hover:opacity-100 transition-opacity"
           {...attributes}
@@ -326,7 +316,6 @@ function CategoryTreeItem({
           <GripVertical className="w-4 h-4" />
         </button>
 
-        {/* Name field */}
         {isEditing ? (
           <Input
             ref={inputRef}
@@ -340,7 +329,30 @@ function CategoryTreeItem({
           <span className="flex-1 truncate">{item.name}</span>
         )}
 
-        {/* Actions */}
+        <Select
+          value={item.type}
+          onValueChange={(value) => onTypeChange(item.id, value as FieldItem["type"])}
+        >
+          <SelectTrigger className="w-[120px] h-8">
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            {FIELD_TYPES.map((type) => (
+              <SelectItem key={type.value} value={type.value}>
+                {type.label}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+
+        <div className="flex items-center gap-2">
+          <span className="text-sm">Required</span>
+          <Switch
+            checked={item.required}
+            onCheckedChange={(checked) => onRequiredChange(item.id, checked)}
+          />
+        </div>
+
         <div className="flex items-center gap-1">
           <Button
             variant="ghost"
@@ -360,7 +372,6 @@ function CategoryTreeItem({
           </Button>
         </div>
 
-        {/* Child line (nesting an item) */}
         {showGhostChild && (
           <div
             className={cn(GHOST_LINE_CLASSES, GHOST_LINE_ACTIVE_CLASSES)}
@@ -381,7 +392,6 @@ function CategoryTreeItem({
         )}
       </div>
 
-      {/* After line */}
       {showGhostAfter && !showGhostChild && (
         <div
           className={cn(GHOST_LINE_CLASSES, GHOST_LINE_ACTIVE_CLASSES)}
@@ -401,11 +411,10 @@ function CategoryTreeItem({
         </div>
       )}
 
-      {/* Render children */}
       {item.children.length > 0 && isExpanded && (
         <div className="flex flex-col gap-2 mt-2">
           {item.children.map((child) => (
-            <CategoryTreeItem
+            <ProductFieldItem
               key={child.id}
               item={child}
               depth={depth + 1}
@@ -414,6 +423,8 @@ function CategoryTreeItem({
               currentPosition={currentPosition}
               onDelete={onDelete}
               onRename={onRename}
+              onTypeChange={onTypeChange}
+              onRequiredChange={onRequiredChange}
             />
           ))}
         </div>
@@ -423,35 +434,27 @@ function CategoryTreeItem({
 }
 
 /** ---------------------------------------------------------------------------------
- * 4. CategoryTree (Main)
+ * 4. ProductStructure (Main)
  * --------------------------------------------------------------------------------- */
-export function CategoryTree({ className }: CategoryTreeProps) {
-  const [items, setItems] = useState<TreeItem[]>([]);
+export function ProductStructure({ className, onDataUpdate }: ProductStructureProps) {
+  const [items, setItems] = useState<FieldItem[]>([]);
   const [activeId, setActiveId] = useState<string | null>(null);
   const [overId, setOverId] = useState<string | null>(null);
   const [offsetLeft, setOffsetLeft] = useState(0);
-  const [currentPosition, setCurrentPosition] = useState<DragIntention | null>(
-    null
-  );
-  const [newCategoryName, setNewCategoryName] = useState("");
-  const [actionHistory, setActionHistory] = useState<CategoryAction[]>([]);
+  const [currentPosition, setCurrentPosition] = useState<DragIntention | null>(null);
+  const [newFieldName, setNewFieldName] = useState("");
   const { toast } = useToast();
-  const [isHistoryExpanded, setIsHistoryExpanded] = useState(false);
-  const [dateFilter, setDateFilter] = useState<Date>();
-  const [categoryFilter, setCategoryFilter] = useState<string>("");
-  const [showFilters, setShowFilters] = useState(false);
+  const [isHistoryExpanded, setIsHistoryExpanded] = useState(false)
 
-  /** DnD sensors */
   const sensors = useSensors(
     useSensor(PointerSensor, {
       activationConstraint: { distance: 8 },
     })
   );
 
-  /** Flatten & rebuild approach (with memoization) */
   const flattenTree = useCallback(
-    (list: TreeItem[], parentId: string | undefined = undefined): TreeItem[] => {
-      return list.reduce<TreeItem[]>((acc, item) => {
+    (list: FieldItem[], parentId: string | undefined = undefined): FieldItem[] => {
+      return list.reduce<FieldItem[]>((acc, item) => {
         const copy = { ...item, parentId };
         return [...acc, copy, ...flattenTree(item.children, item.id)];
       }, []);
@@ -459,12 +462,12 @@ export function CategoryTree({ className }: CategoryTreeProps) {
     []
   );
 
-  const buildTree = useCallback((flat: TreeItem[]): TreeItem[] => {
-    const map = new Map<string, TreeItem>();
+  const buildTree = useCallback((flat: FieldItem[]): FieldItem[] => {
+    const map = new Map<string, FieldItem>();
     for (const f of flat) {
       map.set(f.id, { ...f, children: [] });
     }
-    const result: TreeItem[] = [];
+    const result: FieldItem[] = [];
     for (const f of flat) {
       if (!f.parentId) {
         result.push(map.get(f.id)!);
@@ -478,19 +481,17 @@ export function CategoryTree({ className }: CategoryTreeProps) {
     return result;
   }, []);
 
-  /** Memoized tree data */
   const flattenedTree = useMemo(() => flattenTree(items), [items, flattenTree]);
   const flatItemsMap = useMemo(() => {
-    const map = new Map<string, TreeItem>();
+    const map = new Map<string, FieldItem>();
     flattenedTree.forEach((item) => map.set(item.id, item));
     return map;
   }, [flattenedTree]);
 
-  /** Depth helper (BFS) */
   const getDepth = useCallback(
-    (list: TreeItem[], id: string): number => {
+    (list: FieldItem[], id: string): number => {
       if (!list.length) return -1;
-      const queue: Array<{ items: TreeItem[]; depth: number }> = [
+      const queue: Array<{ items: FieldItem[]; depth: number }> = [
         { items: list, depth: 0 },
       ];
 
@@ -508,13 +509,12 @@ export function CategoryTree({ className }: CategoryTreeProps) {
     []
   );
 
-  /** Check for cycles: can't drop an item into its own descendant */
   const isDescendant = useCallback(
-    (items: TreeItem[], sourceId: string, targetId: string): boolean => {
+    (items: FieldItem[], sourceId: string, targetId: string): boolean => {
       const source = items.find((x) => x.id === sourceId);
       if (!source) return false;
 
-      function hasDescendant(tid: string, children: TreeItem[]): boolean {
+      function hasDescendant(tid: string, children: FieldItem[]): boolean {
         for (const child of children) {
           if (child.id === tid || hasDescendant(tid, child.children)) {
             return true;
@@ -527,50 +527,25 @@ export function CategoryTree({ className }: CategoryTreeProps) {
     []
   );
 
-  /** Filter history items */
-  const filteredHistory = useMemo(() => {
-    return actionHistory.filter(action => {
-      // Date filter
-      if (dateFilter) {
-        const actionDate = new Date(action.timestamp);
-        if (
-          actionDate.getDate() !== dateFilter.getDate() ||
-          actionDate.getMonth() !== dateFilter.getMonth() ||
-          actionDate.getFullYear() !== dateFilter.getFullYear()
-        ) {
-          return false;
-        }
-      }
-
-      // Category filter
-      if (categoryFilter && action.category.id !== categoryFilter) {
-        return false;
-      }
-
-      return true;
-    });
-  }, [actionHistory, dateFilter, categoryFilter]);
-
-  /** API calls */
-  const saveCategories = useCallback(
-    async (newItems: TreeItem[]) => {
+  const saveFields = useCallback(
+    async (newItems: FieldItem[]) => {
       try {
-        const response = await fetch("/api/categories", {
+        const response = await fetch("/api/product-structure", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ categories: newItems }),
+          body: JSON.stringify({ fields: newItems }),
         });
 
         if (!response.ok) {
-          throw new Error(`Failed to save categories: ${response.statusText}`);
+          throw new Error(`Failed to save fields: ${response.statusText}`);
         }
       } catch (error) {
-        console.error("Failed to save categories:", error);
+        console.error("Failed to save fields:", error);
         toast({
           variant: "destructive",
           title: "Error",
           description:
-            "Failed to save categories. Your changes may not be persisted.",
+            "Failed to save fields. Your changes may not be persisted.",
         });
       }
     },
@@ -578,22 +553,19 @@ export function CategoryTree({ className }: CategoryTreeProps) {
   );
 
   const addToHistory = useCallback(
-    async (action: Omit<CategoryAction, "id" | "timestamp" | "user">) => {
+    async (action: Omit<FieldAction, "id" | "timestamp" | "user">) => {
       const newAction = {
         ...action,
         id: crypto.randomUUID(),
         timestamp: new Date().toISOString(),
         user: {
-          id: "u_01HNK2E8YRJX9QWM5390VEXZK4", // This should be replaced with actual user ID
+          id: "u_01HNK2E8YRJX9QWM5390VEXZK4",
           name: "Sydney Fernandes"
         }
       };
 
-      // Update local state first for immediate feedback
-      setActionHistory((prev) => [newAction, ...prev]);
-
       try {
-        const response = await fetch("/api/categories/history", {
+        const response = await fetch("/api/product-structure/history", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ action: newAction }),
@@ -607,60 +579,34 @@ export function CategoryTree({ className }: CategoryTreeProps) {
         toast({
           variant: "destructive",
           title: "Error",
-          description:
-            "Failed to save action history. Some actions may not be recorded.",
+          description: "Failed to save action history. Some actions may not be recorded.",
         });
-        // Roll back the state update if saving fails
-        setActionHistory((prev) => prev.filter((item) => item.id !== newAction.id));
       }
     },
     [toast]
   );
 
-  /** Load categories & history on mount */
   useEffect(() => {
-    async function loadCategories() {
+    async function loadFields() {
       try {
-        const response = await fetch("/api/categories");
+        const response = await fetch("/api/product-structure");
         if (!response.ok) {
-          throw new Error(`Failed to load categories: ${response.statusText}`);
+          throw new Error(`Failed to load fields: ${response.statusText}`);
         }
         const data = await response.json();
-        setItems(data.categories || []);
+        setItems(data.fields || []);
       } catch (err) {
-        console.error("Failed to load categories:", err);
+        console.error("Failed to load fields:", err);
         toast({
           variant: "destructive",
           title: "Error",
-          description: "Failed to load categories. Please refresh the page.",
+          description: "Failed to load fields. Please refresh the page.",
         });
       }
     }
-    loadCategories();
+    loadFields();
   }, [toast]);
 
-  useEffect(() => {
-    async function loadHistory() {
-      try {
-        const response = await fetch("/api/categories/history");
-        if (!response.ok) {
-          throw new Error(`Failed to load history: ${response.statusText}`);
-        }
-        const data = await response.json();
-        setActionHistory(data.history || []);
-      } catch (err) {
-        console.error("Failed to load history:", err);
-        toast({
-          variant: "destructive",
-          title: "Error",
-          description: "Failed to load action history. Please refresh the page.",
-        });
-      }
-    }
-    loadHistory();
-  }, [toast]);
-
-  /** Drag-and-drop handlers */
   function handleDragStart({ active }: DragStartEvent) {
     setActiveId(active.id.toString());
   }
@@ -672,10 +618,6 @@ export function CategoryTree({ className }: CategoryTreeProps) {
     }
   }
 
-  /**
-   * APPROACH B: Always nest if horizontally beyond CHILD_THRESHOLD.
-   * This makes it much easier to drop deeper items without precise vertical zones.
-   */
   function handleDragOver({ over, active }: DragOverEvent) {
     if (!over || !over.rect) {
       setCurrentPosition(null);
@@ -697,7 +639,6 @@ export function CategoryTree({ className }: CategoryTreeProps) {
       return;
     }
 
-    // Prevent dragging into its own descendant
     if (isDescendant(items, activeId, overId)) {
       setCurrentPosition(null);
       return;
@@ -705,7 +646,6 @@ export function CategoryTree({ className }: CategoryTreeProps) {
 
     const overDepth = getDepth(items, overId);
 
-    // Get bounding rects
     const overRect = over.rect;
     const activeRect = active.rect.current?.translated;
     if (!activeRect || !overRect.height) {
@@ -713,14 +653,11 @@ export function CategoryTree({ className }: CategoryTreeProps) {
       return;
     }
 
-    // Vertical approach for before/after
     const pointerY = activeRect.top;
     const offsetY = Math.max(0, Math.min(pointerY - overRect.top, overRect.height));
     const relativeY = offsetY / overRect.height;
 
-    // If dragged far to the left, attempt root-level
     if (offsetLeft < UNPARENT_THRESHOLD && src.parentId) {
-      // If target is root, reorder before/after it
       if (!tgt.parentId) {
         if (relativeY < 0.5) {
           setCurrentPosition({ type: "before", id: overId });
@@ -728,19 +665,16 @@ export function CategoryTree({ className }: CategoryTreeProps) {
           setCurrentPosition({ type: "after", id: overId });
         }
       } else {
-        // Otherwise, just force to root level
         setCurrentPosition({ type: "root", id: overId });
       }
       return;
     }
 
-    // If dragged far to the right, nest as child (if within depth)
     if (offsetLeft > CHILD_THRESHOLD && overDepth < MAX_DEPTH - 1) {
       setCurrentPosition({ type: "child", id: overId });
       return;
     }
 
-    // Otherwise, decide before/after based purely on mid-point
     if (relativeY < 0.5) {
       setCurrentPosition({ type: "before", id: overId });
     } else {
@@ -764,7 +698,6 @@ export function CategoryTree({ className }: CategoryTreeProps) {
       return;
     }
 
-    // Safety check for cycles & depth
     if (type === "child") {
       if (
         isDescendant(items, activeId, tgt.id) ||
@@ -775,29 +708,23 @@ export function CategoryTree({ className }: CategoryTreeProps) {
       }
     }
 
-    // Build a new flat structure without the source
     const newFlat = flattenedTree.filter((f) => f.id !== src.id);
     const overIndex = newFlat.findIndex((f) => f.id === tgt.id);
 
-    let moveDescription = "";
     let insertIndex = overIndex;
     let newParentId = tgt.parentId;
-    let action: CategoryAction["action"] = "ORDER_CHANGED";
 
     switch (type) {
       case "before":
-        moveDescription = `Moved "${src.name}" before "${tgt.name}"`;
         newParentId = tgt.parentId;
         break;
 
       case "after":
         insertIndex = overIndex + 1;
-        moveDescription = `Moved "${src.name}" after "${tgt.name}"`;
         newParentId = tgt.parentId;
         break;
 
       case "child":
-        // Place as last child
         const lastChildIndex = newFlat.findIndex(
           (f, i) =>
             f.parentId === tgt.id &&
@@ -805,8 +732,6 @@ export function CategoryTree({ className }: CategoryTreeProps) {
         );
         insertIndex = lastChildIndex === -1 ? overIndex + 1 : lastChildIndex + 1;
         newParentId = tgt.id;
-        moveDescription = `Made "${src.name}" a child of "${tgt.name}"`;
-        action = "SUBCATEGORY_MOVED";
         break;
 
       case "root":
@@ -819,68 +744,15 @@ export function CategoryTree({ className }: CategoryTreeProps) {
               )
             : -1;
         insertIndex = lastRootIndex + 1;
-        moveDescription = `Moved "${src.name}" to root level`;
         break;
     }
 
-    // Insert updated item
     const updatedSrc = { ...src, parentId: newParentId };
     newFlat.splice(insertIndex, 0, updatedSrc);
 
-    // Rebuild and update
     const newTree = buildTree(newFlat);
     setItems(newTree);
-    saveCategories(newTree);
-
-    const previousParent = src.parentId ? flatItemsMap.get(src.parentId) : undefined;
-    const newParent = newParentId ? flatItemsMap.get(newParentId) : undefined;
-
-    addToHistory({
-      action,
-      details: {
-        message: moveDescription,
-        affectedCategories: {
-          target: {
-            id: src.id,
-            name: src.name,
-            path: src.parentId ? `/${src.name.toLowerCase()}` : undefined
-          },
-          ...(previousParent && {
-            previousParent: {
-              id: previousParent.id,
-              name: previousParent.name
-            }
-          }),
-          ...(newParent && {
-            newParent: {
-              id: newParent.id,
-              name: newParent.name
-            }
-          })
-        }
-      },
-      category: {
-        id: src.id,
-        name: src.name,
-        path: src.parentId ? `/${src.name.toLowerCase()}` : undefined,
-        metadata: {
-          updatedAt: new Date().toISOString(),
-          status: "active"
-        }
-      },
-      changes: {
-        previousState: {
-          parentId: src.parentId,
-          position: overIndex,
-          path: previousParent ? `/${previousParent.name.toLowerCase()}/${src.name.toLowerCase()}` : undefined
-        },
-        newState: {
-          parentId: newParentId,
-          position: insertIndex,
-          path: newParent ? `/${newParent.name.toLowerCase()}/${src.name.toLowerCase()}` : undefined
-        }
-      }
-    });
+    saveFields(newTree);
     resetDrag();
   }
 
@@ -891,44 +763,39 @@ export function CategoryTree({ className }: CategoryTreeProps) {
     setCurrentPosition(null);
   }
 
-  /** Count subcategories recursively */
-  const countSubcategories = useCallback((items: TreeItem[]): number => {
-    return items.reduce((count, item) => {
-      return count + item.children.length + countSubcategories(item.children);
-    }, 0);
-  }, []);
+  const handleAddField = () => {
+    if (!newFieldName.trim()) return;
 
-  /** Handlers for create, rename, delete */
-  const handleAddCategory = () => {
-    if (!newCategoryName.trim()) return;
-
-    const newCat: TreeItem = {
+    const newField: FieldItem = {
       id: crypto.randomUUID(),
-      name: newCategoryName.trim(),
+      name: newFieldName.trim(),
+      type: "text",
+      required: false,
       children: [],
       parentId: undefined,
     };
 
-    const updated = [...items, newCat];
+    const updated = [...items, newField];
     setItems(updated);
-    saveCategories(updated);
-    setNewCategoryName("");
+    saveFields(updated);
+    setNewFieldName("");
+
     addToHistory({
-      action: "CATEGORY_CREATED",
+      action: "FIELD_CREATED",
       details: {
-        message: `Created category "${newCat.name}"`,
-        affectedCategories: {
+        message: `Created field "${newField.name}"`,
+        affectedFields: {
           target: {
-            id: newCat.id,
-            name: newCat.name,
-            path: `/${newCat.name.toLowerCase()}`
+            id: newField.id,
+            name: newField.name
           }
         }
       },
-      category: {
-        id: newCat.id,
-        name: newCat.name,
-        path: `/${newCat.name.toLowerCase()}`,
+      field: {
+        id: newField.id,
+        name: newField.name,
+        type: newField.type,
+        required: newField.required,
         metadata: {
           createdAt: new Date().toISOString(),
           updatedAt: new Date().toISOString(),
@@ -944,7 +811,6 @@ export function CategoryTree({ className }: CategoryTreeProps) {
       if (!itemToDelete) return;
 
       try {
-        // Gather all children for deletion
         const childrenIds = new Set<string>();
         const getAllChildren = (parentId: string) => {
           flattenedTree.forEach((child) => {
@@ -960,82 +826,52 @@ export function CategoryTree({ className }: CategoryTreeProps) {
         const newFlat = flattenedTree.filter((x) => !childrenIds.has(x.id));
         const newTree = buildTree(newFlat);
         setItems(newTree);
-
-        // Persist changes
-        await saveCategories(newTree);
-        addToHistory({
-          action: childrenIds.size > 1 ? "SUBCATEGORY_REMOVED" : "CATEGORY_REMOVED",
-          details: {
-            message: `${childrenIds.size > 1 ? 'Category and subcategories' : 'Category'} removed: "${itemToDelete.name}"`,
-            affectedCategories: {
-              target: {
-                id: itemToDelete.id,
-                name: itemToDelete.name,
-                path: itemToDelete.parentId ? `/${itemToDelete.name.toLowerCase()}` : undefined
-              }
-            }
-          },
-          category: {
-            id: itemToDelete.id,
-            name: itemToDelete.name,
-            path: itemToDelete.parentId ? `/${itemToDelete.name.toLowerCase()}` : undefined,
-            metadata: {
-              createdAt: itemToDelete.metadata?.createdAt || new Date().toISOString(), // Preserve original createdAt if it exists
-              updatedAt: new Date().toISOString(),
-              deletedAt: new Date().toISOString(),
-              status: "inactive"
-            }
-          },
-          changes: {
-            previousState: {
-              parentId: itemToDelete.parentId || undefined,
-              status: "active"
-            },
-            newState: {
-              status: "inactive"
-            }
-          }
-        });
+        await saveFields(newTree);
       } catch (err) {
-        console.error("Failed to delete category:", err);
+        console.error("Failed to delete field:", err);
         toast({
           variant: "destructive",
           title: "Error",
-          description: "Failed to delete category. Please try again.",
+          description: "Failed to delete field. Please try again.",
         });
-        // Reload categories from server to ensure UI consistency
-        const response = await fetch("/api/categories");
+        const response = await fetch("/api/product-structure");
         if (response.ok) {
           const data = await response.json();
-          setItems(data.categories || []);
+          setItems(data.fields || []);
         }
       }
     },
-    [flatItemsMap, flattenedTree, buildTree, saveCategories, addToHistory, toast]
+    [flatItemsMap, flattenedTree, buildTree, saveFields, toast]
   );
 
+  useEffect(() => {
+    onDataUpdate?.({ items });
+  }, [items, onDataUpdate]);
+
   return (
-    <div className={cn("flex gap-6", className)}>
-      {/* Main Content */}
-      <div className="flex-1 p-4">
-        {/* Header & Add New Category */}
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-2xl font-bold">Categories</h2>
+    <div className={cn("flex-1", className)}>
+      <div>
+        <div className="space-y-4 mb-6 flex items-center justify-between">
+          <div>
+            <h2 className="text-2xl font-semibold tracking-tight">Product Structure</h2>
+            <p className="text-sm text-muted-foreground">
+              Define the structure of your product data with custom fields
+            </p>
+          </div>
           <div className="flex items-center gap-2">
             <Input
-              value={newCategoryName}
-              onChange={(e) => setNewCategoryName(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && handleAddCategory()}
-              placeholder="Add new category"
+              value={newFieldName}
+              onChange={(e) => setNewFieldName(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && handleAddField()}
+              placeholder="Add new field"
               className="h-9"
             />
-            <Button variant="default" size="default" onClick={handleAddCategory}>
+            <Button variant="default" size="default" onClick={handleAddField}>
               <CirclePlus className="h-5 w-5" />
             </Button>
           </div>
         </div>
 
-        {/* Category Tree */}
         <DndContext
           sensors={sensors}
           onDragStart={handleDragStart}
@@ -1046,7 +882,7 @@ export function CategoryTree({ className }: CategoryTreeProps) {
         >
           <div className="flex flex-col gap-2">
             {items.map((item) => (
-              <CategoryTreeItem
+              <ProductFieldItem
                 key={item.id}
                 item={item}
                 depth={0}
@@ -1055,31 +891,45 @@ export function CategoryTree({ className }: CategoryTreeProps) {
                 currentPosition={currentPosition}
                 onDelete={handleDelete}
                 onRename={async (id: string, newName: string) => {
-                  const oldItem = items.find((x) => x.id === id);
-                  if (!oldItem) return;
-
                   const newArr = items.map((x) =>
                     x.id === id ? { ...x, name: newName } : x
                   );
                   setItems(newArr);
+                  await saveFields(newArr);
+                }}
+                onTypeChange={async (id: string, newType: FieldItem["type"]) => {
+                  const newArr = items.map((x) =>
+                    x.id === id ? { ...x, type: newType } : x
+                  );
+                  setItems(newArr);
+                  await saveFields(newArr);
+                }}
+                onRequiredChange={async (id: string, required: boolean) => {
+                  const oldItem = items.find(x => x.id === id);
+                  if (!oldItem) return;
 
-                  await saveCategories(newArr);
+                  const newArr = items.map((x) =>
+                    x.id === id ? { ...x, required } : x
+                  );
+                  setItems(newArr);
+                  await saveFields(newArr);
+
                   addToHistory({
-                    action: "CATEGORY_RENAMED",
+                    action: "FIELD_REQUIRED_CHANGED",
                     details: {
-                      message: `Renamed "${oldItem.name}" to "${newName}"`,
-                      affectedCategories: {
+                      message: `Changed "${oldItem.name}" required status to ${required ? "required" : "optional"}`,
+                      affectedFields: {
                         target: {
                           id: oldItem.id,
-                          name: newName,
-                          path: oldItem.parentId ? `/${newName.toLowerCase()}` : undefined
+                          name: oldItem.name
                         }
                       }
                     },
-                    category: {
+                    field: {
                       id: oldItem.id,
-                      name: newName,
-                      path: oldItem.parentId ? `/${newName.toLowerCase()}` : undefined,
+                      name: oldItem.name,
+                      type: oldItem.type,
+                      required,
                       metadata: {
                         updatedAt: new Date().toISOString(),
                         status: "active"
@@ -1087,10 +937,10 @@ export function CategoryTree({ className }: CategoryTreeProps) {
                     },
                     changes: {
                       previousState: {
-                        path: oldItem.parentId ? `/${oldItem.name.toLowerCase()}` : undefined
+                        required: oldItem.required
                       },
                       newState: {
-                        path: oldItem.parentId ? `/${newName.toLowerCase()}` : undefined
+                        required
                       }
                     }
                   });
@@ -1099,7 +949,6 @@ export function CategoryTree({ className }: CategoryTreeProps) {
             ))}
           </div>
 
-          {/* Drag Overlay */}
           <DragOverlay dropAnimation={defaultDropAnimation}>
             {activeId && (
               <div className="bg-background border rounded-md p-2 opacity-80">
@@ -1109,15 +958,6 @@ export function CategoryTree({ className }: CategoryTreeProps) {
           </DragOverlay>
         </DndContext>
       </div>
-
-      {/* Sidebar */}
-      <CategorySidebar
-        items={items}
-        actionHistory={actionHistory}
-        isHistoryExpanded={isHistoryExpanded}
-        onHistoryExpandToggle={() => setIsHistoryExpanded(!isHistoryExpanded)}
-        countSubcategories={countSubcategories}
-      />
     </div>
   );
 }
@@ -1125,10 +965,72 @@ export function CategoryTree({ className }: CategoryTreeProps) {
 /**
  * Main Page Component
  */
-export default function CategoriesPage() {
+export default function ProductStructurePage() {
+  const [items, setItems] = useState<FieldItem[]>([])
+  const [isHistoryExpanded, setIsHistoryExpanded] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+
+  // Handle window resize
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1280)
+      if (window.innerWidth < 1280) {
+        setIsHistoryExpanded(false)
+      }
+    }
+
+    // Check initial size
+    checkMobile()
+
+    // Add resize listener
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
   return (
-    <div className="min-h-screen">
-      <CategoryTree />
+    <div className="min-h-screen flex relative">
+      <div className={cn(
+        "flex-1 transition-all duration-200",
+        isHistoryExpanded && !isMobile && "mr-[450px]"
+      )}>
+        <ProductStructure 
+          className="p-8"
+          onDataUpdate={({ items }) => setItems(items)} 
+        />
+      </div>
+
+      <div className={cn(
+        "fixed right-0 top-0 h-screen transition-all duration-200 transform",
+        isHistoryExpanded ? "translate-x-0" : "translate-x-full",
+        isMobile && "w-full max-w-[450px]"
+      )}>
+        <ProductStructureSidebar
+          fields={items}
+          className="h-full"
+          isExpanded={isHistoryExpanded}
+          onExpandToggle={() => setIsHistoryExpanded(!isHistoryExpanded)}
+        />
+      </div>
+
+      {/* Overlay for mobile */}
+      {isMobile && isHistoryExpanded && (
+        <div 
+          className="fixed inset-0 bg-background/80 backdrop-blur-sm"
+          onClick={() => setIsHistoryExpanded(false)}
+        />
+      )}
+
+      {/* Toggle button for mobile */}
+      {isMobile && !isHistoryExpanded && (
+        <Button
+          variant="outline"
+          size="icon"
+          className="fixed bottom-6 right-6 h-12 w-12 rounded-full shadow-lg"
+          onClick={() => setIsHistoryExpanded(true)}
+        >
+          <ChevronLeft className="h-6 w-6" />
+        </Button>
+      )}
     </div>
-  );
-}
+  )
+} 

@@ -1,53 +1,63 @@
 "use client"
 
-import { Database, Upload } from "lucide-react"
+import { LayoutGrid, type LucideIcon } from "lucide-react"
+import { usePathname } from "next/navigation"
 import Link from "next/link"
+
 import {
   SidebarGroup,
   SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  useSidebar,
 } from "@/components/ui/sidebar"
 
-interface DatabaseItem {
+type DatabaseItem = {
   name: string
   url: string
-  icon: React.ComponentType<{ className?: string }>
+  icon: LucideIcon
 }
 
 interface NavDatabaseProps {
-  databases: DatabaseItem[]
+  databases?: DatabaseItem[]
 }
 
-const defaultDatabases = [
-  {
-    name: "View Database",
-    url: "/database",
-    icon: Database,
-  },
-  {
-    name: "Adicionar Archivos",
-    url: "/database/upload",
-    icon: Upload,
-  },
-]
+export function NavDatabase({ databases }: NavDatabaseProps) {
+  const pathname = usePathname()
 
-export function NavDatabase({ databases = defaultDatabases }: NavDatabaseProps) {
+  const defaultItems: DatabaseItem[] = [
+    {
+      name: "Database",
+      url: "/database",
+      icon: LayoutGrid
+    },
+    {
+      name: "Super Content",
+      url: "/supercontent",
+      icon: LayoutGrid
+    }
+  ]
+
+  const items = databases || defaultItems
+
   return (
-    <SidebarGroup>
-      <SidebarGroupLabel>Database</SidebarGroupLabel>
+    <SidebarGroup className="group-data-[collapsible=icon]:hidden">
+      <SidebarGroupLabel>Platform</SidebarGroupLabel>
       <SidebarMenu>
-        {databases.map((item) => (
-          <SidebarMenuItem key={item.url}>
-            <SidebarMenuButton asChild>
-              <Link href={item.url}>
-                <item.icon />
-                <span>{item.name}</span>
-              </Link>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-        ))}
+        {items.map((item) => {
+          const isActive = pathname === item.url || pathname.startsWith(item.url + "/")
+          return (
+            <SidebarMenuItem key={item.url}>
+              <SidebarMenuButton asChild isActive={isActive}>
+                <Link href={item.url}>
+                  <item.icon />
+                  <span>{item.name}</span>
+                </Link>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+          )
+        })}
       </SidebarMenu>
     </SidebarGroup>
   )
