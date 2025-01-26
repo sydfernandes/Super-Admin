@@ -1,6 +1,158 @@
 {
   "history": [
     {
+      "action": {
+        "action": "FIELD_REQUIRED_CHANGED",
+        "details": {
+          "message": "Changed \"Metadata\" required status to required",
+          "affectedFields": {
+            "target": {
+              "id": "e5115c14-8824-4c63-aebe-24a5ddfd994a",
+              "name": "Metadata"
+            }
+          }
+        },
+        "field": {
+          "id": "e5115c14-8824-4c63-aebe-24a5ddfd994a",
+          "name": "Metadata",
+          "type": "text",
+          "required": true,
+          "metadata": {
+            "updatedAt": "2025-01-26T14:40:38.174Z",
+            "status": "active"
+          }
+        },
+        "changes": {
+          "previousState": {
+            "required": false
+          },
+          "newState": {
+            "required": true
+          }
+        },
+        "id": "2cd467b2-63af-486f-8647-6927498e3811",
+        "timestamp": "2025-01-26T14:40:38.174Z",
+        "user": {
+          "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+          "name": "Sydney Fernandes"
+        }
+      }
+    },
+    {
+      "action": {
+        "action": "FIELD_REQUIRED_CHANGED",
+        "details": {
+          "message": "Changed \"Metadata\" required status to optional",
+          "affectedFields": {
+            "target": {
+              "id": "e5115c14-8824-4c63-aebe-24a5ddfd994a",
+              "name": "Metadata"
+            }
+          }
+        },
+        "field": {
+          "id": "e5115c14-8824-4c63-aebe-24a5ddfd994a",
+          "name": "Metadata",
+          "type": "text",
+          "required": false,
+          "metadata": {
+            "updatedAt": "2025-01-26T14:40:37.329Z",
+            "status": "active"
+          }
+        },
+        "changes": {
+          "previousState": {
+            "required": true
+          },
+          "newState": {
+            "required": false
+          }
+        },
+        "id": "1facc005-3f07-4b94-b564-d4d8dd8404ce",
+        "timestamp": "2025-01-26T14:40:37.329Z",
+        "user": {
+          "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+          "name": "Sydney Fernandes"
+        }
+      }
+    },
+    {
+      "action": {
+        "action": "FIELD_REQUIRED_CHANGED",
+        "details": {
+          "message": "Changed \"Estados\" required status to required",
+          "affectedFields": {
+            "target": {
+              "id": "596a5b57-1656-42d4-858e-23315fdff587",
+              "name": "Estados"
+            }
+          }
+        },
+        "field": {
+          "id": "596a5b57-1656-42d4-858e-23315fdff587",
+          "name": "Estados",
+          "type": "text",
+          "required": true,
+          "metadata": {
+            "updatedAt": "2025-01-26T14:40:35.192Z",
+            "status": "active"
+          }
+        },
+        "changes": {
+          "previousState": {
+            "required": false
+          },
+          "newState": {
+            "required": true
+          }
+        },
+        "id": "815b988e-4d96-445d-9a12-943b3d09c6b9",
+        "timestamp": "2025-01-26T14:40:35.192Z",
+        "user": {
+          "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+          "name": "Sydney Fernandes"
+        }
+      }
+    },
+    {
+      "action": {
+        "action": "FIELD_REQUIRED_CHANGED",
+        "details": {
+          "message": "Changed \"Estados\" required status to optional",
+          "affectedFields": {
+            "target": {
+              "id": "596a5b57-1656-42d4-858e-23315fdff587",
+              "name": "Estados"
+            }
+          }
+        },
+        "field": {
+          "id": "596a5b57-1656-42d4-858e-23315fdff587",
+          "name": "Estados",
+          "type": "text",
+          "required": false,
+          "metadata": {
+            "updatedAt": "2025-01-26T14:40:33.451Z",
+            "status": "active"
+          }
+        },
+        "changes": {
+          "previousState": {
+            "required": true
+          },
+          "newState": {
+            "required": false
+          }
+        },
+        "id": "fb61f4de-c625-4b34-b8f0-81bafd537993",
+        "timestamp": "2025-01-26T14:40:33.451Z",
+        "user": {
+          "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+          "name": "Sydney Fernandes"
+        }
+      }
+    },
+    {
       "action": "FIELD_REQUIRED_CHANGED",
       "details": {
         "message": "Changed \"Estados\" required status to required",

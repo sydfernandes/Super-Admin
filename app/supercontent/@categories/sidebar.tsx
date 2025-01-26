@@ -7,8 +7,7 @@ import { CategoryHistory } from "./history";
 interface TreeItem {
   id: string;
   name: string;
-  parentId: string | undefined;
-  children: TreeItem[];
+  parentId: string | null;
   metadata?: {
     createdAt?: string;
     updatedAt?: string;
@@ -77,8 +76,6 @@ interface CategoriesSidebarProps {
   activeTab?: string;
   categories: TreeItem[];
   actionHistory: CategoryAction[];
-  isHistoryExpanded: boolean;
-  onHistoryExpandToggle: () => void;
 }
 
 export function CategoriesSidebar({
@@ -86,24 +83,21 @@ export function CategoriesSidebar({
   activeTab,
   categories = [],
   actionHistory = [],
-  isHistoryExpanded = false,
-  onHistoryExpandToggle,
 }: CategoriesSidebarProps) {
-  // Calculate total subcategories by recursively counting all children
-  const countSubcategories = (categories: TreeItem[]): number => {
-    return categories.reduce((count, category) => {
-      // Count immediate children
-      const immediateChildren = category.children?.length || 0;
-      // Recursively count children of children
-      const childrenOfChildren = category.children ? countSubcategories(category.children) : 0;
-      return count + immediateChildren + childrenOfChildren;
-    }, 0);
+  // Count root categories (items with no parent)
+  const getRootCategories = (items: TreeItem[]): TreeItem[] => {
+    return items.filter(item => item.parentId === null);
   };
 
-  // Root categories are the top-level categories
-  const rootCategoriesCount = categories.length;
-  // Get total subcategories count
-  const totalSubcategoriesCount = countSubcategories(categories);
+  // Count subcategories (items with a parent)
+  const countSubcategories = (items: TreeItem[]): number => {
+    return items.filter(item => item.parentId !== null).length;
+  };
+
+  // Get active categories count (excluding inactive ones)
+  const activeCategories = categories.filter(cat => cat.metadata?.status !== 'inactive');
+  const rootCategoriesCount = getRootCategories(activeCategories).length;
+  const totalSubcategoriesCount = countSubcategories(activeCategories);
 
   return (
     <RightSidebar className={className}>
@@ -120,7 +114,7 @@ export function CategoriesSidebar({
                   <div className="flex flex-col">
                     <span className="text-2xl font-bold">{rootCategoriesCount}</span>
                     <span className="text-xs text-muted-foreground">
-                      Main {rootCategoriesCount === 1 ? 'category' : 'categories'}
+                      {rootCategoriesCount === 1 ? 'Categoria' : 'Categorias'} principais
                     </span>
                   </div>
                 </CardContent>
@@ -133,7 +127,7 @@ export function CategoriesSidebar({
                   <div className="flex flex-col">
                     <span className="text-2xl font-bold">{totalSubcategoriesCount}</span>
                     <span className="text-xs text-muted-foreground">
-                      Total {totalSubcategoriesCount === 1 ? 'subcategory' : 'subcategories'}
+                      Total de {totalSubcategoriesCount === 1 ? 'subcategoria' : 'subcategorias'}
                     </span>
                   </div>
                 </CardContent>
@@ -145,39 +139,11 @@ export function CategoriesSidebar({
               <CategoryHistory 
                 history={actionHistory}
                 categories={categories}
-                isExpanded={isHistoryExpanded}
-                onExpandToggle={onHistoryExpandToggle}
                 className="h-full"
               />
             </div>
           </>
-        ) : (
-          <>
-            <div className="space-y-2">
-              <Card>
-                <CardContent className="p-4">
-                  <div className="space-y-2">
-                    <h3 className="text-sm font-medium">Recent Activity</h3>
-                    <div className="text-sm text-muted-foreground">
-                      <div className="flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-green-500" />
-                        New product added
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-blue-500" />
-                        Stock updated
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-red-500" />
-                        Product removed
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </>
-        )}
+        ) : null}
       </div>
     </RightSidebar>
   );

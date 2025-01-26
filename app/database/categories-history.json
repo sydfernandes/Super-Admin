@@ -1,6 +1,571 @@
 {
   "history": [
     {
+      "id": "6b82d677-2e91-42ef-aa00-82be76532b01",
+      "timestamp": "2025-01-26T15:04:37.877Z",
+      "action": "CATEGORY_RENAMED",
+      "details": {
+        "message": "Renamed category from \"Especiarias\" to \"Especias\"",
+        "affectedCategories": {
+          "target": {
+            "id": "1c33b99f-3871-4c54-a34f-e48babe36da4",
+            "name": "Especias",
+            "path": "/especias"
+          }
+        }
+      },
+      "category": {
+        "id": "1c33b99f-3871-4c54-a34f-e48babe36da4",
+        "name": "Especias",
+        "path": "/especias",
+        "metadata": {
+          "updatedAt": "2025-01-26T15:04:37.877Z",
+          "status": "active"
+        }
+      },
+      "changes": {
+        "previousState": {
+          "path": "/especiarias"
+        },
+        "newState": {
+          "path": "/especias"
+        }
+      },
+      "user": {
+        "id": "current-user",
+        "name": "Current User"
+      }
+    },
+    {
+      "id": "4bc3178f-6fcc-4252-8378-bd909ca93526",
+      "timestamp": "2025-01-26T15:04:15.985Z",
+      "action": "CATEGORY_RENAMED",
+      "details": {
+        "message": "Renamed category from \"Especias\" to \"Especiarias\"",
+        "affectedCategories": {
+          "target": {
+            "id": "1c33b99f-3871-4c54-a34f-e48babe36da4",
+            "name": "Especiarias",
+            "path": "/especiarias"
+          }
+        }
+      },
+      "category": {
+        "id": "1c33b99f-3871-4c54-a34f-e48babe36da4",
+        "name": "Especiarias",
+        "path": "/especiarias",
+        "metadata": {
+          "updatedAt": "2025-01-26T15:04:15.985Z",
+          "status": "active"
+        }
+      },
+      "changes": {
+        "previousState": {
+          "path": "/especias"
+        },
+        "newState": {
+          "path": "/especiarias"
+        }
+      },
+      "user": {
+        "id": "current-user",
+        "name": "Current User"
+      }
+    },
+    {
+      "id": "4e6b8f47-d366-4013-943a-ba78a9b799bb",
+      "timestamp": "2025-01-26T14:39:23.995Z",
+      "action": "CATEGORY_RENAMED",
+      "details": {
+        "message": "Renamed category from \"Aceite, Vinagre y Sals\" to \"Aceite, Vinagre y Salsas\"",
+        "affectedCategories": {
+          "target": {
+            "id": "c3bd7e11-16ee-4d8b-8ec4-f5430fb6efef",
+            "name": "Aceite, Vinagre y Salsas",
+            "path": "/aceite, vinagre y salsas"
+          }
+        }
+      },
+      "category": {
+        "id": "c3bd7e11-16ee-4d8b-8ec4-f5430fb6efef",
+        "name": "Aceite, Vinagre y Salsas",
+        "path": "/aceite, vinagre y salsas",
+        "metadata": {
+          "updatedAt": "2025-01-26T14:39:23.995Z",
+          "status": "active"
+        }
+      },
+      "changes": {
+        "previousState": {
+          "path": "/aceite, vinagre y sals"
+        },
+        "newState": {
+          "path": "/aceite, vinagre y salsas"
+        }
+      },
+      "user": {
+        "id": "current-user",
+        "name": "Current User"
+      }
+    },
+    {
+      "id": "cfd6c390-9d6a-4ba9-850f-02dea1015179",
+      "timestamp": "2025-01-26T14:39:16.141Z",
+      "action": "CATEGORY_RENAMED",
+      "details": {
+        "message": "Renamed category from \"Aceite, Vinagre y Salss\" to \"Aceite, Vinagre y Sals\"",
+        "affectedCategories": {
+          "target": {
+            "id": "c3bd7e11-16ee-4d8b-8ec4-f5430fb6efef",
+            "name": "Aceite, Vinagre y Sals",
+            "path": "/aceite, vinagre y sals"
+          }
+        }
+      },
+      "category": {
+        "id": "c3bd7e11-16ee-4d8b-8ec4-f5430fb6efef",
+        "name": "Aceite, Vinagre y Sals",
+        "path": "/aceite, vinagre y sals",
+        "metadata": {
+          "updatedAt": "2025-01-26T14:39:16.141Z",
+          "status": "active"
+        }
+      },
+      "changes": {
+        "previousState": {
+          "path": "/aceite, vinagre y salss"
+        },
+        "newState": {
+          "path": "/aceite, vinagre y sals"
+        }
+      },
+      "user": {
+        "id": "current-user",
+        "name": "Current User"
+      }
+    },
+    {
+      "id": "d23b61b0-631a-4a68-9d90-16324652aa12",
+      "timestamp": "2025-01-26T14:25:00.086Z",
+      "action": "SUBCATEGORY_MOVED",
+      "details": {
+        "message": "Moved category \"Arroz\" to before \"Legumbre\"",
+        "affectedCategories": {
+          "target": {
+            "id": "f1402fce-fd7e-4c5a-b9b8-bd53d4d9ab1a",
+            "name": "Arroz"
+          },
+          "previousParent": {
+            "id": "3526b1db-4764-4f4b-8899-19bb0850b24f",
+            "name": "Arroz, Legumbres y Pasta"
+          },
+          "newParent": {
+            "id": "3526b1db-4764-4f4b-8899-19bb0850b24f",
+            "name": "Arroz, Legumbres y Pasta"
+          }
+        }
+      },
+      "user": {
+        "id": "current-user",
+        "name": "Current User"
+      },
+      "category": {
+        "id": "f1402fce-fd7e-4c5a-b9b8-bd53d4d9ab1a",
+        "name": "Arroz"
+      },
+      "changes": {
+        "previousState": {
+          "parentId": "3526b1db-4764-4f4b-8899-19bb0850b24f"
+        },
+        "newState": {
+          "parentId": "3526b1db-4764-4f4b-8899-19bb0850b24f"
+        }
+      }
+    },
+    {
+      "id": "6db66f90-c01f-4df6-b607-2e9d7348d69b",
+      "timestamp": "2025-01-26T14:24:45.810Z",
+      "action": "SUBCATEGORY_MOVED",
+      "details": {
+        "message": "Moved category \"Legumbre\" to before \"Arroz\"",
+        "affectedCategories": {
+          "target": {
+            "id": "2494f459-7072-4551-b9ad-3c8badc9b4ad",
+            "name": "Legumbre"
+          },
+          "previousParent": {
+            "id": "3526b1db-4764-4f4b-8899-19bb0850b24f",
+            "name": "Arroz, Legumbres y Pasta"
+          },
+          "newParent": {
+            "id": "3526b1db-4764-4f4b-8899-19bb0850b24f",
+            "name": "Arroz, Legumbres y Pasta"
+          }
+        }
+      },
+      "user": {
+        "id": "current-user",
+        "name": "Current User"
+      },
+      "category": {
+        "id": "2494f459-7072-4551-b9ad-3c8badc9b4ad",
+        "name": "Legumbre"
+      },
+      "changes": {
+        "previousState": {
+          "parentId": "3526b1db-4764-4f4b-8899-19bb0850b24f"
+        },
+        "newState": {
+          "parentId": "3526b1db-4764-4f4b-8899-19bb0850b24f"
+        }
+      }
+    },
+    {
+      "id": "7b7b01f8-2d9e-4aae-9ff5-7bba1b1965c5",
+      "timestamp": "2025-01-26T14:22:45.740Z",
+      "action": "CATEGORY_RENAMED",
+      "details": {
+        "message": "Renamed category from \"Aceite, Vinagre y Sal\" to \"Aceite, Vinagre y Salss\"",
+        "affectedCategories": {
+          "target": {
+            "id": "c3bd7e11-16ee-4d8b-8ec4-f5430fb6efef",
+            "name": "Aceite, Vinagre y Salss",
+            "path": "/aceite, vinagre y salss"
+          }
+        }
+      },
+      "category": {
+        "id": "c3bd7e11-16ee-4d8b-8ec4-f5430fb6efef",
+        "name": "Aceite, Vinagre y Salss",
+        "path": "/aceite, vinagre y salss",
+        "metadata": {
+          "updatedAt": "2025-01-26T14:22:45.740Z",
+          "status": "active"
+        }
+      },
+      "changes": {
+        "previousState": {
+          "path": "/aceite, vinagre y sal"
+        },
+        "newState": {
+          "path": "/aceite, vinagre y salss"
+        }
+      },
+      "user": {
+        "id": "current-user",
+        "name": "Current User"
+      }
+    },
+    {
+      "id": "e7280ae3-b5b6-47e2-8371-2ea1b44fe1d0",
+      "timestamp": "2025-01-26T13:08:01.408Z",
+      "action": "CATEGORY_CREATED",
+      "details": {
+        "message": "Created new category \"sydney\"",
+        "affectedCategories": {
+          "target": {
+            "id": "89bfe29b-4c29-430b-8f1d-77a04ea9183c",
+            "name": "sydney",
+            "path": "/sydney"
+          }
+        }
+      },
+      "category": {
+        "id": "89bfe29b-4c29-430b-8f1d-77a04ea9183c",
+        "name": "sydney",
+        "path": "/sydney",
+        "metadata": {
+          "createdAt": "2025-01-26T13:08:01.332Z",
+          "updatedAt": "2025-01-26T13:08:01.332Z",
+          "status": "active"
+        }
+      },
+      "user": {
+        "id": "current-user",
+        "name": "Current User"
+      }
+    },
+    {
+      "id": "2eed5707-fbba-4010-9c6e-69f660202148",
+      "timestamp": "2025-01-26T13:07:48.292Z",
+      "action": "CATEGORY_REMOVED",
+      "details": {
+        "message": "Removed category \"lol\" and 0 subcategories",
+        "affectedCategories": {
+          "target": {
+            "id": "7ba3dfe6-fe37-4d36-8670-bd627aed77d7",
+            "name": "lol"
+          }
+        }
+      },
+      "category": {
+        "id": "7ba3dfe6-fe37-4d36-8670-bd627aed77d7",
+        "name": "lol",
+        "metadata": {
+          "createdAt": "2025-01-26T13:07:37.186Z",
+          "updatedAt": "2025-01-26T13:07:37.186Z",
+          "status": "inactive",
+          "deletedAt": "2025-01-26T13:07:48.292Z"
+        }
+      },
+      "user": {
+        "id": "current-user",
+        "name": "Current User"
+      }
+    },
+    {
+      "id": "101d1754-f7ba-4fae-94b3-424206c99fde",
+      "timestamp": "2025-01-26T13:07:37.271Z",
+      "action": "CATEGORY_CREATED",
+      "details": {
+        "message": "Created new category \"lol\"",
+        "affectedCategories": {
+          "target": {
+            "id": "7ba3dfe6-fe37-4d36-8670-bd627aed77d7",
+            "name": "lol",
+            "path": "/lol"
+          }
+        }
+      },
+      "category": {
+        "id": "7ba3dfe6-fe37-4d36-8670-bd627aed77d7",
+        "name": "lol",
+        "path": "/lol",
+        "metadata": {
+          "createdAt": "2025-01-26T13:07:37.186Z",
+          "updatedAt": "2025-01-26T13:07:37.186Z",
+          "status": "active"
+        }
+      },
+      "user": {
+        "id": "current-user",
+        "name": "Current User"
+      }
+    },
+    {
+      "id": "b30941be-231b-480b-a7eb-b85e02d9a52f",
+      "timestamp": "2025-01-26T13:01:19.024Z",
+      "action": "CATEGORY_REMOVED",
+      "details": {
+        "message": "Removed category \"aaa\" and 0 subcategories",
+        "affectedCategories": {
+          "target": {
+            "id": "45f52a3d-0ae4-4ee8-b1d9-30e7a265dd2b",
+            "name": "aaa"
+          }
+        }
+      },
+      "category": {
+        "id": "45f52a3d-0ae4-4ee8-b1d9-30e7a265dd2b",
+        "name": "aaa",
+        "metadata": {
+          "createdAt": "2025-01-26T13:01:08.887Z",
+          "updatedAt": "2025-01-26T13:01:08.888Z",
+          "status": "inactive",
+          "deletedAt": "2025-01-26T13:01:19.024Z"
+        }
+      },
+      "user": {
+        "id": "current-user",
+        "name": "Current User"
+      }
+    },
+    {
+      "id": "abc88d83-8a44-4173-bcfa-f6e92eccaf48",
+      "timestamp": "2025-01-26T13:01:08.986Z",
+      "action": "CATEGORY_CREATED",
+      "details": {
+        "message": "Created new category \"aaa\"",
+        "affectedCategories": {
+          "target": {
+            "id": "45f52a3d-0ae4-4ee8-b1d9-30e7a265dd2b",
+            "name": "aaa",
+            "path": "/aaa"
+          }
+        }
+      },
+      "category": {
+        "id": "45f52a3d-0ae4-4ee8-b1d9-30e7a265dd2b",
+        "name": "aaa",
+        "path": "/aaa",
+        "metadata": {
+          "createdAt": "2025-01-26T13:01:08.887Z",
+          "updatedAt": "2025-01-26T13:01:08.888Z",
+          "status": "active"
+        }
+      },
+      "user": {
+        "id": "current-user",
+        "name": "Current User"
+      }
+    },
+    {
+      "id": "7bae48b4-f056-43e4-85ca-03aa3fefd098",
+      "timestamp": "2025-01-26T13:00:35.461Z",
+      "action": "CATEGORY_RENAMED",
+      "details": {
+        "message": "Renamed category from \"Aceite, Vinagre y Sal\" to \"Aceite, Vinagre y Sals\"",
+        "affectedCategories": {
+          "target": {
+            "id": "c3bd7e11-16ee-4d8b-8ec4-f5430fb6efef",
+            "name": "Aceite, Vinagre y Sals",
+            "path": "/aceite, vinagre y sals"
+          }
+        }
+      },
+      "category": {
+        "id": "c3bd7e11-16ee-4d8b-8ec4-f5430fb6efef",
+        "name": "Aceite, Vinagre y Sals",
+        "path": "/aceite, vinagre y sals",
+        "metadata": {
+          "updatedAt": "2025-01-26T13:00:35.461Z",
+          "status": "active"
+        }
+      },
+      "changes": {
+        "previousState": {
+          "path": "/aceite, vinagre y sal"
+        },
+        "newState": {
+          "path": "/aceite, vinagre y sals"
+        }
+      },
+      "user": {
+        "id": "current-user",
+        "name": "Current User"
+      }
+    },
+    {
+      "id": "7afc2b39-6608-4755-ad8a-f4c460aa96dd",
+      "timestamp": "2025-01-26T12:58:18.389Z",
+      "action": "CATEGORY_RENAMED",
+      "details": {
+        "message": "Renamed category from \"Aceite, Vinagre y Sal\" to \"Aceite, Vinagre y Sals\"",
+        "affectedCategories": {
+          "target": {
+            "id": "c3bd7e11-16ee-4d8b-8ec4-f5430fb6efef",
+            "name": "Aceite, Vinagre y Sals",
+            "path": "/aceite, vinagre y sals"
+          }
+        }
+      },
+      "category": {
+        "id": "c3bd7e11-16ee-4d8b-8ec4-f5430fb6efef",
+        "name": "Aceite, Vinagre y Sals",
+        "path": "/aceite, vinagre y sals",
+        "metadata": {
+          "updatedAt": "2025-01-26T12:58:18.389Z",
+          "status": "active"
+        }
+      },
+      "changes": {
+        "previousState": {
+          "path": "/aceite, vinagre y sal"
+        },
+        "newState": {
+          "path": "/aceite, vinagre y sals"
+        }
+      },
+      "user": {
+        "id": "current-user",
+        "name": "Current User"
+      }
+    },
+    {
+      "id": "d1a86f49-ff14-4661-86af-e12fb2d0f06d",
+      "timestamp": "2025-01-26T12:25:08.668Z",
+      "action": "CATEGORY_REMOVED",
+      "details": {
+        "message": "Removed category \"as\" and 0 subcategories",
+        "affectedCategories": {
+          "target": {
+            "id": "6fc7f9d3-e162-4199-a2a0-673e791c8f5a",
+            "name": "as"
+          }
+        }
+      },
+      "category": {
+        "id": "6fc7f9d3-e162-4199-a2a0-673e791c8f5a",
+        "name": "as",
+        "metadata": {
+          "deletedAt": "2025-01-26T12:25:08.668Z",
+          "status": "inactive"
+        }
+      },
+      "changes": {
+        "previousState": {}
+      },
+      "user": {
+        "id": "current-user",
+        "name": "Current User"
+      }
+    },
+    {
+      "id": "b3100942-7787-419a-bdbd-6e36999478c1",
+      "timestamp": "2025-01-26T12:24:47.975Z",
+      "action": "CATEGORY_CREATED",
+      "details": {
+        "message": "Created new category \"as\"",
+        "affectedCategories": {
+          "target": {
+            "id": "6fc7f9d3-e162-4199-a2a0-673e791c8f5a",
+            "name": "as",
+            "path": "/as"
+          }
+        }
+      },
+      "category": {
+        "id": "6fc7f9d3-e162-4199-a2a0-673e791c8f5a",
+        "name": "as",
+        "path": "/as",
+        "metadata": {
+          "createdAt": "2025-01-26T12:24:47.975Z",
+          "updatedAt": "2025-01-26T12:24:47.975Z",
+          "status": "active"
+        }
+      },
+      "user": {
+        "id": "current-user",
+        "name": "Current User"
+      }
+    },
+    {
+      "id": "cab2b688-70c3-41e4-8ab2-385285388152",
+      "timestamp": "2025-01-26T12:21:49.796Z",
+      "action": "CATEGORY_RENAMED",
+      "details": {
+        "message": "Renamed category from \"Aceite, Vinagre y Sal\" to \"Aceite, Vinagre y Sals\"",
+        "affectedCategories": {
+          "target": {
+            "id": "c3bd7e11-16ee-4d8b-8ec4-f5430fb6efef",
+            "name": "Aceite, Vinagre y Sals",
+            "path": "/aceite, vinagre y sals"
+          }
+        }
+      },
+      "category": {
+        "id": "c3bd7e11-16ee-4d8b-8ec4-f5430fb6efef",
+        "name": "Aceite, Vinagre y Sals",
+        "path": "/aceite, vinagre y sals",
+        "metadata": {
+          "updatedAt": "2025-01-26T12:21:49.796Z",
+          "status": "active"
+        }
+      },
+      "changes": {
+        "previousState": {
+          "path": "/aceite, vinagre y sal"
+        },
+        "newState": {
+          "path": "/aceite, vinagre y sals"
+        }
+      },
+      "user": {
+        "id": "current-user",
+        "name": "Current User"
+      }
+    },
+    {
       "action": "ORDER_CHANGED",
       "details": {
         "message": "Moved \"Frutas E Verduras\" after \"Bebé\"",

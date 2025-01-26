@@ -3,942 +3,938 @@
     {
       "id": "a7a1a0fa-7afe-40aa-9a6c-5cf9fcad9579",
       "name": "Aceite, Especies y Salsas",
-      "children": [
-        {
-          "id": "c3bd7e11-16ee-4d8b-8ec4-f5430fb6efef",
-          "name": "Aceite, Vinagre y Sal",
-          "children": [],
-          "parentId": "a7a1a0fa-7afe-40aa-9a6c-5cf9fcad9579"
-        },
-        {
-          "id": "1c33b99f-3871-4c54-a34f-e48babe36da4",
-          "name": "Especias",
-          "children": [],
-          "parentId": "a7a1a0fa-7afe-40aa-9a6c-5cf9fcad9579"
-        },
-        {
-          "id": "624f4e73-24d3-4fde-b3ac-b207a6ec9235",
-          "name": "Mayonesa, Ketchup y Mostaza",
-          "children": [],
-          "parentId": "a7a1a0fa-7afe-40aa-9a6c-5cf9fcad9579"
-        },
-        {
-          "id": "2c8fe655-3a07-4238-8763-3977b6f778a6",
-          "name": "Otras Salsas",
-          "children": [],
-          "parentId": "a7a1a0fa-7afe-40aa-9a6c-5cf9fcad9579"
-        }
-      ]
+      "parentId": null,
+      "metadata": {}
+    },
+    {
+      "id": "c3bd7e11-16ee-4d8b-8ec4-f5430fb6efef",
+      "name": "Aceite, Vinagre y Salsas",
+      "parentId": "a7a1a0fa-7afe-40aa-9a6c-5cf9fcad9579",
+      "metadata": {}
+    },
+    {
+      "id": "1c33b99f-3871-4c54-a34f-e48babe36da4",
+      "name": "Especias",
+      "parentId": "a7a1a0fa-7afe-40aa-9a6c-5cf9fcad9579",
+      "metadata": {}
+    },
+    {
+      "id": "624f4e73-24d3-4fde-b3ac-b207a6ec9235",
+      "name": "Mayonesa, Ketchup y Mostaza",
+      "parentId": "a7a1a0fa-7afe-40aa-9a6c-5cf9fcad9579",
+      "metadata": {}
+    },
+    {
+      "id": "2c8fe655-3a07-4238-8763-3977b6f778a6",
+      "name": "Otras Salsas",
+      "parentId": "a7a1a0fa-7afe-40aa-9a6c-5cf9fcad9579",
+      "metadata": {}
     },
     {
       "id": "2e3c1046-09bc-4fd2-8587-bc4a2f09f370",
       "name": "Aperitivos",
-      "children": [
-        {
-          "id": "9d4ef689-0dbb-48e6-9f9f-252cc0d39d67",
-          "name": "Aceitunas y Encurtidos",
-          "children": [],
-          "parentId": "2e3c1046-09bc-4fd2-8587-bc4a2f09f370"
-        },
-        {
-          "id": "cf88f06c-d6da-4bd7-ab09-5359b060e1c4",
-          "name": "Frutos Secos y Fruta desecada",
-          "children": [],
-          "parentId": "2e3c1046-09bc-4fd2-8587-bc4a2f09f370"
-        },
-        {
-          "id": "acfb1995-9e3f-4723-b30b-a04c8c98cc13",
-          "name": "Patatas fritas y Snacks",
-          "children": [],
-          "parentId": "2e3c1046-09bc-4fd2-8587-bc4a2f09f370"
-        }
-      ]
+      "parentId": null,
+      "metadata": {}
+    },
+    {
+      "id": "9d4ef689-0dbb-48e6-9f9f-252cc0d39d67",
+      "name": "Aceitunas y Encurtidos",
+      "parentId": "2e3c1046-09bc-4fd2-8587-bc4a2f09f370",
+      "metadata": {}
+    },
+    {
+      "id": "cf88f06c-d6da-4bd7-ab09-5359b060e1c4",
+      "name": "Frutos Secos y Fruta desecada",
+      "parentId": "2e3c1046-09bc-4fd2-8587-bc4a2f09f370",
+      "metadata": {}
+    },
+    {
+      "id": "acfb1995-9e3f-4723-b30b-a04c8c98cc13",
+      "name": "Patatas fritas y Snacks",
+      "parentId": "2e3c1046-09bc-4fd2-8587-bc4a2f09f370",
+      "metadata": {}
     },
     {
       "id": "21011105-4e20-42ed-b57d-200bd125952e",
       "name": "Azúcar, Caramelos y Chocolate",
-      "children": [
-        {
-          "id": "56ab165d-7ef3-4a6d-aa9b-831caa99dd9e",
-          "name": "Azúcar y Edulcorante",
-          "children": [],
-          "parentId": "21011105-4e20-42ed-b57d-200bd125952e"
-        },
-        {
-          "id": "2173c103-8222-4ce3-a88e-3524036ae0c6",
-          "name": "Chicles y Caramelos",
-          "children": [],
-          "parentId": "21011105-4e20-42ed-b57d-200bd125952e"
-        },
-        {
-          "id": "dece9a27-0b02-4bc3-ab1a-a6cea97aa021",
-          "name": "Chocolate",
-          "children": [],
-          "parentId": "21011105-4e20-42ed-b57d-200bd125952e"
-        },
-        {
-          "id": "0f757fae-a36e-4d9d-adb3-fb89bdb374a1",
-          "name": "Golosinas",
-          "children": [],
-          "parentId": "21011105-4e20-42ed-b57d-200bd125952e"
-        },
-        {
-          "id": "34dddf25-b020-4857-ba9a-5e5cb8d7b0b6",
-          "name": "Marmelada y Miel",
-          "children": [],
-          "parentId": "21011105-4e20-42ed-b57d-200bd125952e"
-        }
-      ]
+      "parentId": null,
+      "metadata": {}
+    },
+    {
+      "id": "56ab165d-7ef3-4a6d-aa9b-831caa99dd9e",
+      "name": "Azúcar y Edulcorante",
+      "parentId": "21011105-4e20-42ed-b57d-200bd125952e",
+      "metadata": {}
+    },
+    {
+      "id": "2173c103-8222-4ce3-a88e-3524036ae0c6",
+      "name": "Chicles y Caramelos",
+      "parentId": "21011105-4e20-42ed-b57d-200bd125952e",
+      "metadata": {}
+    },
+    {
+      "id": "dece9a27-0b02-4bc3-ab1a-a6cea97aa021",
+      "name": "Chocolate",
+      "parentId": "21011105-4e20-42ed-b57d-200bd125952e",
+      "metadata": {}
+    },
+    {
+      "id": "0f757fae-a36e-4d9d-adb3-fb89bdb374a1",
+      "name": "Golosinas",
+      "parentId": "21011105-4e20-42ed-b57d-200bd125952e",
+      "metadata": {}
+    },
+    {
+      "id": "34dddf25-b020-4857-ba9a-5e5cb8d7b0b6",
+      "name": "Marmelada y Miel",
+      "parentId": "21011105-4e20-42ed-b57d-200bd125952e",
+      "metadata": {}
     },
     {
       "id": "61d1796b-961a-4c0c-94a4-09f64ea78f85",
       "name": "Bebidas",
-      "children": [
-        {
-          "id": "17963756-81ca-4646-ab19-a3186700ed97",
-          "name": "Agua y Refrescos",
-          "children": [
-            {
-              "id": "e6fd357d-129c-4454-a6d6-8de18f20e10b",
-              "name": "Isotónico y Energetico",
-              "children": [],
-              "parentId": "17963756-81ca-4646-ab19-a3186700ed97"
-            },
-            {
-              "id": "37c3005e-0efd-4825-a65a-494b39997fad",
-              "name": "Agua",
-              "children": [],
-              "parentId": "17963756-81ca-4646-ab19-a3186700ed97"
-            },
-            {
-              "id": "05bec492-b023-4512-a5fe-ec0d89cef148",
-              "name": "Refresco de Naranja y de Limón",
-              "children": [],
-              "parentId": "17963756-81ca-4646-ab19-a3186700ed97"
-            },
-            {
-              "id": "0287384b-7317-49b0-82ab-c7a9a5f9e5c8",
-              "name": "Tónica y Bitter",
-              "children": [],
-              "parentId": "17963756-81ca-4646-ab19-a3186700ed97"
-            },
-            {
-              "id": "6cc18f5d-f908-4eec-8871-3c579296fb81",
-              "name": "Refresco de Té y sin Gas",
-              "children": [],
-              "parentId": "17963756-81ca-4646-ab19-a3186700ed97"
-            },
-            {
-              "id": "163bb1fd-43e0-4b28-84df-9a1c4f019bcd",
-              "name": "Refresco de Cola",
-              "children": [],
-              "parentId": "17963756-81ca-4646-ab19-a3186700ed97"
-            }
-          ],
-          "parentId": "61d1796b-961a-4c0c-94a4-09f64ea78f85"
-        },
-        {
-          "id": "9491530d-e2bb-4bc4-a65e-090e9cef9d5a",
-          "name": "Bodega",
-          "children": [
-            {
-              "id": "cd66f5d0-91fb-4285-acab-95cdd789fa85",
-              "name": "Cerveza",
-              "children": [],
-              "parentId": "9491530d-e2bb-4bc4-a65e-090e9cef9d5a"
-            },
-            {
-              "id": "c0aa4c62-1b49-4f17-92e7-2615890fde6f",
-              "name": "Cerveza sin Alcohol",
-              "children": [],
-              "parentId": "9491530d-e2bb-4bc4-a65e-090e9cef9d5a"
-            },
-            {
-              "id": "33abc85a-777e-4503-950b-209c2e838019",
-              "name": "Licores",
-              "children": [],
-              "parentId": "9491530d-e2bb-4bc4-a65e-090e9cef9d5a"
-            },
-            {
-              "id": "2b0e10f0-1ad1-4678-a65a-665cae37ad3a",
-              "name": "Sidra Y Cava",
-              "children": [],
-              "parentId": "9491530d-e2bb-4bc4-a65e-090e9cef9d5a"
-            },
-            {
-              "id": "db5f5f6f-808e-483a-b701-73f792100733",
-              "name": "Vino Blanco",
-              "children": [],
-              "parentId": "9491530d-e2bb-4bc4-a65e-090e9cef9d5a"
-            },
-            {
-              "id": "3d0fc235-1e62-47f6-981c-4aa63a48c506",
-              "name": "Tinto de verano y Sangría",
-              "children": [],
-              "parentId": "9491530d-e2bb-4bc4-a65e-090e9cef9d5a"
-            },
-            {
-              "id": "e4659dd3-1bcc-4166-a964-1d20fd09d024",
-              "name": "Vino Lambrusco y Espumoso",
-              "children": [],
-              "parentId": "9491530d-e2bb-4bc4-a65e-090e9cef9d5a"
-            },
-            {
-              "id": "04961642-2563-459c-a088-9e6481df7a14",
-              "name": "Vino Rosado",
-              "children": [],
-              "parentId": "9491530d-e2bb-4bc4-a65e-090e9cef9d5a"
-            },
-            {
-              "id": "b463e9aa-f0a6-4867-b0e3-9a1c5ba60d1c",
-              "name": "Vino Tinto",
-              "children": [],
-              "parentId": "9491530d-e2bb-4bc4-a65e-090e9cef9d5a"
-            }
-          ],
-          "parentId": "61d1796b-961a-4c0c-94a4-09f64ea78f85"
-        },
-        {
-          "id": "52bb1e6a-f63c-4e76-bcfc-6bed6ac08de2",
-          "name": "Zumos",
-          "children": [
-            {
-              "id": "0ec6b5cd-7eb1-41db-b9e3-4dd503c5af4a",
-              "name": "Fruta Variada",
-              "children": [],
-              "parentId": "52bb1e6a-f63c-4e76-bcfc-6bed6ac08de2"
-            },
-            {
-              "id": "9fd24433-22d8-48c3-8742-131aeda3de0a",
-              "name": "Melocotón y Piña",
-              "children": [],
-              "parentId": "52bb1e6a-f63c-4e76-bcfc-6bed6ac08de2"
-            },
-            {
-              "id": "2bc38886-7392-4246-bfba-1e6e68d194f3",
-              "name": "Naranja",
-              "children": [],
-              "parentId": "52bb1e6a-f63c-4e76-bcfc-6bed6ac08de2"
-            },
-            {
-              "id": "f0f83745-a57e-4442-8e94-57522b4199e2",
-              "name": "Tomate y Otros Sabores",
-              "children": [],
-              "parentId": "52bb1e6a-f63c-4e76-bcfc-6bed6ac08de2"
-            }
-          ],
-          "parentId": "61d1796b-961a-4c0c-94a4-09f64ea78f85"
-        }
-      ]
+      "parentId": null,
+      "metadata": {}
+    },
+    {
+      "id": "17963756-81ca-4646-ab19-a3186700ed97",
+      "name": "Agua y Refrescos",
+      "parentId": "61d1796b-961a-4c0c-94a4-09f64ea78f85",
+      "metadata": {}
+    },
+    {
+      "id": "e6fd357d-129c-4454-a6d6-8de18f20e10b",
+      "name": "Isotónico y Energetico",
+      "parentId": "17963756-81ca-4646-ab19-a3186700ed97",
+      "metadata": {}
+    },
+    {
+      "id": "37c3005e-0efd-4825-a65a-494b39997fad",
+      "name": "Agua",
+      "parentId": "17963756-81ca-4646-ab19-a3186700ed97",
+      "metadata": {}
+    },
+    {
+      "id": "05bec492-b023-4512-a5fe-ec0d89cef148",
+      "name": "Refresco de Naranja y de Limón",
+      "parentId": "17963756-81ca-4646-ab19-a3186700ed97",
+      "metadata": {}
+    },
+    {
+      "id": "0287384b-7317-49b0-82ab-c7a9a5f9e5c8",
+      "name": "Tónica y Bitter",
+      "parentId": "17963756-81ca-4646-ab19-a3186700ed97",
+      "metadata": {}
+    },
+    {
+      "id": "6cc18f5d-f908-4eec-8871-3c579296fb81",
+      "name": "Refresco de Té y sin Gas",
+      "parentId": "17963756-81ca-4646-ab19-a3186700ed97",
+      "metadata": {}
+    },
+    {
+      "id": "163bb1fd-43e0-4b28-84df-9a1c4f019bcd",
+      "name": "Refresco de Cola",
+      "parentId": "17963756-81ca-4646-ab19-a3186700ed97",
+      "metadata": {}
+    },
+    {
+      "id": "9491530d-e2bb-4bc4-a65e-090e9cef9d5a",
+      "name": "Bodega",
+      "parentId": "61d1796b-961a-4c0c-94a4-09f64ea78f85",
+      "metadata": {}
+    },
+    {
+      "id": "cd66f5d0-91fb-4285-acab-95cdd789fa85",
+      "name": "Cerveza",
+      "parentId": "9491530d-e2bb-4bc4-a65e-090e9cef9d5a",
+      "metadata": {}
+    },
+    {
+      "id": "c0aa4c62-1b49-4f17-92e7-2615890fde6f",
+      "name": "Cerveza sin Alcohol",
+      "parentId": "9491530d-e2bb-4bc4-a65e-090e9cef9d5a",
+      "metadata": {}
+    },
+    {
+      "id": "33abc85a-777e-4503-950b-209c2e838019",
+      "name": "Licores",
+      "parentId": "9491530d-e2bb-4bc4-a65e-090e9cef9d5a",
+      "metadata": {}
+    },
+    {
+      "id": "2b0e10f0-1ad1-4678-a65a-665cae37ad3a",
+      "name": "Sidra Y Cava",
+      "parentId": "9491530d-e2bb-4bc4-a65e-090e9cef9d5a",
+      "metadata": {}
+    },
+    {
+      "id": "db5f5f6f-808e-483a-b701-73f792100733",
+      "name": "Vino Blanco",
+      "parentId": "9491530d-e2bb-4bc4-a65e-090e9cef9d5a",
+      "metadata": {}
+    },
+    {
+      "id": "3d0fc235-1e62-47f6-981c-4aa63a48c506",
+      "name": "Tinto de verano y Sangría",
+      "parentId": "9491530d-e2bb-4bc4-a65e-090e9cef9d5a",
+      "metadata": {}
+    },
+    {
+      "id": "e4659dd3-1bcc-4166-a964-1d20fd09d024",
+      "name": "Vino Lambrusco y Espumoso",
+      "parentId": "9491530d-e2bb-4bc4-a65e-090e9cef9d5a",
+      "metadata": {}
+    },
+    {
+      "id": "04961642-2563-459c-a088-9e6481df7a14",
+      "name": "Vino Rosado",
+      "parentId": "9491530d-e2bb-4bc4-a65e-090e9cef9d5a",
+      "metadata": {}
+    },
+    {
+      "id": "b463e9aa-f0a6-4867-b0e3-9a1c5ba60d1c",
+      "name": "Vino Tinto",
+      "parentId": "9491530d-e2bb-4bc4-a65e-090e9cef9d5a",
+      "metadata": {}
+    },
+    {
+      "id": "52bb1e6a-f63c-4e76-bcfc-6bed6ac08de2",
+      "name": "Zumos",
+      "parentId": "61d1796b-961a-4c0c-94a4-09f64ea78f85",
+      "metadata": {}
+    },
+    {
+      "id": "0ec6b5cd-7eb1-41db-b9e3-4dd503c5af4a",
+      "name": "Fruta Variada",
+      "parentId": "52bb1e6a-f63c-4e76-bcfc-6bed6ac08de2",
+      "metadata": {}
+    },
+    {
+      "id": "9fd24433-22d8-48c3-8742-131aeda3de0a",
+      "name": "Melocotón y Piña",
+      "parentId": "52bb1e6a-f63c-4e76-bcfc-6bed6ac08de2",
+      "metadata": {}
+    },
+    {
+      "id": "2bc38886-7392-4246-bfba-1e6e68d194f3",
+      "name": "Naranja",
+      "parentId": "52bb1e6a-f63c-4e76-bcfc-6bed6ac08de2",
+      "metadata": {}
+    },
+    {
+      "id": "f0f83745-a57e-4442-8e94-57522b4199e2",
+      "name": "Tomate y Otros Sabores",
+      "parentId": "52bb1e6a-f63c-4e76-bcfc-6bed6ac08de2",
+      "metadata": {}
     },
     {
       "id": "ad368ed6-f3df-428d-a026-4a811c919324",
       "name": "Bebé",
-      "children": [
-        {
-          "id": "dbd8e305-89f3-4a2a-b962-f5cd6dd69b74",
-          "name": "Alimentación Infantil",
-          "children": [],
-          "parentId": "ad368ed6-f3df-428d-a026-4a811c919324"
-        },
-        {
-          "id": "b2eb1dc1-c193-43f9-9d20-ed74f09a2cf1",
-          "name": "Biberón y Chupete",
-          "children": [],
-          "parentId": "ad368ed6-f3df-428d-a026-4a811c919324"
-        },
-        {
-          "id": "1046f2cb-23d5-4fd3-98b7-aecec3c1d922",
-          "name": "Higiene y Cuidado",
-          "children": [],
-          "parentId": "ad368ed6-f3df-428d-a026-4a811c919324"
-        },
-        {
-          "id": "816bfd9d-b78a-4ebe-a925-20b67b741c69",
-          "name": "Toallitas y Pañales",
-          "children": [],
-          "parentId": "ad368ed6-f3df-428d-a026-4a811c919324"
-        }
-      ]
+      "parentId": null,
+      "metadata": {}
+    },
+    {
+      "id": "dbd8e305-89f3-4a2a-b962-f5cd6dd69b74",
+      "name": "Alimentación Infantil",
+      "parentId": "ad368ed6-f3df-428d-a026-4a811c919324",
+      "metadata": {}
+    },
+    {
+      "id": "b2eb1dc1-c193-43f9-9d20-ed74f09a2cf1",
+      "name": "Biberón y Chupete",
+      "parentId": "ad368ed6-f3df-428d-a026-4a811c919324",
+      "metadata": {}
+    },
+    {
+      "id": "1046f2cb-23d5-4fd3-98b7-aecec3c1d922",
+      "name": "Higiene y Cuidado",
+      "parentId": "ad368ed6-f3df-428d-a026-4a811c919324",
+      "metadata": {}
+    },
+    {
+      "id": "816bfd9d-b78a-4ebe-a925-20b67b741c69",
+      "name": "Toallitas y Pañales",
+      "parentId": "ad368ed6-f3df-428d-a026-4a811c919324",
+      "metadata": {}
     },
     {
       "id": "63a52fae-0085-4552-8ecd-d240356de280",
       "name": "Frutas E Verduras",
-      "children": [
-        {
-          "id": "1a322a4f-e9a7-4dc3-80e2-f4505f3d61ea",
-          "name": "Fruta",
-          "children": [],
-          "parentId": "63a52fae-0085-4552-8ecd-d240356de280"
-        },
-        {
-          "id": "d015f9bb-3a4b-4487-88ce-54c7d1c4e6fd",
-          "name": "Verdura",
-          "children": [],
-          "parentId": "63a52fae-0085-4552-8ecd-d240356de280"
-        },
-        {
-          "id": "bdc7d0c2-a0ad-4946-9622-b1f93d0bace3",
-          "name": "Lechuga y Ensalada Preparada",
-          "children": [],
-          "parentId": "63a52fae-0085-4552-8ecd-d240356de280"
-        }
-      ]
+      "parentId": null,
+      "metadata": {}
+    },
+    {
+      "id": "1a322a4f-e9a7-4dc3-80e2-f4505f3d61ea",
+      "name": "Fruta",
+      "parentId": "63a52fae-0085-4552-8ecd-d240356de280",
+      "metadata": {}
+    },
+    {
+      "id": "d015f9bb-3a4b-4487-88ce-54c7d1c4e6fd",
+      "name": "Verdura",
+      "parentId": "63a52fae-0085-4552-8ecd-d240356de280",
+      "metadata": {}
+    },
+    {
+      "id": "bdc7d0c2-a0ad-4946-9622-b1f93d0bace3",
+      "name": "Lechuga y Ensalada Preparada",
+      "parentId": "63a52fae-0085-4552-8ecd-d240356de280",
+      "metadata": {}
     },
     {
       "id": "3906ab53-2e13-483c-9327-00011b78528f",
       "name": "Pescado",
-      "children": [
-        {
-          "id": "91822d51-dee3-484d-ab9c-85e22ad70db3",
-          "name": "Pescado Fresco",
-          "children": [],
-          "parentId": "3906ab53-2e13-483c-9327-00011b78528f"
-        },
-        {
-          "id": "root-1737711759259",
-          "name": "Sushi",
-          "parentId": "3906ab53-2e13-483c-9327-00011b78528f",
-          "children": []
-        },
-        {
-          "id": "fd23d2c9-71bc-482a-af46-04308eaf83f2",
-          "name": "Pescado congelado",
-          "children": [],
-          "parentId": "3906ab53-2e13-483c-9327-00011b78528f"
-        },
-        {
-          "id": "ea153f75-6de2-4e74-acc1-b498e6fca4c5",
-          "name": "Salazones y Ahumados",
-          "children": [],
-          "parentId": "3906ab53-2e13-483c-9327-00011b78528f"
-        },
-        {
-          "id": "b211bd88-25fe-4a1e-9426-2046678b2941",
-          "name": "Marisco",
-          "children": [],
-          "parentId": "3906ab53-2e13-483c-9327-00011b78528f"
-        }
-      ]
+      "parentId": null,
+      "metadata": {}
+    },
+    {
+      "id": "91822d51-dee3-484d-ab9c-85e22ad70db3",
+      "name": "Pescado Fresco",
+      "parentId": "3906ab53-2e13-483c-9327-00011b78528f",
+      "metadata": {}
+    },
+    {
+      "id": "root-1737711759259",
+      "name": "Sushi",
+      "parentId": "3906ab53-2e13-483c-9327-00011b78528f",
+      "metadata": {}
+    },
+    {
+      "id": "fd23d2c9-71bc-482a-af46-04308eaf83f2",
+      "name": "Pescado congelado",
+      "parentId": "3906ab53-2e13-483c-9327-00011b78528f",
+      "metadata": {}
+    },
+    {
+      "id": "ea153f75-6de2-4e74-acc1-b498e6fca4c5",
+      "name": "Salazones y Ahumados",
+      "parentId": "3906ab53-2e13-483c-9327-00011b78528f",
+      "metadata": {}
+    },
+    {
+      "id": "b211bd88-25fe-4a1e-9426-2046678b2941",
+      "name": "Marisco",
+      "parentId": "3906ab53-2e13-483c-9327-00011b78528f",
+      "metadata": {}
     },
     {
       "id": "43867dfb-3dc5-45fd-b4a5-0d9356603576",
       "name": "Carne",
-      "children": [
-        {
-          "id": "a6eecb84-52db-4db5-a67e-89a132457419",
-          "name": "Aves y Pollos",
-          "children": [],
-          "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576"
-        },
-        {
-          "id": "17c9245e-c12f-443d-9122-b4231fce6083",
-          "name": "Cerdo",
-          "children": [],
-          "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576"
-        },
-        {
-          "id": "3a951a70-5b3d-4641-8019-716bfe635f2c",
-          "name": "Carne congelada",
-          "children": [],
-          "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576"
-        },
-        {
-          "id": "a639a562-6ad8-4aa5-b9b7-41c5fb5ac0aa",
-          "name": "Conejo y Cordero",
-          "children": [],
-          "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576"
-        },
-        {
-          "id": "ba11f2c0-13d9-4b31-8687-5e0d0692dab4",
-          "name": "Empanados y Elaborados",
-          "children": [],
-          "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576"
-        },
-        {
-          "id": "76316f1e-27b2-43f1-8a1f-767ac408066b",
-          "name": "Embutido",
-          "children": [],
-          "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576"
-        },
-        {
-          "id": "c912817e-a412-445d-8019-02648e4dcc28",
-          "name": "Hamburguesas y Picadas",
-          "children": [],
-          "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576"
-        },
-        {
-          "id": "62009c04-0904-45e8-8e64-f99081602a25",
-          "name": "Arreglos",
-          "children": [],
-          "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576"
-        },
-        {
-          "id": "3091dba0-8ada-49ff-a1b6-1f5ef608404d",
-          "name": "Vacuno",
-          "children": [],
-          "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576"
-        }
-      ]
+      "parentId": null,
+      "metadata": {}
+    },
+    {
+      "id": "a6eecb84-52db-4db5-a67e-89a132457419",
+      "name": "Aves y Pollos",
+      "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576",
+      "metadata": {}
+    },
+    {
+      "id": "17c9245e-c12f-443d-9122-b4231fce6083",
+      "name": "Cerdo",
+      "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576",
+      "metadata": {}
+    },
+    {
+      "id": "3a951a70-5b3d-4641-8019-716bfe635f2c",
+      "name": "Carne congelada",
+      "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576",
+      "metadata": {}
+    },
+    {
+      "id": "a639a562-6ad8-4aa5-b9b7-41c5fb5ac0aa",
+      "name": "Conejo y Cordero",
+      "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576",
+      "metadata": {}
+    },
+    {
+      "id": "ba11f2c0-13d9-4b31-8687-5e0d0692dab4",
+      "name": "Empanados y Elaborados",
+      "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576",
+      "metadata": {}
+    },
+    {
+      "id": "76316f1e-27b2-43f1-8a1f-767ac408066b",
+      "name": "Embutido",
+      "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576",
+      "metadata": {}
+    },
+    {
+      "id": "c912817e-a412-445d-8019-02648e4dcc28",
+      "name": "Hamburguesas y Picadas",
+      "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576",
+      "metadata": {}
+    },
+    {
+      "id": "62009c04-0904-45e8-8e64-f99081602a25",
+      "name": "Arreglos",
+      "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576",
+      "metadata": {}
+    },
+    {
+      "id": "3091dba0-8ada-49ff-a1b6-1f5ef608404d",
+      "name": "Vacuno",
+      "parentId": "43867dfb-3dc5-45fd-b4a5-0d9356603576",
+      "metadata": {}
     },
     {
       "id": "fdc63993-638d-4cd3-8cf3-8fdf8867e389",
       "name": "Cereales y Galletas",
-      "children": [
-        {
-          "id": "bc578f87-7d50-4ad6-b0cc-c61d99d38365",
-          "name": "Cereales",
-          "children": [],
-          "parentId": "fdc63993-638d-4cd3-8cf3-8fdf8867e389"
-        },
-        {
-          "id": "9edb4d36-5174-4a97-bad1-93edf0df9834",
-          "name": "Tortitas",
-          "children": [],
-          "parentId": "fdc63993-638d-4cd3-8cf3-8fdf8867e389"
-        },
-        {
-          "id": "20e3cac1-e6f4-45ac-ae51-d8c733286a5b",
-          "name": "Galletas",
-          "children": [],
-          "parentId": "fdc63993-638d-4cd3-8cf3-8fdf8867e389"
-        }
-      ]
+      "parentId": null,
+      "metadata": {}
+    },
+    {
+      "id": "bc578f87-7d50-4ad6-b0cc-c61d99d38365",
+      "name": "Cereales",
+      "parentId": "fdc63993-638d-4cd3-8cf3-8fdf8867e389",
+      "metadata": {}
+    },
+    {
+      "id": "9edb4d36-5174-4a97-bad1-93edf0df9834",
+      "name": "Tortitas",
+      "parentId": "fdc63993-638d-4cd3-8cf3-8fdf8867e389",
+      "metadata": {}
+    },
+    {
+      "id": "20e3cac1-e6f4-45ac-ae51-d8c733286a5b",
+      "name": "Galletas",
+      "parentId": "fdc63993-638d-4cd3-8cf3-8fdf8867e389",
+      "metadata": {}
     },
     {
       "id": "33924094-36df-4f0f-94b9-ed09a91a3a00",
       "name": "Congelados",
-      "children": [
-        {
-          "id": "170f3aa4-5985-4911-b96b-04f4ca023e5b",
-          "name": "Arroz y Pasta",
-          "children": [],
-          "parentId": "33924094-36df-4f0f-94b9-ed09a91a3a00"
-        },
-        {
-          "id": "6c82acbc-fa02-4be8-8cdd-92a3971186db",
-          "name": "Carne",
-          "children": [],
-          "parentId": "33924094-36df-4f0f-94b9-ed09a91a3a00"
-        },
-        {
-          "id": "8f815240-30b0-495b-b44c-ca792eb1ed16",
-          "name": "Helados",
-          "children": [],
-          "parentId": "33924094-36df-4f0f-94b9-ed09a91a3a00"
-        },
-        {
-          "id": "586095c3-1749-44ab-972a-e66100faa6c1",
-          "name": "Hielo",
-          "children": [],
-          "parentId": "33924094-36df-4f0f-94b9-ed09a91a3a00"
-        },
-        {
-          "id": "fab1c24f-19bc-486e-b99f-a0d7003b5510",
-          "name": "Marisco",
-          "children": [],
-          "parentId": "33924094-36df-4f0f-94b9-ed09a91a3a00"
-        },
-        {
-          "id": "6a099268-d9d4-4c85-921a-2762db7f05b8",
-          "name": "Pescado",
-          "children": [],
-          "parentId": "33924094-36df-4f0f-94b9-ed09a91a3a00"
-        },
-        {
-          "id": "51712cb6-8a75-405a-aa26-f5185b1a3562",
-          "name": "Pizzas",
-          "children": [],
-          "parentId": "33924094-36df-4f0f-94b9-ed09a91a3a00"
-        },
-        {
-          "id": "430d46f4-749e-45df-8a0f-cccd95923682",
-          "name": "Tartas y Churros",
-          "children": [],
-          "parentId": "33924094-36df-4f0f-94b9-ed09a91a3a00"
-        },
-        {
-          "id": "01b1f259-f9b0-47df-8fc4-2b103dd6fa5d",
-          "name": "Rebozados",
-          "children": [],
-          "parentId": "33924094-36df-4f0f-94b9-ed09a91a3a00"
-        },
-        {
-          "id": "52356563-bd4b-4ba9-90cd-62d200ec3fff",
-          "name": "Verdura",
-          "children": [],
-          "parentId": "33924094-36df-4f0f-94b9-ed09a91a3a00"
-        }
-      ]
+      "parentId": null,
+      "metadata": {}
+    },
+    {
+      "id": "170f3aa4-5985-4911-b96b-04f4ca023e5b",
+      "name": "Arroz y Pasta",
+      "parentId": "33924094-36df-4f0f-94b9-ed09a91a3a00",
+      "metadata": {}
+    },
+    {
+      "id": "6c82acbc-fa02-4be8-8cdd-92a3971186db",
+      "name": "Carne",
+      "parentId": "33924094-36df-4f0f-94b9-ed09a91a3a00",
+      "metadata": {}
+    },
+    {
+      "id": "8f815240-30b0-495b-b44c-ca792eb1ed16",
+      "name": "Helados",
+      "parentId": "33924094-36df-4f0f-94b9-ed09a91a3a00",
+      "metadata": {}
+    },
+    {
+      "id": "586095c3-1749-44ab-972a-e66100faa6c1",
+      "name": "Hielo",
+      "parentId": "33924094-36df-4f0f-94b9-ed09a91a3a00",
+      "metadata": {}
+    },
+    {
+      "id": "fab1c24f-19bc-486e-b99f-a0d7003b5510",
+      "name": "Marisco",
+      "parentId": "33924094-36df-4f0f-94b9-ed09a91a3a00",
+      "metadata": {}
+    },
+    {
+      "id": "6a099268-d9d4-4c85-921a-2762db7f05b8",
+      "name": "Pescado",
+      "parentId": "33924094-36df-4f0f-94b9-ed09a91a3a00",
+      "metadata": {}
+    },
+    {
+      "id": "51712cb6-8a75-405a-aa26-f5185b1a3562",
+      "name": "Pizzas",
+      "parentId": "33924094-36df-4f0f-94b9-ed09a91a3a00",
+      "metadata": {}
+    },
+    {
+      "id": "430d46f4-749e-45df-8a0f-cccd95923682",
+      "name": "Tartas y Churros",
+      "parentId": "33924094-36df-4f0f-94b9-ed09a91a3a00",
+      "metadata": {}
+    },
+    {
+      "id": "01b1f259-f9b0-47df-8fc4-2b103dd6fa5d",
+      "name": "Rebozados",
+      "parentId": "33924094-36df-4f0f-94b9-ed09a91a3a00",
+      "metadata": {}
+    },
+    {
+      "id": "52356563-bd4b-4ba9-90cd-62d200ec3fff",
+      "name": "Verdura",
+      "parentId": "33924094-36df-4f0f-94b9-ed09a91a3a00",
+      "metadata": {}
     },
     {
       "id": "820ca468-e8bd-453a-abfd-cf2c62e3b410",
       "name": "Huevos, Leche y Mantequilla",
-      "children": [
-        {
-          "id": "c2a51f29-a410-41e3-90a0-b76c830b60d3",
-          "name": "Yogures",
-          "children": [
-            {
-              "id": "d43279d4-860b-48b9-9406-e35f1ad0de3b",
-              "name": "Yogures desnatados",
-              "children": [],
-              "parentId": "c2a51f29-a410-41e3-90a0-b76c830b60d3"
-            },
-            {
-              "id": "856219d2-0532-431f-a0d6-6e56b5efc673",
-              "name": "Bífidus",
-              "children": [],
-              "parentId": "c2a51f29-a410-41e3-90a0-b76c830b60d3"
-            },
-            {
-              "id": "45fc0d1e-adf4-4574-a2a9-f45b092b26d3",
-              "name": "Yogures naturales y sabores",
-              "children": [],
-              "parentId": "c2a51f29-a410-41e3-90a0-b76c830b60d3"
-            },
-            {
-              "id": "08f84d22-e19e-4974-87e0-63bc2a05ad8b",
-              "name": "Yogures líquidos",
-              "children": [],
-              "parentId": "c2a51f29-a410-41e3-90a0-b76c830b60d3"
-            },
-            {
-              "id": "e2cfda37-45dc-4be0-a923-6d84985b13e4",
-              "name": "Yogures y postres infantiles",
-              "children": [],
-              "parentId": "c2a51f29-a410-41e3-90a0-b76c830b60d3"
-            },
-            {
-              "id": "a420d6b1-4279-4333-9721-fd71b4c0d461",
-              "name": "Yogures griegos",
-              "children": [],
-              "parentId": "c2a51f29-a410-41e3-90a0-b76c830b60d3"
-            }
-          ],
-          "parentId": "820ca468-e8bd-453a-abfd-cf2c62e3b410"
-        }
-      ]
+      "parentId": null,
+      "metadata": {}
+    },
+    {
+      "id": "c2a51f29-a410-41e3-90a0-b76c830b60d3",
+      "name": "Yogures",
+      "parentId": "820ca468-e8bd-453a-abfd-cf2c62e3b410",
+      "metadata": {}
+    },
+    {
+      "id": "d43279d4-860b-48b9-9406-e35f1ad0de3b",
+      "name": "Yogures desnatados",
+      "parentId": "c2a51f29-a410-41e3-90a0-b76c830b60d3",
+      "metadata": {}
+    },
+    {
+      "id": "856219d2-0532-431f-a0d6-6e56b5efc673",
+      "name": "Bífidus",
+      "parentId": "c2a51f29-a410-41e3-90a0-b76c830b60d3",
+      "metadata": {}
+    },
+    {
+      "id": "45fc0d1e-adf4-4574-a2a9-f45b092b26d3",
+      "name": "Yogures naturales y sabores",
+      "parentId": "c2a51f29-a410-41e3-90a0-b76c830b60d3",
+      "metadata": {}
+    },
+    {
+      "id": "08f84d22-e19e-4974-87e0-63bc2a05ad8b",
+      "name": "Yogures líquidos",
+      "parentId": "c2a51f29-a410-41e3-90a0-b76c830b60d3",
+      "metadata": {}
+    },
+    {
+      "id": "e2cfda37-45dc-4be0-a923-6d84985b13e4",
+      "name": "Yogures y postres infantiles",
+      "parentId": "c2a51f29-a410-41e3-90a0-b76c830b60d3",
+      "metadata": {}
+    },
+    {
+      "id": "a420d6b1-4279-4333-9721-fd71b4c0d461",
+      "name": "Yogures griegos",
+      "parentId": "c2a51f29-a410-41e3-90a0-b76c830b60d3",
+      "metadata": {}
     },
     {
       "id": "df6b2291-aaa2-4670-8876-1946f3a39fbb",
       "name": "Cuidado Personal",
-      "children": [
-        {
-          "id": "161b3988-07ef-4e6a-bda6-a3f0887c6883",
-          "name": "Maquillaje",
-          "children": [],
-          "parentId": "df6b2291-aaa2-4670-8876-1946f3a39fbb"
-        },
-        {
-          "id": "0f760b17-8994-4e15-a3a8-9fe7a0680f5d",
-          "name": "Cuidado del Cabello",
-          "children": [],
-          "parentId": "df6b2291-aaa2-4670-8876-1946f3a39fbb"
-        },
-        {
-          "id": "d16252c0-3a2c-4216-af59-fbbd6ab6499c",
-          "name": "Cuidado Facil y Corporal",
-          "children": [],
-          "parentId": "df6b2291-aaa2-4670-8876-1946f3a39fbb"
-        }
-      ]
+      "parentId": null,
+      "metadata": {}
+    },
+    {
+      "id": "161b3988-07ef-4e6a-bda6-a3f0887c6883",
+      "name": "Maquillaje",
+      "parentId": "df6b2291-aaa2-4670-8876-1946f3a39fbb",
+      "metadata": {}
+    },
+    {
+      "id": "0f760b17-8994-4e15-a3a8-9fe7a0680f5d",
+      "name": "Cuidado del Cabello",
+      "parentId": "df6b2291-aaa2-4670-8876-1946f3a39fbb",
+      "metadata": {}
+    },
+    {
+      "id": "d16252c0-3a2c-4216-af59-fbbd6ab6499c",
+      "name": "Cuidado Facil y Corporal",
+      "parentId": "df6b2291-aaa2-4670-8876-1946f3a39fbb",
+      "metadata": {}
     },
     {
       "id": "ba23fb09-d06c-4133-b638-8a703b261040",
       "name": "Mascotas",
-      "children": [
-        {
-          "id": "2513e14f-f8a3-4383-a861-76e9326a6ab5",
-          "name": "Gato",
-          "children": [],
-          "parentId": "ba23fb09-d06c-4133-b638-8a703b261040"
-        },
-        {
-          "id": "ce215529-7dac-4c2c-99e3-e77274ad6a36",
-          "name": "Perro",
-          "children": [],
-          "parentId": "ba23fb09-d06c-4133-b638-8a703b261040"
-        },
-        {
-          "id": "b207323d-8226-44d3-8325-427e2ec13a1c",
-          "name": "Otras Mascotas",
-          "children": [],
-          "parentId": "ba23fb09-d06c-4133-b638-8a703b261040"
-        }
-      ]
+      "parentId": null,
+      "metadata": {}
+    },
+    {
+      "id": "2513e14f-f8a3-4383-a861-76e9326a6ab5",
+      "name": "Gato",
+      "parentId": "ba23fb09-d06c-4133-b638-8a703b261040",
+      "metadata": {}
+    },
+    {
+      "id": "ce215529-7dac-4c2c-99e3-e77274ad6a36",
+      "name": "Perro",
+      "parentId": "ba23fb09-d06c-4133-b638-8a703b261040",
+      "metadata": {}
+    },
+    {
+      "id": "b207323d-8226-44d3-8325-427e2ec13a1c",
+      "name": "Otras Mascotas",
+      "parentId": "ba23fb09-d06c-4133-b638-8a703b261040",
+      "metadata": {}
     },
     {
       "id": "e370ff40-30c9-4a9b-843c-5f745e8df264",
       "name": "Limpieza y Hogar",
-      "children": [
-        {
-          "id": "115a9f11-07a3-449f-8682-a4b35c49f12f",
-          "name": "Detergente y suavizante ropa",
-          "children": [],
-          "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264"
-        },
-        {
-          "id": "ac92ff55-3b8b-4179-b173-320af4b06d7e",
-          "name": "Estropajo, bayeta y guantes",
-          "children": [],
-          "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264"
-        },
-        {
-          "id": "b9d95c1a-3a98-46bd-8c97-2d64dc2feed3",
-          "name": "Insecticida y ambientador",
-          "children": [],
-          "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264"
-        },
-        {
-          "id": "57bddf9b-7b78-4250-9bc2-b7c98a67bbfe",
-          "name": "Lejía y líquidos fuertes",
-          "children": [],
-          "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264"
-        },
-        {
-          "id": "5cfd0cd5-2a87-4428-9f2e-9ee22c974b2e",
-          "name": "Limpiacristales",
-          "children": [],
-          "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264"
-        },
-        {
-          "id": "299238f6-461e-438e-b5f0-7f709c03add7",
-          "name": "Limpiahogar y friegasuelos",
-          "children": [],
-          "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264"
-        },
-        {
-          "id": "a598475d-7191-40a0-bd9e-11cc770987f8",
-          "name": "Limpieza baño y WC",
-          "children": [],
-          "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264"
-        },
-        {
-          "id": "345989ea-4095-48ff-bcee-1f4e38e7a126",
-          "name": "Limpieza cocina",
-          "children": [],
-          "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264"
-        },
-        {
-          "id": "8f104370-e361-4a91-b883-95b74c879c61",
-          "name": "Limpieza muebles y multiusos",
-          "children": [],
-          "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264"
-        },
-        {
-          "id": "1a841d64-48da-4ca6-94ce-7077c7daee2b",
-          "name": "Limpieza vajilla",
-          "children": [],
-          "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264"
-        },
-        {
-          "id": "c50fe20a-cbd2-4bfd-895f-969f69827b54",
-          "name": "Menaje y conservación de alimentos",
-          "children": [],
-          "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264"
-        },
-        {
-          "id": "7b8dc7a6-b4e3-48b4-8900-36458844d7f9",
-          "name": "Papel higiénico y celulosa",
-          "children": [],
-          "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264"
-        },
-        {
-          "id": "87aba81a-e887-4d4f-8850-1df8cdd10421",
-          "name": "Pilas y bolsas de basura",
-          "children": [],
-          "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264"
-        },
-        {
-          "id": "40822e0a-c6ca-4ad8-a751-80bbd5bc35ed",
-          "name": "Utensilios de limpieza y calzado",
-          "children": [],
-          "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264"
-        }
-      ]
+      "parentId": null,
+      "metadata": {}
+    },
+    {
+      "id": "115a9f11-07a3-449f-8682-a4b35c49f12f",
+      "name": "Detergente y suavizante ropa",
+      "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264",
+      "metadata": {}
+    },
+    {
+      "id": "ac92ff55-3b8b-4179-b173-320af4b06d7e",
+      "name": "Estropajo, bayeta y guantes",
+      "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264",
+      "metadata": {}
+    },
+    {
+      "id": "b9d95c1a-3a98-46bd-8c97-2d64dc2feed3",
+      "name": "Insecticida y ambientador",
+      "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264",
+      "metadata": {}
+    },
+    {
+      "id": "57bddf9b-7b78-4250-9bc2-b7c98a67bbfe",
+      "name": "Lejía y líquidos fuertes",
+      "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264",
+      "metadata": {}
+    },
+    {
+      "id": "5cfd0cd5-2a87-4428-9f2e-9ee22c974b2e",
+      "name": "Limpiacristales",
+      "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264",
+      "metadata": {}
+    },
+    {
+      "id": "299238f6-461e-438e-b5f0-7f709c03add7",
+      "name": "Limpiahogar y friegasuelos",
+      "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264",
+      "metadata": {}
+    },
+    {
+      "id": "a598475d-7191-40a0-bd9e-11cc770987f8",
+      "name": "Limpieza baño y WC",
+      "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264",
+      "metadata": {}
+    },
+    {
+      "id": "345989ea-4095-48ff-bcee-1f4e38e7a126",
+      "name": "Limpieza cocina",
+      "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264",
+      "metadata": {}
+    },
+    {
+      "id": "8f104370-e361-4a91-b883-95b74c879c61",
+      "name": "Limpieza muebles y multiusos",
+      "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264",
+      "metadata": {}
+    },
+    {
+      "id": "1a841d64-48da-4ca6-94ce-7077c7daee2b",
+      "name": "Limpieza vajilla",
+      "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264",
+      "metadata": {}
+    },
+    {
+      "id": "c50fe20a-cbd2-4bfd-895f-969f69827b54",
+      "name": "Menaje y conservación de alimentos",
+      "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264",
+      "metadata": {}
+    },
+    {
+      "id": "7b8dc7a6-b4e3-48b4-8900-36458844d7f9",
+      "name": "Papel higiénico y celulosa",
+      "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264",
+      "metadata": {}
+    },
+    {
+      "id": "87aba81a-e887-4d4f-8850-1df8cdd10421",
+      "name": "Pilas y bolsas de basura",
+      "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264",
+      "metadata": {}
+    },
+    {
+      "id": "40822e0a-c6ca-4ad8-a751-80bbd5bc35ed",
+      "name": "Utensilios de limpieza y calzado",
+      "parentId": "e370ff40-30c9-4a9b-843c-5f745e8df264",
+      "metadata": {}
     },
     {
       "id": "5e176ea6-07e6-43d1-9a4c-47c9c3e2390c",
       "name": "Panaderia y Pastelería",
-      "children": [
-        {
-          "id": "d18f07f9-665c-4596-a444-6e98301f831f",
-          "name": "Bolleria de Horno",
-          "children": [],
-          "parentId": "5e176ea6-07e6-43d1-9a4c-47c9c3e2390c"
-        },
-        {
-          "id": "a5da6aac-8434-41ce-a187-042f63e0c084",
-          "name": "Bolleria Envasada",
-          "children": [],
-          "parentId": "5e176ea6-07e6-43d1-9a4c-47c9c3e2390c"
-        },
-        {
-          "id": "1723778b-5726-4c0a-88d4-8c01336da25a",
-          "name": "Harina y preparado repostería",
-          "children": [],
-          "parentId": "5e176ea6-07e6-43d1-9a4c-47c9c3e2390c"
-        },
-        {
-          "id": "1a99c995-9c47-44a8-a383-1222859c2a6f",
-          "name": "Pan de horno",
-          "children": [],
-          "parentId": "5e176ea6-07e6-43d1-9a4c-47c9c3e2390c"
-        },
-        {
-          "id": "b10215aa-ca00-4a88-aaa6-6d082c779bc8",
-          "name": "Pan de molde y otras especialidades",
-          "children": [],
-          "parentId": "5e176ea6-07e6-43d1-9a4c-47c9c3e2390c"
-        },
-        {
-          "id": "aa0f3ba5-bc20-414b-a790-87bad0d4a7e0",
-          "name": "Pan tostado y rallado",
-          "children": [],
-          "parentId": "5e176ea6-07e6-43d1-9a4c-47c9c3e2390c"
-        },
-        {
-          "id": "78cec3e4-cbcb-4bda-a0d5-477746f64647",
-          "name": "Picos, rosquilletas y picatostes",
-          "children": [],
-          "parentId": "5e176ea6-07e6-43d1-9a4c-47c9c3e2390c"
-        },
-        {
-          "id": "222e6043-db18-472f-9405-eac7655c1ed2",
-          "name": "Tartas y pasteles",
-          "children": [],
-          "parentId": "5e176ea6-07e6-43d1-9a4c-47c9c3e2390c"
-        },
-        {
-          "id": "460e5a94-6d10-4a46-b46b-6ab233a78f97",
-          "name": "Velas y decoración",
-          "children": [],
-          "parentId": "5e176ea6-07e6-43d1-9a4c-47c9c3e2390c"
-        }
-      ]
+      "parentId": null,
+      "metadata": {}
+    },
+    {
+      "id": "d18f07f9-665c-4596-a444-6e98301f831f",
+      "name": "Bolleria de Horno",
+      "parentId": "5e176ea6-07e6-43d1-9a4c-47c9c3e2390c",
+      "metadata": {}
+    },
+    {
+      "id": "a5da6aac-8434-41ce-a187-042f63e0c084",
+      "name": "Bolleria Envasada",
+      "parentId": "5e176ea6-07e6-43d1-9a4c-47c9c3e2390c",
+      "metadata": {}
+    },
+    {
+      "id": "1723778b-5726-4c0a-88d4-8c01336da25a",
+      "name": "Harina y preparado repostería",
+      "parentId": "5e176ea6-07e6-43d1-9a4c-47c9c3e2390c",
+      "metadata": {}
+    },
+    {
+      "id": "1a99c995-9c47-44a8-a383-1222859c2a6f",
+      "name": "Pan de horno",
+      "parentId": "5e176ea6-07e6-43d1-9a4c-47c9c3e2390c",
+      "metadata": {}
+    },
+    {
+      "id": "b10215aa-ca00-4a88-aaa6-6d082c779bc8",
+      "name": "Pan de molde y otras especialidades",
+      "parentId": "5e176ea6-07e6-43d1-9a4c-47c9c3e2390c",
+      "metadata": {}
+    },
+    {
+      "id": "aa0f3ba5-bc20-414b-a790-87bad0d4a7e0",
+      "name": "Pan tostado y rallado",
+      "parentId": "5e176ea6-07e6-43d1-9a4c-47c9c3e2390c",
+      "metadata": {}
+    },
+    {
+      "id": "78cec3e4-cbcb-4bda-a0d5-477746f64647",
+      "name": "Picos, rosquilletas y picatostes",
+      "parentId": "5e176ea6-07e6-43d1-9a4c-47c9c3e2390c",
+      "metadata": {}
+    },
+    {
+      "id": "222e6043-db18-472f-9405-eac7655c1ed2",
+      "name": "Tartas y pasteles",
+      "parentId": "5e176ea6-07e6-43d1-9a4c-47c9c3e2390c",
+      "metadata": {}
+    },
+    {
+      "id": "460e5a94-6d10-4a46-b46b-6ab233a78f97",
+      "name": "Velas y decoración",
+      "parentId": "5e176ea6-07e6-43d1-9a4c-47c9c3e2390c",
+      "metadata": {}
     },
     {
       "id": "8aa3ac7f-6ad8-4dfb-aa4b-192f1bbee81f",
       "name": "Pizzas y Platos Preparados",
-      "children": [
-        {
-          "id": "a57e4121-de04-4fdd-8f64-03ba45431661",
-          "name": "Listo para Comer",
-          "children": [],
-          "parentId": "8aa3ac7f-6ad8-4dfb-aa4b-192f1bbee81f"
-        },
-        {
-          "id": "95809013-2160-4a06-82b3-e18097f07288",
-          "name": "Pizzas",
-          "children": [],
-          "parentId": "8aa3ac7f-6ad8-4dfb-aa4b-192f1bbee81f"
-        },
-        {
-          "id": "82a63084-b9c1-4db0-942b-e5d985e3a1e2",
-          "name": "Platos preparados calientes",
-          "children": [],
-          "parentId": "8aa3ac7f-6ad8-4dfb-aa4b-192f1bbee81f"
-        },
-        {
-          "id": "345136c8-63f9-4f4d-bc2c-2adccbbd2728",
-          "name": "Platos preparados fríos",
-          "children": [],
-          "parentId": "8aa3ac7f-6ad8-4dfb-aa4b-192f1bbee81f"
-        }
-      ]
+      "parentId": null,
+      "metadata": {}
+    },
+    {
+      "id": "a57e4121-de04-4fdd-8f64-03ba45431661",
+      "name": "Listo para Comer",
+      "parentId": "8aa3ac7f-6ad8-4dfb-aa4b-192f1bbee81f",
+      "metadata": {}
+    },
+    {
+      "id": "95809013-2160-4a06-82b3-e18097f07288",
+      "name": "Pizzas",
+      "parentId": "8aa3ac7f-6ad8-4dfb-aa4b-192f1bbee81f",
+      "metadata": {}
+    },
+    {
+      "id": "82a63084-b9c1-4db0-942b-e5d985e3a1e2",
+      "name": "Platos preparados calientes",
+      "parentId": "8aa3ac7f-6ad8-4dfb-aa4b-192f1bbee81f",
+      "metadata": {}
+    },
+    {
+      "id": "345136c8-63f9-4f4d-bc2c-2adccbbd2728",
+      "name": "Platos preparados fríos",
+      "parentId": "8aa3ac7f-6ad8-4dfb-aa4b-192f1bbee81f",
+      "metadata": {}
     },
     {
       "id": "ea63d41d-2a3d-4f4e-be3a-260a40af75f4",
       "name": "Postres",
-      "children": [
-        {
-          "id": "a12c020f-c013-4992-ac36-8236195380cd",
-          "name": "Flan y natillas",
-          "children": [],
-          "parentId": "ea63d41d-2a3d-4f4e-be3a-260a40af75f4"
-        },
-        {
-          "id": "8a5492a2-d2da-4bbf-811e-cd4920f95e57",
-          "name": "Gelatina y otros postres",
-          "children": [],
-          "parentId": "ea63d41d-2a3d-4f4e-be3a-260a40af75f4"
-        },
-        {
-          "id": "4ad67e18-a936-46b2-9360-3e267bdf9716",
-          "name": "Postres de soja",
-          "children": [],
-          "parentId": "ea63d41d-2a3d-4f4e-be3a-260a40af75f4"
-        }
-      ]
+      "parentId": null,
+      "metadata": {}
+    },
+    {
+      "id": "a12c020f-c013-4992-ac36-8236195380cd",
+      "name": "Flan y natillas",
+      "parentId": "ea63d41d-2a3d-4f4e-be3a-260a40af75f4",
+      "metadata": {}
+    },
+    {
+      "id": "8a5492a2-d2da-4bbf-811e-cd4920f95e57",
+      "name": "Gelatina y otros postres",
+      "parentId": "ea63d41d-2a3d-4f4e-be3a-260a40af75f4",
+      "metadata": {}
+    },
+    {
+      "id": "4ad67e18-a936-46b2-9360-3e267bdf9716",
+      "name": "Postres de soja",
+      "parentId": "ea63d41d-2a3d-4f4e-be3a-260a40af75f4",
+      "metadata": {}
     },
     {
       "id": "b28f8fc9-3147-4b57-b7dc-ee810d50a5ba",
       "name": "Charcuteria y Quesos",
-      "children": [
-        {
-          "id": "dbcd066c-2726-4edc-bcc8-72ee4eb7a23c",
-          "name": "Aves y jamón cocido",
-          "children": [],
-          "parentId": "b28f8fc9-3147-4b57-b7dc-ee810d50a5ba"
-        },
-        {
-          "id": "c331ad7b-eec7-4ae7-9894-ebb0f86178a4",
-          "name": "Bacón y salchichas",
-          "children": [],
-          "parentId": "b28f8fc9-3147-4b57-b7dc-ee810d50a5ba"
-        },
-        {
-          "id": "f1c98572-8501-46cf-8ba4-28244f55b10c",
-          "name": "Chopped y mortadela",
-          "children": [],
-          "parentId": "b28f8fc9-3147-4b57-b7dc-ee810d50a5ba"
-        },
-        {
-          "id": "72e2d69b-de17-45da-9693-49568a9cf64d",
-          "name": "Jamón serrano",
-          "children": [],
-          "parentId": "b28f8fc9-3147-4b57-b7dc-ee810d50a5ba"
-        },
-        {
-          "id": "3be081d4-7e01-4917-8526-6654276b7fdc",
-          "name": "Embutido curado",
-          "children": [],
-          "parentId": "b28f8fc9-3147-4b57-b7dc-ee810d50a5ba"
-        },
-        {
-          "id": "ee049694-369e-4c96-8ea3-c4e708d8222a",
-          "name": "Paté y sobrasada",
-          "children": [],
-          "parentId": "b28f8fc9-3147-4b57-b7dc-ee810d50a5ba"
-        },
-        {
-          "id": "02137278-d98e-4abf-9fb7-27ba887905f3",
-          "name": "Queso curado, semicurado y tierno",
-          "children": [],
-          "parentId": "b28f8fc9-3147-4b57-b7dc-ee810d50a5ba"
-        },
-        {
-          "id": "30a5e4c5-9f33-409d-b873-a47a54a6c176",
-          "name": "Queso lonchas, rallado y en porciones",
-          "children": [],
-          "parentId": "b28f8fc9-3147-4b57-b7dc-ee810d50a5ba"
-        },
-        {
-          "id": "07b7416b-b200-4130-98b0-ca2476912413",
-          "name": "Queso untable y fresco",
-          "children": [],
-          "parentId": "b28f8fc9-3147-4b57-b7dc-ee810d50a5ba"
-        }
-      ]
+      "parentId": null,
+      "metadata": {}
+    },
+    {
+      "id": "dbcd066c-2726-4edc-bcc8-72ee4eb7a23c",
+      "name": "Aves y jamón cocido",
+      "parentId": "b28f8fc9-3147-4b57-b7dc-ee810d50a5ba",
+      "metadata": {}
+    },
+    {
+      "id": "c331ad7b-eec7-4ae7-9894-ebb0f86178a4",
+      "name": "Bacón y salchichas",
+      "parentId": "b28f8fc9-3147-4b57-b7dc-ee810d50a5ba",
+      "metadata": {}
+    },
+    {
+      "id": "f1c98572-8501-46cf-8ba4-28244f55b10c",
+      "name": "Chopped y mortadela",
+      "parentId": "b28f8fc9-3147-4b57-b7dc-ee810d50a5ba",
+      "metadata": {}
+    },
+    {
+      "id": "72e2d69b-de17-45da-9693-49568a9cf64d",
+      "name": "Jamón serrano",
+      "parentId": "b28f8fc9-3147-4b57-b7dc-ee810d50a5ba",
+      "metadata": {}
+    },
+    {
+      "id": "3be081d4-7e01-4917-8526-6654276b7fdc",
+      "name": "Embutido curado",
+      "parentId": "b28f8fc9-3147-4b57-b7dc-ee810d50a5ba",
+      "metadata": {}
+    },
+    {
+      "id": "ee049694-369e-4c96-8ea3-c4e708d8222a",
+      "name": "Paté y sobrasada",
+      "parentId": "b28f8fc9-3147-4b57-b7dc-ee810d50a5ba",
+      "metadata": {}
+    },
+    {
+      "id": "02137278-d98e-4abf-9fb7-27ba887905f3",
+      "name": "Queso curado, semicurado y tierno",
+      "parentId": "b28f8fc9-3147-4b57-b7dc-ee810d50a5ba",
+      "metadata": {}
+    },
+    {
+      "id": "30a5e4c5-9f33-409d-b873-a47a54a6c176",
+      "name": "Queso lonchas, rallado y en porciones",
+      "parentId": "b28f8fc9-3147-4b57-b7dc-ee810d50a5ba",
+      "metadata": {}
+    },
+    {
+      "id": "07b7416b-b200-4130-98b0-ca2476912413",
+      "name": "Queso untable y fresco",
+      "parentId": "b28f8fc9-3147-4b57-b7dc-ee810d50a5ba",
+      "metadata": {}
     },
     {
       "id": "3526b1db-4764-4f4b-8899-19bb0850b24f",
       "name": "Arroz, Legumbres y Pasta",
-      "children": [
-        {
-          "id": "f1402fce-fd7e-4c5a-b9b8-bd53d4d9ab1a",
-          "name": "Arroz",
-          "children": [],
-          "parentId": "3526b1db-4764-4f4b-8899-19bb0850b24f"
-        },
-        {
-          "id": "2494f459-7072-4551-b9ad-3c8badc9b4ad",
-          "name": "Legumbre",
-          "children": [],
-          "parentId": "3526b1db-4764-4f4b-8899-19bb0850b24f"
-        },
-        {
-          "id": "7cb002e1-e25f-4b87-ae70-327d98f95e0d",
-          "name": "Pasta y Fideos",
-          "children": [],
-          "parentId": "3526b1db-4764-4f4b-8899-19bb0850b24f"
-        }
-      ]
+      "parentId": null,
+      "metadata": {}
+    },
+    {
+      "id": "f1402fce-fd7e-4c5a-b9b8-bd53d4d9ab1a",
+      "name": "Arroz",
+      "parentId": "3526b1db-4764-4f4b-8899-19bb0850b24f",
+      "metadata": {}
+    },
+    {
+      "id": "2494f459-7072-4551-b9ad-3c8badc9b4ad",
+      "name": "Legumbre",
+      "parentId": "3526b1db-4764-4f4b-8899-19bb0850b24f",
+      "metadata": {}
+    },
+    {
+      "id": "7cb002e1-e25f-4b87-ae70-327d98f95e0d",
+      "name": "Pasta y Fideos",
+      "parentId": "3526b1db-4764-4f4b-8899-19bb0850b24f",
+      "metadata": {}
     },
     {
       "id": "3648f64d-b626-4b51-a363-1ad4b1eb6d6c",
       "name": "Conservas, Caldos y Cremas",
-      "children": [
-        {
-          "id": "b56fb5f3-b254-45ee-84c6-9e39d674c100",
-          "name": "Atún y otras conservas de pescado",
-          "children": [],
-          "parentId": "3648f64d-b626-4b51-a363-1ad4b1eb6d6c"
-        },
-        {
-          "id": "e55a927e-7687-4a2b-95cf-45d57a909406",
-          "name": "Atún y otras conservas de pescado",
-          "children": [],
-          "parentId": "3648f64d-b626-4b51-a363-1ad4b1eb6d6c"
-        },
-        {
-          "id": "f142d883-dc63-4ce5-8dab-bfe6bf520718",
-          "name": "Berberechos y mejillones",
-          "children": [],
-          "parentId": "3648f64d-b626-4b51-a363-1ad4b1eb6d6c"
-        },
-        {
-          "id": "cdea6ce3-69db-4457-b7ea-5ce489000769",
-          "name": "Conservas de verdura y frutas",
-          "children": [],
-          "parentId": "3648f64d-b626-4b51-a363-1ad4b1eb6d6c"
-        },
-        {
-          "id": "a3d2c355-6965-4d63-9f76-ee27a70de9dc",
-          "name": "Gazpacho y cremas",
-          "children": [],
-          "parentId": "3648f64d-b626-4b51-a363-1ad4b1eb6d6c"
-        },
-        {
-          "id": "cc777c3e-927b-4078-81be-84e8d700456f",
-          "name": "Sopa y caldo",
-          "children": [],
-          "parentId": "3648f64d-b626-4b51-a363-1ad4b1eb6d6c"
-        },
-        {
-          "id": "12a80198-d6bd-4e6a-9134-a0a86cc7b85f",
-          "name": "Tomate",
-          "children": [],
-          "parentId": "3648f64d-b626-4b51-a363-1ad4b1eb6d6c"
-        }
-      ]
+      "parentId": null,
+      "metadata": {}
+    },
+    {
+      "id": "b56fb5f3-b254-45ee-84c6-9e39d674c100",
+      "name": "Atún y otras conservas de pescado",
+      "parentId": "3648f64d-b626-4b51-a363-1ad4b1eb6d6c",
+      "metadata": {}
+    },
+    {
+      "id": "e55a927e-7687-4a2b-95cf-45d57a909406",
+      "name": "Atún y otras conservas de pescado",
+      "parentId": "3648f64d-b626-4b51-a363-1ad4b1eb6d6c",
+      "metadata": {}
+    },
+    {
+      "id": "f142d883-dc63-4ce5-8dab-bfe6bf520718",
+      "name": "Berberechos y mejillones",
+      "parentId": "3648f64d-b626-4b51-a363-1ad4b1eb6d6c",
+      "metadata": {}
+    },
+    {
+      "id": "cdea6ce3-69db-4457-b7ea-5ce489000769",
+      "name": "Conservas de verdura y frutas",
+      "parentId": "3648f64d-b626-4b51-a363-1ad4b1eb6d6c",
+      "metadata": {}
+    },
+    {
+      "id": "a3d2c355-6965-4d63-9f76-ee27a70de9dc",
+      "name": "Gazpacho y cremas",
+      "parentId": "3648f64d-b626-4b51-a363-1ad4b1eb6d6c",
+      "metadata": {}
+    },
+    {
+      "id": "cc777c3e-927b-4078-81be-84e8d700456f",
+      "name": "Sopa y caldo",
+      "parentId": "3648f64d-b626-4b51-a363-1ad4b1eb6d6c",
+      "metadata": {}
+    },
+    {
+      "id": "12a80198-d6bd-4e6a-9134-a0a86cc7b85f",
+      "name": "Tomate",
+      "parentId": "3648f64d-b626-4b51-a363-1ad4b1eb6d6c",
+      "metadata": {}
     },
     {
       "id": "151ff186-5394-45c4-90d9-575e730842a4",
       "name": "Cacao, Café e Infusiones",
-      "children": [
-        {
-          "id": "a36eef2a-99ff-4b43-9ddb-29b6d7559501",
-          "name": "Cacao soluble y chocolate a la taza",
-          "children": [],
-          "parentId": "151ff186-5394-45c4-90d9-575e730842a4"
-        },
-        {
-          "id": "2e8ddd1d-0e61-4a28-8f20-a93802b0830d",
-          "name": "Café cápsula y monodosis",
-          "children": [],
-          "parentId": "151ff186-5394-45c4-90d9-575e730842a4"
-        },
-        {
-          "id": "0f3122a8-1156-4b66-b512-93c0ec660d16",
-          "name": "Café molido y en grano",
-          "children": [],
-          "parentId": "151ff186-5394-45c4-90d9-575e730842a4"
-        },
-        {
-          "id": "052ab3a4-00b5-414e-9470-b1b46a687877",
-          "name": "Café soluble y otras bebidas",
-          "children": [],
-          "parentId": "151ff186-5394-45c4-90d9-575e730842a4"
-        },
-        {
-          "id": "7fb5e76b-0efa-4262-85fc-5e06e184fa48",
-          "name": "Té e infusiones",
-          "children": [],
-          "parentId": "151ff186-5394-45c4-90d9-575e730842a4"
-        }
-      ]
+      "parentId": null,
+      "metadata": {}
+    },
+    {
+      "id": "a36eef2a-99ff-4b43-9ddb-29b6d7559501",
+      "name": "Cacao soluble y chocolate a la taza",
+      "parentId": "151ff186-5394-45c4-90d9-575e730842a4",
+      "metadata": {}
+    },
+    {
+      "id": "2e8ddd1d-0e61-4a28-8f20-a93802b0830d",
+      "name": "Café cápsula y monodosis",
+      "parentId": "151ff186-5394-45c4-90d9-575e730842a4",
+      "metadata": {}
+    },
+    {
+      "id": "0f3122a8-1156-4b66-b512-93c0ec660d16",
+      "name": "Café molido y en grano",
+      "parentId": "151ff186-5394-45c4-90d9-575e730842a4",
+      "metadata": {}
+    },
+    {
+      "id": "052ab3a4-00b5-414e-9470-b1b46a687877",
+      "name": "Café soluble y otras bebidas",
+      "parentId": "151ff186-5394-45c4-90d9-575e730842a4",
+      "metadata": {}
+    },
+    {
+      "id": "7fb5e76b-0efa-4262-85fc-5e06e184fa48",
+      "name": "Té e infusiones",
+      "parentId": "151ff186-5394-45c4-90d9-575e730842a4",
+      "metadata": {}
     }
   ]
 }

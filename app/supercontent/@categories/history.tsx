@@ -6,8 +6,21 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
 import { CalendarIcon, Filter, X } from "lucide-react";
-import { format } from "date-fns";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useCallback } from "react";
+import { format, isSameDay, parseISO } from "date-fns";
+import { ptBR } from "date-fns/locale";
+
+interface TreeItem {
+  id: string;
+  name: string;
+  parentId: string | null;
+  metadata?: {
+    createdAt?: string;
+    updatedAt?: string;
+    deletedAt?: string;
+    status?: "active" | "inactive";
+  };
+}
 
 interface CategoryAction {
   id: string;
@@ -64,68 +77,89 @@ interface CategoryAction {
   };
 }
 
-interface TreeItem {
-  id: string;
-  name: string;
-  parentId: string | undefined;
-  children: TreeItem[];
-}
-
 interface CategoryHistoryProps {
+  className?: string;
   history: CategoryAction[];
   categories: TreeItem[];
-  className?: string;
-  isExpanded?: boolean;
-  onExpandToggle?: () => void;
 }
 
 export function CategoryHistory({
-  history,
-  categories,
   className,
-  isExpanded,
-  onExpandToggle,
+  history = [],
+  categories = [],
 }: CategoryHistoryProps) {
   const [dateFilter, setDateFilter] = useState<Date>();
 
+  // Memoize the categories map for faster lookups
+  const categoriesMap = useMemo(() => {
+    return new Map(categories.map(cat => [cat.id, cat]));
+  }, [categories]);
+
+  // Optimize parent category name lookup
+  const getParentCategoryName = useCallback((parentId: string | undefined | null): string => {
+    if (!parentId) return "Root";
+    const parent = categoriesMap.get(parentId);
+    return parent ? parent.name : "Unknown";
+  }, [categoriesMap]);
+
+  // Optimize date filtering with memoized date object and faster date comparison
   const filteredHistory = useMemo(() => {
+    if (!dateFilter) return history;
+    
     return history.filter(action => {
-      if (dateFilter) {
-        const actionDate = new Date(action.timestamp);
-        if (
-          actionDate.getDate() !== dateFilter.getDate() ||
-          actionDate.getMonth() !== dateFilter.getMonth() ||
-          actionDate.getFullYear() !== dateFilter.getFullYear()
-        ) {
-          return false;
-        }
+      if (!action.timestamp) return false;
+      try {
+        return isSameDay(parseISO(action.timestamp), dateFilter);
+      } catch {
+        return false;
       }
-      return true;
     });
   }, [history, dateFilter]);
 
-  // Group history items by date
+  // Optimize grouping with pre-parsed dates and memoized format function
   const groupedHistory = useMemo(() => {
+    const formatDate = (date: Date) => format(date, 'yyyy-MM-dd');
     const groups = new Map<string, CategoryAction[]>();
     
     filteredHistory.forEach(action => {
-      const date = new Date(action.timestamp).toLocaleDateString();
-      if (!groups.has(date)) {
-        groups.set(date, []);
+      try {
+        const actionDate = parseISO(action.timestamp);
+        const dateKey = formatDate(actionDate);
+        if (!groups.has(dateKey)) {
+          groups.set(dateKey, []);
+        }
+        groups.get(dateKey)?.push(action);
+      } catch {
+        // Skip invalid dates
       }
-      groups.get(date)?.push(action);
     });
 
-    return Array.from(groups.entries()).sort((a, b) => 
-      new Date(b[0]).getTime() - new Date(a[0]).getTime()
-    );
+    return Array.from(groups.entries())
+      .sort((a, b) => parseISO(b[0]).getTime() - parseISO(a[0]).getTime());
   }, [filteredHistory]);
+
+  // Memoize date formatting functions
+  const formatFullDate = useCallback((date: string) => {
+    try {
+      return format(parseISO(date), "EEEE, d 'de' MMMM 'de' yyyy", { locale: ptBR });
+    } catch {
+      return "Data inválida";
+    }
+  }, []);
+
+  const formatTime = useCallback((timestamp: string) => {
+    try {
+      return format(parseISO(timestamp), 'HH:mm');
+    } catch {
+      return "--:--";
+    }
+  }, []);
 
   return (
     <Card className={cn(
       "flex flex-col min-h-0",
-      "max-h-[calc(100vh-8rem)]", // Maximum height with padding
-      "h-full", // Take full height of parent
+      "max-h-[calc(100vh-8rem)]",
+      "h-full",
       className
     )}>
       <CardHeader className="pb-2 shrink-0">
@@ -163,6 +197,7 @@ export function CategoryHistory({
                   selected={dateFilter}
                   onSelect={setDateFilter}
                   initialFocus
+                  locale={ptBR}
                 />
               </PopoverContent>
             </Popover>
@@ -175,12 +210,7 @@ export function CategoryHistory({
             <div key={date} className="space-y-2">
               <div className="sticky top-0 bg-background/95 backdrop-blur-sm z-10 py-1">
                 <div className="text-xs font-medium text-muted-foreground">
-                  {new Date(date).toLocaleDateString('pt-PT', { 
-                    weekday: 'long', 
-                    year: 'numeric', 
-                    month: 'long', 
-                    day: 'numeric' 
-                  })}
+                  {formatFullDate(date)}
                 </div>
               </div>
               <div className="space-y-1 relative pl-4">
@@ -193,10 +223,7 @@ export function CategoryHistory({
                     <div className="absolute left-[-12px] top-2.5 w-2 h-2 rounded-full bg-border ring-[3px] ring-background" />
                     <div className="flex items-baseline gap-2 min-w-0">
                       <span className="text-[10px] tabular-nums text-muted-foreground whitespace-nowrap">
-                        {new Date(action.timestamp).toLocaleTimeString('pt-PT', { 
-                          hour: '2-digit', 
-                          minute: '2-digit' 
-                        })}
+                        {formatTime(action.timestamp)}
                       </span>
                       <div className="flex-1 min-w-0">
                         <p className="text-xs text-foreground/90 font-medium truncate">
