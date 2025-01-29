@@ -69,8 +69,53 @@ interface FieldAction {
   };
 }
 
+interface HistoryItem {
+  action?: FieldAction;
+  id?: string;
+  timestamp?: string;
+  details?: {
+    message: string;
+    affectedFields: {
+      target: {
+        id: string;
+        name: string;
+      };
+    };
+  };
+  user?: {
+    id: string;
+    name: string;
+  };
+  field?: {
+    id: string;
+    name: string;
+    type: string;
+    required: boolean;
+    metadata?: {
+      createdAt?: string;
+      updatedAt?: string;
+      deletedAt?: string;
+      status?: "active" | "inactive";
+    };
+  };
+  changes?: {
+    previousState?: {
+      type?: string;
+      required?: boolean;
+      parentId?: string;
+      position?: number;
+    };
+    newState?: {
+      type?: string;
+      required?: boolean;
+      parentId?: string;
+      position?: number;
+    };
+  };
+}
+
 interface ProductStructureHistoryProps {
-  history: FieldAction[];
+  history: HistoryItem[];
   fields: FieldItem[];
   className?: string;
   isExpanded?: boolean;
@@ -87,9 +132,12 @@ export function ProductStructureHistory({
   const [dateFilter, setDateFilter] = useState<Date>();
 
   const filteredHistory = useMemo(() => {
-    return history.filter(action => {
+    return history.filter(item => {
       if (dateFilter) {
-        const actionDate = new Date(action.timestamp);
+        const timestamp = item.action?.timestamp || item.timestamp;
+        if (!timestamp) return false;
+        
+        const actionDate = new Date(timestamp);
         if (
           actionDate.getDate() !== dateFilter.getDate() ||
           actionDate.getMonth() !== dateFilter.getMonth() ||
@@ -104,14 +152,17 @@ export function ProductStructureHistory({
 
   // Group history items by date
   const groupedHistory = useMemo(() => {
-    const groups = new Map<string, FieldAction[]>();
+    const groups = new Map<string, HistoryItem[]>();
     
-    filteredHistory.forEach(action => {
-      const date = new Date(action.timestamp).toLocaleDateString();
+    filteredHistory.forEach(item => {
+      const timestamp = item.action?.timestamp || item.timestamp;
+      if (!timestamp) return;
+      
+      const date = new Date(timestamp).toLocaleDateString();
       if (!groups.has(date)) {
         groups.set(date, []);
       }
-      groups.get(date)?.push(action);
+      groups.get(date)?.push(item);
     });
 
     return Array.from(groups.entries()).sort((a, b) => 
@@ -183,49 +234,64 @@ export function ProductStructureHistory({
               </div>
               <div className="space-y-1 relative pl-4">
                 <div className="absolute left-[7px] top-2 bottom-2 w-[2px] bg-border" />
-                {actions.map((action) => (
-                  <div 
-                    key={action.id} 
-                    className="relative py-1"
-                  >
-                    <div className="absolute left-[-12px] top-2.5 w-2 h-2 rounded-full bg-border ring-[3px] ring-background" />
-                    <div className="flex items-baseline gap-2 min-w-0">
-                      <span className="text-[10px] tabular-nums text-muted-foreground whitespace-nowrap">
-                        {new Date(action.timestamp).toLocaleTimeString('en-US', { 
-                          hour: '2-digit', 
-                          minute: '2-digit' 
-                        })}
-                      </span>
-                      <div className="flex-1 min-w-0">
-                        <p className="text-xs text-foreground/90 font-medium truncate">
-                          {action.details.message}
-                        </p>
-                        {action.changes && (
-                          <div className="mt-1 text-[10px] text-muted-foreground">
-                            {action.changes.previousState?.type !== action.changes.newState?.type && (
-                              <div className="flex items-center gap-1.5">
-                                <span className="truncate capitalize">{action.changes.previousState?.type || 'none'}</span>
-                                <svg className="h-3 w-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                  <path d="M5 12h14m-7-7 7 7-7 7" />
-                                </svg>
-                                <span className="truncate capitalize">{action.changes.newState?.type}</span>
-                              </div>
-                            )}
-                            {action.changes.previousState?.required !== action.changes.newState?.required && (
-                              <div className="flex items-center gap-1.5">
-                                <span>{action.changes.previousState?.required ? 'Required' : 'Optional'}</span>
-                                <svg className="h-3 w-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                  <path d="M5 12h14m-7-7 7 7-7 7" />
-                                </svg>
-                                <span>{action.changes.newState?.required ? 'Required' : 'Optional'}</span>
-                              </div>
-                            )}
-                          </div>
-                        )}
+                {actions.map((item) => {
+                  const timestamp = item.action?.timestamp || item.timestamp;
+                  if (!timestamp) return null;
+
+                  return (
+                    <div 
+                      key={item.action?.id || item.id} 
+                      className="relative py-1"
+                    >
+                      <div className="absolute left-[-12px] top-2.5 w-2 h-2 rounded-full bg-border ring-[3px] ring-background" />
+                      <div className="flex items-baseline gap-2 min-w-0">
+                        <span className="text-[10px] tabular-nums text-muted-foreground whitespace-nowrap">
+                          {new Date(timestamp).toLocaleTimeString('en-US', { 
+                            hour: '2-digit', 
+                            minute: '2-digit' 
+                          })}
+                        </span>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-xs text-foreground/90 font-medium truncate">
+                            {(item.action?.details?.message || item.details?.message) || 'Unknown action'}
+                          </p>
+                          {(item.action?.changes || item.changes) && (
+                            <div className="mt-1 text-[10px] text-muted-foreground">
+                              {(item.action?.changes?.previousState?.type !== item.action?.changes?.newState?.type || 
+                                item.changes?.previousState?.type !== item.changes?.newState?.type) && (
+                                <div className="flex items-center gap-1.5">
+                                  <span className="truncate capitalize">
+                                    {(item.action?.changes?.previousState?.type || item.changes?.previousState?.type) || 'none'}
+                                  </span>
+                                  <svg className="h-3 w-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                    <path d="M5 12h14m-7-7 7 7-7 7" />
+                                  </svg>
+                                  <span className="truncate capitalize">
+                                    {item.action?.changes?.newState?.type || item.changes?.newState?.type}
+                                  </span>
+                                </div>
+                              )}
+                              {(item.action?.changes?.previousState?.required !== item.action?.changes?.newState?.required ||
+                                item.changes?.previousState?.required !== item.changes?.newState?.required) && (
+                                <div className="flex items-center gap-1.5">
+                                  <span>
+                                    {(item.action?.changes?.previousState?.required || item.changes?.previousState?.required) ? 'Required' : 'Optional'}
+                                  </span>
+                                  <svg className="h-3 w-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                    <path d="M5 12h14m-7-7 7 7-7 7" />
+                                  </svg>
+                                  <span>
+                                    {(item.action?.changes?.newState?.required || item.changes?.newState?.required) ? 'Required' : 'Optional'}
+                                  </span>
+                                </div>
+                              )}
+                            </div>
+                          )}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           ))}

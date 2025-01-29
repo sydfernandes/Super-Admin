@@ -41,93 +41,21 @@ import { useToast } from "@/hooks/use-toast";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
 import { ProductStructureSidebar } from "./sidebar"
+import type { TreeItem, BaseFieldItem, FieldAction, FieldItemType } from "./types";
+import { ProductFieldItem as FieldItem } from "./field-item";
 
 /** ---------------------------------------------------------------------------------
  * 1. Data Types
  * --------------------------------------------------------------------------------- */
-interface FieldItem {
-  id: string;
-  name: string;
-  type: "text" | "number" | "boolean" | "date" | "select" | "multiselect" | "url" | "timestamp" | "email" | "image" | "currency" | "phone" | "json" | "markdown" | "color";
-  required: boolean;
-  parentId: string | undefined;
-  children: FieldItem[];
-  options?: string[];
-  metadata?: {
-    createdAt?: string;
-    updatedAt?: string;
-    deletedAt?: string;
-    status?: "active" | "inactive";
-  };
-}
-
 interface DragIntention {
   type: "before" | "after" | "child" | "root";
   id: string;
 }
 
-interface FieldAction {
-  id: string;
-  timestamp: string;
-  action: "FIELD_CREATED" | "FIELD_UPDATED" | "FIELD_DELETED" | "FIELD_MOVED" | "FIELD_REQUIRED_CHANGED" | "FIELD_TYPE_CHANGED";
-  details: {
-    message: string;
-    affectedFields: {
-      target: {
-        id: string;
-        name: string;
-      };
-    };
-  };
-  user: {
-    id: string;
-    name: string;
-  };
-  field: {
-    id: string;
-    name: string;
-    type: string;
-    required: boolean;
-    metadata?: {
-      createdAt?: string;
-      updatedAt?: string;
-      deletedAt?: string;
-      status?: "active" | "inactive";
-    };
-  };
-  changes?: {
-    previousState?: {
-      type?: string;
-      required?: boolean;
-      parentId?: string;
-      position?: number;
-    };
-    newState?: {
-      type?: string;
-      required?: boolean;
-      parentId?: string;
-      position?: number;
-    };
-  };
-}
-
 /** Props for the top-level ProductStructure container */
 interface ProductStructureProps {
   className?: string;
-  onDataUpdate?: (data: { items: FieldItem[] }) => void;
-}
-
-/** Props for each item (node) in the tree */
-interface ProductFieldItemProps {
-  item: FieldItem;
-  depth: number;
-  activeId: string | null;
-  overId: string | null;
-  currentPosition: DragIntention | null;
-  onDelete: (id: string) => Promise<void>;
-  onRename: (id: string, newName: string) => Promise<void>;
-  onTypeChange: (id: string, newType: FieldItem["type"]) => Promise<void>;
-  onRequiredChange: (id: string, required: boolean) => Promise<void>;
+  onDataUpdate?: (data: { items: TreeItem[] }) => void;
 }
 
 /** ---------------------------------------------------------------------------------
@@ -331,7 +259,7 @@ function ProductFieldItem({
 
         <Select
           value={item.type}
-          onValueChange={(value) => onTypeChange(item.id, value as FieldItem["type"])}
+          onValueChange={(value) => onTypeChange(item.id, value as BaseFieldItem["type"])}
         >
           <SelectTrigger className="w-[120px] h-8">
             <SelectValue />
@@ -414,7 +342,7 @@ function ProductFieldItem({
       {item.children.length > 0 && isExpanded && (
         <div className="flex flex-col gap-2 mt-2">
           {item.children.map((child) => (
-            <ProductFieldItem
+            <FieldItem
               key={child.id}
               item={child}
               depth={depth + 1}
@@ -437,154 +365,104 @@ function ProductFieldItem({
  * 4. ProductStructure (Main)
  * --------------------------------------------------------------------------------- */
 export function ProductStructure({ className, onDataUpdate }: ProductStructureProps) {
-  const [items, setItems] = useState<FieldItem[]>([]);
-  const [activeId, setActiveId] = useState<string | null>(null);
-  const [overId, setOverId] = useState<string | null>(null);
-  const [offsetLeft, setOffsetLeft] = useState(0);
-  const [currentPosition, setCurrentPosition] = useState<DragIntention | null>(null);
+  const [items, setItems] = useState<BaseFieldItem[]>([]);
   const [newFieldName, setNewFieldName] = useState("");
   const { toast } = useToast();
-  const [isHistoryExpanded, setIsHistoryExpanded] = useState(false)
+  const [isHistoryExpanded, setIsHistoryExpanded] = useState(false);
 
-  const sensors = useSensors(
-    useSensor(PointerSensor, {
-      activationConstraint: { distance: 8 },
-    })
-  );
+  // Convert flat list to tree structure
+  const buildTree = useCallback((flatItems: BaseFieldItem[]): TreeItem[] => {
+    const itemMap = new Map<string, TreeItem>();
+    const rootItems: TreeItem[] = [];
 
-  const flattenTree = useCallback(
-    (list: FieldItem[], parentId: string | undefined = undefined): FieldItem[] => {
-      return list.reduce<FieldItem[]>((acc, item) => {
-        const copy = { ...item, parentId };
-        return [...acc, copy, ...flattenTree(item.children, item.id)];
-      }, []);
-    },
-    []
-  );
+    // First pass: Create TreeItems without children
+    flatItems.forEach(item => {
+      itemMap.set(item.id, { ...item, children: [] });
+    });
 
-  const buildTree = useCallback((flat: FieldItem[]): FieldItem[] => {
-    const map = new Map<string, FieldItem>();
-    for (const f of flat) {
-      map.set(f.id, { ...f, children: [] });
-    }
-    const result: FieldItem[] = [];
-    for (const f of flat) {
-      if (!f.parentId) {
-        result.push(map.get(f.id)!);
+    // Second pass: Build the tree structure
+    flatItems.forEach(item => {
+      const treeItem = itemMap.get(item.id)!;
+      if (item.parentId === null) {
+        rootItems.push(treeItem);
       } else {
-        const parent = map.get(f.parentId);
+        const parent = itemMap.get(item.parentId);
         if (parent) {
-          parent.children.push(map.get(f.id)!);
+          parent.children.push(treeItem);
         }
       }
-    }
-    return result;
+    });
+
+    return rootItems;
   }, []);
 
-  const flattenedTree = useMemo(() => flattenTree(items), [items, flattenTree]);
-  const flatItemsMap = useMemo(() => {
-    const map = new Map<string, FieldItem>();
-    flattenedTree.forEach((item) => map.set(item.id, item));
-    return map;
-  }, [flattenedTree]);
+  // Convert tree structure to flat list
+  const flattenTree = useCallback((treeItems: TreeItem[]): BaseFieldItem[] => {
+    const flatItems: BaseFieldItem[] = [];
+    
+    const flatten = (items: TreeItem[], parentId: string | null = null) => {
+      items.forEach(item => {
+        const { children, ...rest } = item;
+        flatItems.push({ ...rest, parentId });
+        flatten(children, item.id);
+      });
+    };
 
-  const getDepth = useCallback(
-    (list: FieldItem[], id: string): number => {
-      if (!list.length) return -1;
-      const queue: Array<{ items: FieldItem[]; depth: number }> = [
-        { items: list, depth: 0 },
-      ];
+    flatten(treeItems);
+    return flatItems;
+  }, []);
 
-      while (queue.length > 0) {
-        const { items: currentItems, depth } = queue.shift()!;
-        for (const item of currentItems) {
-          if (item.id === id) return depth;
-          if (item.children.length) {
-            queue.push({ items: item.children, depth: depth + 1 });
-          }
-        }
+  const saveFields = useCallback(async (newItems: BaseFieldItem[]) => {
+    try {
+      const response = await fetch("/api/product-structure", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ fields: newItems }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Failed to save fields: ${response.statusText}`);
       }
-      return -1;
-    },
-    []
-  );
+    } catch (error) {
+      console.error("Failed to save fields:", error);
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: "Failed to save fields. Your changes may not be persisted.",
+      });
+    }
+  }, [toast]);
 
-  const isDescendant = useCallback(
-    (items: FieldItem[], sourceId: string, targetId: string): boolean => {
-      const source = items.find((x) => x.id === sourceId);
-      if (!source) return false;
-
-      function hasDescendant(tid: string, children: FieldItem[]): boolean {
-        for (const child of children) {
-          if (child.id === tid || hasDescendant(tid, child.children)) {
-            return true;
-          }
-        }
-        return false;
+  const addToHistory = useCallback(async (action: Omit<FieldAction, "id" | "timestamp" | "user">) => {
+    const newAction = {
+      ...action,
+      id: crypto.randomUUID(),
+      timestamp: new Date().toISOString(),
+      user: {
+        id: "u_01HNK2E8YRJX9QWM5390VEXZK4",
+        name: "Sydney Fernandes"
       }
-      return hasDescendant(targetId, source.children);
-    },
-    []
-  );
+    };
 
-  const saveFields = useCallback(
-    async (newItems: FieldItem[]) => {
-      try {
-        const response = await fetch("/api/product-structure", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ fields: newItems }),
-        });
+    try {
+      const response = await fetch("/api/product-structure/history", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: newAction }),
+      });
 
-        if (!response.ok) {
-          throw new Error(`Failed to save fields: ${response.statusText}`);
-        }
-      } catch (error) {
-        console.error("Failed to save fields:", error);
-        toast({
-          variant: "destructive",
-          title: "Error",
-          description:
-            "Failed to save fields. Your changes may not be persisted.",
-        });
+      if (!response.ok) {
+        throw new Error(`Failed to save history: ${response.statusText}`);
       }
-    },
-    [toast]
-  );
-
-  const addToHistory = useCallback(
-    async (action: Omit<FieldAction, "id" | "timestamp" | "user">) => {
-      const newAction = {
-        ...action,
-        id: crypto.randomUUID(),
-        timestamp: new Date().toISOString(),
-        user: {
-          id: "u_01HNK2E8YRJX9QWM5390VEXZK4",
-          name: "Sydney Fernandes"
-        }
-      };
-
-      try {
-        const response = await fetch("/api/product-structure/history", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ action: newAction }),
-        });
-
-        if (!response.ok) {
-          throw new Error(`Failed to save history: ${response.statusText}`);
-        }
-      } catch (err) {
-        console.error("Failed to save history:", err);
-        toast({
-          variant: "destructive",
-          title: "Error",
-          description: "Failed to save action history. Some actions may not be recorded.",
-        });
-      }
-    },
-    [toast]
-  );
+    } catch (err) {
+      console.error("Failed to save history:", err);
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: "Failed to save action history. Some actions may not be recorded.",
+      });
+    }
+  }, [toast]);
 
   useEffect(() => {
     async function loadFields() {
@@ -607,172 +485,20 @@ export function ProductStructure({ className, onDataUpdate }: ProductStructurePr
     loadFields();
   }, [toast]);
 
-  function handleDragStart({ active }: DragStartEvent) {
-    setActiveId(active.id.toString());
-  }
-
-  function handleDragMove({ delta, over }: DragMoveEvent) {
-    setOffsetLeft(delta.x);
-    if (over) {
-      setOverId(over.id.toString());
-    }
-  }
-
-  function handleDragOver({ over, active }: DragOverEvent) {
-    if (!over || !over.rect) {
-      setCurrentPosition(null);
-      return;
-    }
-
-    const overId = over.id.toString();
-    const activeId = active.id.toString();
-
-    if (overId === activeId) {
-      setCurrentPosition(null);
-      return;
-    }
-
-    const src = flatItemsMap.get(activeId);
-    const tgt = flatItemsMap.get(overId);
-    if (!src || !tgt) {
-      setCurrentPosition(null);
-      return;
-    }
-
-    if (isDescendant(items, activeId, overId)) {
-      setCurrentPosition(null);
-      return;
-    }
-
-    const overDepth = getDepth(items, overId);
-
-    const overRect = over.rect;
-    const activeRect = active.rect.current?.translated;
-    if (!activeRect || !overRect.height) {
-      setCurrentPosition(null);
-      return;
-    }
-
-    const pointerY = activeRect.top;
-    const offsetY = Math.max(0, Math.min(pointerY - overRect.top, overRect.height));
-    const relativeY = offsetY / overRect.height;
-
-    if (offsetLeft < UNPARENT_THRESHOLD && src.parentId) {
-      if (!tgt.parentId) {
-        if (relativeY < 0.5) {
-          setCurrentPosition({ type: "before", id: overId });
-        } else {
-          setCurrentPosition({ type: "after", id: overId });
-        }
-      } else {
-        setCurrentPosition({ type: "root", id: overId });
-      }
-      return;
-    }
-
-    if (offsetLeft > CHILD_THRESHOLD && overDepth < MAX_DEPTH - 1) {
-      setCurrentPosition({ type: "child", id: overId });
-      return;
-    }
-
-    if (relativeY < 0.5) {
-      setCurrentPosition({ type: "before", id: overId });
-    } else {
-      setCurrentPosition({ type: "after", id: overId });
-    }
-  }
-
-  function handleDragEnd({ active, over }: DragEndEvent) {
-    if (!over || !currentPosition) {
-      resetDrag();
-      return;
-    }
-
-    const activeId = active.id.toString();
-    const type = currentPosition.type;
-    const src = flatItemsMap.get(activeId);
-    const tgt = flatItemsMap.get(currentPosition.id);
-
-    if (!src || !tgt || src.id === tgt.id) {
-      resetDrag();
-      return;
-    }
-
-    if (type === "child") {
-      if (
-        isDescendant(items, activeId, tgt.id) ||
-        getDepth(items, tgt.id) >= MAX_DEPTH - 1
-      ) {
-        resetDrag();
-        return;
-      }
-    }
-
-    const newFlat = flattenedTree.filter((f) => f.id !== src.id);
-    const overIndex = newFlat.findIndex((f) => f.id === tgt.id);
-
-    let insertIndex = overIndex;
-    let newParentId = tgt.parentId;
-
-    switch (type) {
-      case "before":
-        newParentId = tgt.parentId;
-        break;
-
-      case "after":
-        insertIndex = overIndex + 1;
-        newParentId = tgt.parentId;
-        break;
-
-      case "child":
-        const lastChildIndex = newFlat.findIndex(
-          (f, i) =>
-            f.parentId === tgt.id &&
-            (i === newFlat.length - 1 || newFlat[i + 1].parentId !== tgt.id)
-        );
-        insertIndex = lastChildIndex === -1 ? overIndex + 1 : lastChildIndex + 1;
-        newParentId = tgt.id;
-        break;
-
-      case "root":
-        newParentId = undefined;
-        const rootItems = newFlat.filter((x) => !x.parentId);
-        const lastRootIndex =
-          rootItems.length > 0
-            ? newFlat.findIndex(
-                (x) => x.id === rootItems[rootItems.length - 1].id
-              )
-            : -1;
-        insertIndex = lastRootIndex + 1;
-        break;
-    }
-
-    const updatedSrc = { ...src, parentId: newParentId };
-    newFlat.splice(insertIndex, 0, updatedSrc);
-
-    const newTree = buildTree(newFlat);
-    setItems(newTree);
-    saveFields(newTree);
-    resetDrag();
-  }
-
-  function resetDrag() {
-    setActiveId(null);
-    setOverId(null);
-    setOffsetLeft(0);
-    setCurrentPosition(null);
-  }
-
   const handleAddField = () => {
     if (!newFieldName.trim()) return;
 
-    const newField: FieldItem = {
+    const newField: BaseFieldItem = {
       id: crypto.randomUUID(),
       name: newFieldName.trim(),
       type: "text",
       required: false,
-      children: [],
-      parentId: undefined,
+      parentId: null,
+      metadata: {
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+        status: "active"
+      }
     };
 
     const updated = [...items, newField];
@@ -791,62 +517,60 @@ export function ProductStructure({ className, onDataUpdate }: ProductStructurePr
           }
         }
       },
-      field: {
-        id: newField.id,
-        name: newField.name,
-        type: newField.type,
-        required: newField.required,
-        metadata: {
-          createdAt: new Date().toISOString(),
-          updatedAt: new Date().toISOString(),
-          status: "active"
-        }
-      }
+      field: newField
     });
   };
 
-  const handleDelete = useCallback(
-    async (id: string) => {
-      const itemToDelete = flatItemsMap.get(id);
-      if (!itemToDelete) return;
+  const handleDelete = useCallback(async (id: string) => {
+    const itemToDelete = items.find(item => item.id === id);
+    if (!itemToDelete) return;
 
-      try {
-        const childrenIds = new Set<string>();
-        const getAllChildren = (parentId: string) => {
-          flattenedTree.forEach((child) => {
-            if (child.parentId === parentId) {
-              childrenIds.add(child.id);
-              getAllChildren(child.id);
-            }
-          });
-        };
-        getAllChildren(id);
-        childrenIds.add(id);
-
-        const newFlat = flattenedTree.filter((x) => !childrenIds.has(x.id));
-        const newTree = buildTree(newFlat);
-        setItems(newTree);
-        await saveFields(newTree);
-      } catch (err) {
-        console.error("Failed to delete field:", err);
-        toast({
-          variant: "destructive",
-          title: "Error",
-          description: "Failed to delete field. Please try again.",
+    try {
+      // Get all descendant IDs
+      const descendantIds = new Set<string>();
+      const getAllDescendants = (parentId: string) => {
+        items.forEach((item) => {
+          if (item.parentId === parentId) {
+            descendantIds.add(item.id);
+            getAllDescendants(item.id);
+          }
         });
-        const response = await fetch("/api/product-structure");
-        if (response.ok) {
-          const data = await response.json();
-          setItems(data.fields || []);
-        }
-      }
-    },
-    [flatItemsMap, flattenedTree, buildTree, saveFields, toast]
-  );
+      };
+      getAllDescendants(id);
+      descendantIds.add(id);
+
+      const newItems = items.filter(item => !descendantIds.has(item.id));
+      setItems(newItems);
+      await saveFields(newItems);
+
+      addToHistory({
+        action: "FIELD_DELETED",
+        details: {
+          message: `Deleted field "${itemToDelete.name}" and its descendants`,
+          affectedFields: {
+            target: {
+              id: itemToDelete.id,
+              name: itemToDelete.name
+            }
+          }
+        },
+        field: itemToDelete
+      });
+    } catch (err) {
+      console.error("Failed to delete field:", err);
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: "Failed to delete field. Please try again.",
+      });
+    }
+  }, [items, saveFields, addToHistory, toast]);
+
+  const treeItems = useMemo(() => buildTree(items), [items, buildTree]);
 
   useEffect(() => {
-    onDataUpdate?.({ items });
-  }, [items, onDataUpdate]);
+    onDataUpdate?.({ items: treeItems });
+  }, [treeItems, onDataUpdate]);
 
   return (
     <div className={cn("flex-1", className)}>
@@ -872,91 +596,79 @@ export function ProductStructure({ className, onDataUpdate }: ProductStructurePr
           </div>
         </div>
 
-        <DndContext
-          sensors={sensors}
-          onDragStart={handleDragStart}
-          onDragMove={handleDragMove}
-          onDragOver={handleDragOver}
-          onDragEnd={handleDragEnd}
-          measuring={{ droppable: { strategy: MeasuringStrategy.Always } }}
-        >
-          <div className="flex flex-col gap-2">
-            {items.map((item) => (
-              <ProductFieldItem
-                key={item.id}
-                item={item}
-                depth={0}
-                activeId={activeId}
-                overId={overId}
-                currentPosition={currentPosition}
-                onDelete={handleDelete}
-                onRename={async (id: string, newName: string) => {
-                  const newArr = items.map((x) =>
-                    x.id === id ? { ...x, name: newName } : x
-                  );
-                  setItems(newArr);
-                  await saveFields(newArr);
-                }}
-                onTypeChange={async (id: string, newType: FieldItem["type"]) => {
-                  const newArr = items.map((x) =>
-                    x.id === id ? { ...x, type: newType } : x
-                  );
-                  setItems(newArr);
-                  await saveFields(newArr);
-                }}
-                onRequiredChange={async (id: string, required: boolean) => {
-                  const oldItem = items.find(x => x.id === id);
-                  if (!oldItem) return;
+        <div className="flex flex-col gap-2">
+          {treeItems.map((item) => (
+            <FieldItem
+              key={item.id}
+              item={item}
+              depth={0}
+              onDelete={handleDelete}
+              onRename={async (id: string, newName: string) => {
+                const newItems = items.map(item =>
+                  item.id === id ? { ...item, name: newName } : item
+                );
+                setItems(newItems);
+                await saveFields(newItems);
+              }}
+              onTypeChange={async (id: string, newType: BaseFieldItem["type"]) => {
+                const oldItem = items.find(x => x.id === id);
+                if (!oldItem) return;
 
-                  const newArr = items.map((x) =>
-                    x.id === id ? { ...x, required } : x
-                  );
-                  setItems(newArr);
-                  await saveFields(newArr);
+                const newItems = items.map(item =>
+                  item.id === id ? { ...item, type: newType } : item
+                );
+                setItems(newItems);
+                await saveFields(newItems);
 
-                  addToHistory({
-                    action: "FIELD_REQUIRED_CHANGED",
-                    details: {
-                      message: `Changed "${oldItem.name}" required status to ${required ? "required" : "optional"}`,
-                      affectedFields: {
-                        target: {
-                          id: oldItem.id,
-                          name: oldItem.name
-                        }
-                      }
-                    },
-                    field: {
-                      id: oldItem.id,
-                      name: oldItem.name,
-                      type: oldItem.type,
-                      required,
-                      metadata: {
-                        updatedAt: new Date().toISOString(),
-                        status: "active"
-                      }
-                    },
-                    changes: {
-                      previousState: {
-                        required: oldItem.required
-                      },
-                      newState: {
-                        required
+                addToHistory({
+                  action: "FIELD_TYPE_CHANGED",
+                  details: {
+                    message: `Changed "${oldItem.name}" type from ${oldItem.type} to ${newType}`,
+                    affectedFields: {
+                      target: {
+                        id: oldItem.id,
+                        name: oldItem.name
                       }
                     }
-                  });
-                }}
-              />
-            ))}
-          </div>
+                  },
+                  field: { ...oldItem, type: newType },
+                  changes: {
+                    previousState: { type: oldItem.type },
+                    newState: { type: newType }
+                  }
+                });
+              }}
+              onRequiredChange={async (id: string, required: boolean) => {
+                const oldItem = items.find(x => x.id === id);
+                if (!oldItem) return;
 
-          <DragOverlay dropAnimation={defaultDropAnimation}>
-            {activeId && (
-              <div className="bg-background border rounded-md p-2 opacity-80">
-                {items.find((it) => it.id === activeId)?.name}
-              </div>
-            )}
-          </DragOverlay>
-        </DndContext>
+                const newItems = items.map(item =>
+                  item.id === id ? { ...item, required } : item
+                );
+                setItems(newItems);
+                await saveFields(newItems);
+
+                addToHistory({
+                  action: "FIELD_REQUIRED_CHANGED",
+                  details: {
+                    message: `Changed "${oldItem.name}" required status to ${required ? "required" : "optional"}`,
+                    affectedFields: {
+                      target: {
+                        id: oldItem.id,
+                        name: oldItem.name
+                      }
+                    }
+                  },
+                  field: { ...oldItem, required },
+                  changes: {
+                    previousState: { required: oldItem.required },
+                    newState: { required }
+                  }
+                });
+              }}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -966,7 +678,7 @@ export function ProductStructure({ className, onDataUpdate }: ProductStructurePr
  * Main Page Component
  */
 export default function ProductStructurePage() {
-  const [items, setItems] = useState<FieldItem[]>([])
+  const [items, setItems] = useState<BaseFieldItem[]>([])
   const [isHistoryExpanded, setIsHistoryExpanded] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
 

@@ -1,0 +1,138 @@
+{
+  "fields": [
+    {
+      "id": "f5dd6a0f-64a4-4993-ac03-9adf711b27bb",
+      "name": "Código do Producto",
+      "type": "text",
+      "required": true,
+      "parentId": null
+    },
+    {
+      "id": "f_01",
+      "name": "Nome do Producto",
+      "type": "text",
+      "required": true,
+      "parentId": null,
+      "metadata": {
+        "createdAt": "2024-01-26T00:00:00.000Z",
+        "updatedAt": "2024-01-26T00:00:00.000Z",
+        "status": "active"
+      }
+    },
+    {
+      "id": "f_02",
+      "name": "Preço",
+      "type": "number",
+      "required": true,
+      "parentId": null,
+      "metadata": {
+        "createdAt": "2024-01-26T00:00:00.000Z",
+        "updatedAt": "2024-01-26T00:00:00.000Z",
+        "status": "active"
+      }
+    },
+    {
+      "id": "2a5312b8-c5c0-4020-89fc-4096ff4242dc",
+      "name": "Discount",
+      "type": "text",
+      "required": false,
+      "parentId": "f_02"
+    },
+    {
+      "id": "bb6f6c2b-aa76-4d34-8907-3f6a3add7262",
+      "name": "Previous Price",
+      "type": "text",
+      "required": false,
+      "parentId": "f_02"
+    },
+    {
+      "id": "f_03",
+      "name": "Descrição",
+      "type": "text",
+      "required": true,
+      "parentId": null,
+      "metadata": {
+        "createdAt": "2024-01-26T00:00:00.000Z",
+        "updatedAt": "2024-01-26T00:00:00.000Z",
+        "status": "active"
+      }
+    },
+    {
+      "id": "79f24984-7031-48ac-bc8e-f0d54cb9aba9",
+      "name": "Imagem do Producto",
+      "type": "url",
+      "required": true,
+      "parentId": null
+    },
+    {
+      "id": "6482d68e-3548-4fb7-9f33-098827ca40d5",
+      "name": "Link do Producto",
+      "type": "url",
+      "required": true,
+      "parentId": null
+    },
+    {
+      "id": "1b42a3ca-9751-429d-98dc-63141a609b92",
+      "name": "Super Mercado",
+      "type": "select",
+      "required": true,
+      "parentId": null
+    },
+    {
+      "id": "e5115c14-8824-4c63-aebe-24a5ddfd994a",
+      "name": "Metadata",
+      "type": "text",
+      "required": true,
+      "parentId": null
+    },
+    {
+      "id": "9bc308ff-2b7d-4ddf-9db8-890efb6941d3",
+      "name": "Added",
+      "type": "timestamp",
+      "required": false,
+      "parentId": "e5115c14-8824-4c63-aebe-24a5ddfd994a"
+    },
+    {
+      "id": "9ca25c84-93be-4334-b9da-396eb5c7f2b6",
+      "name": "Edited",
+      "type": "timestamp",
+      "required": false,
+      "parentId": "e5115c14-8824-4c63-aebe-24a5ddfd994a"
+    },
+    {
+      "id": "7d247ae3-1627-4d7a-a10f-7b43ad9594d1",
+      "name": "Updated",
+      "type": "timestamp",
+      "required": false,
+      "parentId": "e5115c14-8824-4c63-aebe-24a5ddfd994a"
+    },
+    {
+      "id": "596a5b57-1656-42d4-858e-23315fdff587",
+      "name": "Estados",
+      "type": "text",
+      "required": true,
+      "parentId": null
+    },
+    {
+      "id": "35ac29bb-bf11-4e3f-8054-348e098b4b21",
+      "name": "Archive",
+      "type": "text",
+      "required": false,
+      "parentId": "596a5b57-1656-42d4-858e-23315fdff587"
+    },
+    {
+      "id": "5eb31756-cd23-4df9-9d04-53b35b2da3e9",
+      "name": "Descontinuado",
+      "type": "text",
+      "required": false,
+      "parentId": "596a5b57-1656-42d4-858e-23315fdff587"
+    },
+    {
+      "id": "b0724aa4-9ec8-4665-badb-56e14b16df6f",
+      "name": "Available",
+      "type": "boolean",
+      "required": false,
+      "parentId": "596a5b57-1656-42d4-858e-23315fdff587"
+    }
+  ]
+}

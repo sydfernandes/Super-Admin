@@ -4,6 +4,146 @@
       "action": {
         "action": "FIELD_REQUIRED_CHANGED",
         "details": {
+          "message": "Changed \"Discount\" required status to optional",
+          "affectedFields": {
+            "target": {
+              "id": "2a5312b8-c5c0-4020-89fc-4096ff4242dc",
+              "name": "Discount"
+            }
+          }
+        },
+        "field": {
+          "id": "2a5312b8-c5c0-4020-89fc-4096ff4242dc",
+          "name": "Discount",
+          "type": "text",
+          "required": false,
+          "parentId": "f_02"
+        },
+        "changes": {
+          "previousState": {
+            "required": true
+          },
+          "newState": {
+            "required": false
+          }
+        },
+        "id": "2675c8fe-ac9c-48f3-9bfc-daf34c56b9fd",
+        "timestamp": "2025-01-29T12:26:37.002Z",
+        "user": {
+          "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+          "name": "Sydney Fernandes"
+        }
+      }
+    },
+    {
+      "action": {
+        "action": "FIELD_REQUIRED_CHANGED",
+        "details": {
+          "message": "Changed \"Discount\" required status to required",
+          "affectedFields": {
+            "target": {
+              "id": "2a5312b8-c5c0-4020-89fc-4096ff4242dc",
+              "name": "Discount"
+            }
+          }
+        },
+        "field": {
+          "id": "2a5312b8-c5c0-4020-89fc-4096ff4242dc",
+          "name": "Discount",
+          "type": "text",
+          "required": true,
+          "parentId": "f_02"
+        },
+        "changes": {
+          "previousState": {
+            "required": false
+          },
+          "newState": {
+            "required": true
+          }
+        },
+        "id": "8b91d619-769f-4d13-bf39-21b43e26be33",
+        "timestamp": "2025-01-29T12:26:32.437Z",
+        "user": {
+          "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+          "name": "Sydney Fernandes"
+        }
+      }
+    },
+    {
+      "action": {
+        "action": "FIELD_REQUIRED_CHANGED",
+        "details": {
+          "message": "Changed \"Discount\" required status to optional",
+          "affectedFields": {
+            "target": {
+              "id": "2a5312b8-c5c0-4020-89fc-4096ff4242dc",
+              "name": "Discount"
+            }
+          }
+        },
+        "field": {
+          "id": "2a5312b8-c5c0-4020-89fc-4096ff4242dc",
+          "name": "Discount",
+          "type": "text",
+          "required": false,
+          "parentId": "f_02"
+        },
+        "changes": {
+          "previousState": {
+            "required": true
+          },
+          "newState": {
+            "required": false
+          }
+        },
+        "id": "dcb1e0d2-60c6-4852-8ac0-007f1ffee6f1",
+        "timestamp": "2025-01-29T12:26:31.844Z",
+        "user": {
+          "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+          "name": "Sydney Fernandes"
+        }
+      }
+    },
+    {
+      "action": {
+        "action": "FIELD_REQUIRED_CHANGED",
+        "details": {
+          "message": "Changed \"Discount\" required status to required",
+          "affectedFields": {
+            "target": {
+              "id": "2a5312b8-c5c0-4020-89fc-4096ff4242dc",
+              "name": "Discount"
+            }
+          }
+        },
+        "field": {
+          "id": "2a5312b8-c5c0-4020-89fc-4096ff4242dc",
+          "name": "Discount",
+          "type": "text",
+          "required": true,
+          "parentId": "f_02"
+        },
+        "changes": {
+          "previousState": {
+            "required": false
+          },
+          "newState": {
+            "required": true
+          }
+        },
+        "id": "a562f76b-f3c8-4421-bcd6-86e60db693a7",
+        "timestamp": "2025-01-29T12:26:29.664Z",
+        "user": {
+          "id": "u_01HNK2E8YRJX9QWM5390VEXZK4",
+          "name": "Sydney Fernandes"
+        }
+      }
+    },
+    {
+      "action": {
+        "action": "FIELD_REQUIRED_CHANGED",
+        "details": {
           "message": "Changed \"Metadata\" required status to required",
           "affectedFields": {
             "target": {

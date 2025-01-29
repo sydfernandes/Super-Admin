@@ -1,29 +1,42 @@
-import { NextResponse } from "next/server";
-import { promises as fs } from "fs";
-import path from "path";
+import { promises as fs } from 'fs';
+import { NextResponse } from 'next/server';
+import path from 'path';
 
-const dataFile = path.join(process.cwd(), "app/database/product-structure.json");
+interface FieldItem {
+  id: string;
+  name: string;
+  type: string;
+  required: boolean;
+  parentId: string | null;
+  metadata?: {
+    createdAt?: string;
+    updatedAt?: string;
+    deletedAt?: string;
+    status?: "active" | "inactive";
+  };
+}
 
 export async function GET() {
   try {
-    const data = await fs.readFile(dataFile, "utf8");
-    return NextResponse.json(JSON.parse(data));
+    const filePath = path.join(process.cwd(), 'app/database/product-structure-flat.json');
+    const fileData = await fs.readFile(filePath, 'utf8');
+    const data = JSON.parse(fileData);
+    return NextResponse.json(data);
   } catch (error) {
-    console.error("Failed to read product structure:", error);
+    console.error('Error reading fields:', error);
     return NextResponse.json({ fields: [] });
   }
 }
 
-export async function POST(req: Request) {
+export async function POST(request: Request) {
   try {
-    const body = await req.json();
-    await fs.writeFile(dataFile, JSON.stringify(body, null, 2));
-    return NextResponse.json({ success: true });
+    const filePath = path.join(process.cwd(), 'app/database/product-structure-flat.json');
+    const { fields } = await request.json();
+    
+    await fs.writeFile(filePath, JSON.stringify({ fields }, null, 2));
+    return NextResponse.json({ fields });
   } catch (error) {
-    console.error("Failed to save product structure:", error);
-    return NextResponse.json(
-      { error: "Failed to save product structure" },
-      { status: 500 }
-    );
+    console.error('Error saving fields:', error);
+    return NextResponse.json({ error: 'Failed to save fields' }, { status: 500 });
   }
 } 
